@@ -64,10 +64,35 @@ main{
     margin: auto;
 
 }
+section{
+    margin:20px 0px;
+}
+.productos{
+    margin-top: 10px;
+}
+.caja-datos-prod{
+    border-top: 1px RGB(220,137,018) solid;
+    padding: 15px;
+}
 footer{
     color:RGB(107,201,203);
     text-align: center;
     background-color: #222222;
+}
+.top-footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:20px 15px; 
+}
+footer li{
+    text-align: left;
+    list-style-type: none;
+}
+footer a{
+    text-decoration: none;
+    display: inline-block;
+    color:RGB(107,201,203);
 }
 footer div i{
     display:block;
@@ -75,7 +100,19 @@ footer div i{
     margin-top: 15px;
     margin-bottom: 7px;
 }
+.redes-sociales{
+    align-self: center;
+}
+.copyright{
+    margin-top: 2em;
+}
+@media (min-width: 361px) {
 
+    .productos{
+        display:flex;
+        justify-content: space-between;
+    }
+}
 @media (min-width: 769px) {
     .main-header-top-bar{
         display: flex;
