@@ -7,8 +7,9 @@
     padding:0;
 }
 body{
-    font-family: sans-serif; /*la swis721 no esta disponible aca ni en google fonts, esta en otro lugar pero hay que pagar. Definir si cambiamos o si se puede conseguir*/
+    font-family: 'Quicksand', sans-serif;
     font-size: 12px;
+    background-image: url(../images/fondogrungy_en_baja.jpg);
 }
 main{
     width:90%;
@@ -22,22 +23,33 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 5px 15px 10px 5px;
 }
 .logo{
-    width: 130px;
+    width: 30%;
+    max-width: 150px;
     display: inline-block;
+    min-width: 100px;
 }
+.form-busqueda{
+    display: none; /* hago desaparecer la barra de busqueda y dejo la lupa para moblie y tablet?*/
+}
+
 .right-top-header{
-    width: 50px;
+    width: 55px;
 }
 .right-top-header ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
+.right-top-header li{
+    margin: 5px;
+}
 .right-top-header a{
     display: inline-block;
     font-size: 28px;
+    color: rgb(69, 77, 87);
 }
 .main-nav-bar{
     display: none;
@@ -53,19 +65,26 @@ main{
     list-style-type: none;
 }
 .burger{
-    font-size: 22px;
+    font-size: 16px;
     text-align: center;
     display: block;
     background-color: RGB(045,064,122);
     color: #ffffff  ;
-    border-radius: 8px;
-    max-width: 60px;
+    border-radius: 4px;
+    max-width: 43px;
     padding: 15px 0px;
     margin: auto;
 
 }
+.banner{
+    width: 100%;
+
+}
 section{
     margin:20px 0px;
+}
+article{
+    margin-bottom: 10px;
 }
 .productos{
     margin-top: 10px;
@@ -107,17 +126,41 @@ footer div i{
     margin-top: 2em;
 }
 @media (min-width: 361px) {
-
+    
     .productos{
         display:flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
+    article{
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 48%;
+    }
+    
 }
 @media (min-width: 769px) {
-    .main-header-top-bar{
+
+    .logo{
+        width: 150px;
+    }
+    .form-busqueda{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 40%;
+        margin: auto;
+        text-align: right;
+        padding-right: 5%;
+        font-size: 42px;
+    }
+    .barra-busqueda{
+        width: 80%;
+        height: 26px;
+    }
+    .busqueda{
+        background-color: #ebebeb;
+        font-size: 18px;
+        padding: 3px 3px;
+        border: solid black 1px;
+        border-radius: 3px;
     }
     .main-nav-bar{
         display: block;
@@ -134,5 +177,8 @@ footer div i{
     }
     .burger{
         display:none;
+    }
+    article{
+        width:24%;
     }
 }
