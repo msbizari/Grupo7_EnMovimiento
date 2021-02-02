@@ -59,10 +59,15 @@ main{
     display: inline-block;
     color: black;
     padding: 3px 0px;
-    font-size: 14px;
+    font-size: 18px;
 }
 .main-nav-bar ul{
     list-style-type: none;
+}
+.main-nav-bar li{
+    /*border: rgb(140, 165, 173) solid 2px;*/
+    width:19%;
+    text-align: center;
 }
 .burger{
     font-size: 19px;
@@ -93,15 +98,18 @@ article{
     border-top: 1px RGB(220,137,018) solid;
     padding: 15px;
 }
+.icono-truck{
+    color:RGB(045,064,122);
+}
 footer{
     color:RGB(107,201,203);
     text-align: center;
     background-color: #222222;
 }
 .top-footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display:block;
+    margin: auto;
+    width:90%;
     padding:20px 15px; 
 }
 footer li{
@@ -119,9 +127,26 @@ footer div i{
     margin-top: 15px;
     margin-bottom: 7px;
 }
+.contacto{
+    margin:auto;
+    width: 80%;
+}
+.contacto li{
+    text-align: center;
+}
 .redes-sociales{
     align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:20px;
+    margin: auto;
+    width: 50%;
 }
+.redes-sociales li{
+        margin: 20px 0px;
+}
+
 .copyright{
     margin-top: 2em;
 }
@@ -137,7 +162,17 @@ footer div i{
         box-shadow: 0px 0px 10px RGB(100,100,100);
         width: 48%;
     }
-    
+    .top-footer{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:20px 15px; 
+    }
+    .redes-sociales{
+        font-size:22px;
+        margin: 5px 0px;
+        width: 90px;
+    }
 }
 @media (min-width: 769px) {
 
@@ -172,9 +207,6 @@ footer div i{
     .main-nav-bar ul{
         display: flex;
         justify-content: space-between;
-    }
-    .main-nav-bar li{
-        margin: 5px;
     }
     .burger{
         display:none;
