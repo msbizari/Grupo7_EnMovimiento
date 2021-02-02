@@ -65,14 +65,14 @@ main{
     list-style-type: none;
 }
 .burger{
-    font-size: 16px;
+    font-size: 19px;
     text-align: center;
     display: block;
     background-color: RGB(045,064,122);
     color: #ffffff  ;
     border-radius: 4px;
     max-width: 43px;
-    padding: 15px 0px;
+    padding: 12px 0px;
     margin: auto;
 
 }
