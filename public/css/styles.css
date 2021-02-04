@@ -150,6 +150,34 @@ footer div i{
 .copyright{
     margin-top: 2em;
 }
+
+.create-form{
+    padding: 20px 15px;
+}
+.control-formulario{
+    margin-bottom: 15px;
+}
+.control-formulario label{
+    margin-bottom: 15px;
+    font-style: italic;
+    display: block;
+}
+.control {
+    width:100%;
+    padding: 8px 8px;
+}
+.boton-formulario {
+    background-color:  RGB(045,064,122);
+    border: none;
+    font-size: 20px;
+    color:#ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+form a{
+    display: inline-block;
+    margin: 10px 0px;
+}
 @media (min-width: 361px) {
     
     .productos{
@@ -175,7 +203,10 @@ footer div i{
     }
 }
 @media (min-width: 769px) {
-
+    .create-form{
+        width: 50%;
+        margin: auto;
+    }
     .logo{
         width: 150px;
     }
@@ -213,5 +244,8 @@ footer div i{
     }
     article{
         width:24%;
+    }
+    .top-footer{
+        justify-content: space-around;
     }
 }
