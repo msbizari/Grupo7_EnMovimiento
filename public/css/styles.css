@@ -154,17 +154,15 @@ footer div i{
 .create-form{
     padding: 20px 15px;
 }
-.control-formulario{
-    margin-bottom: 15px;
-}
 .control-formulario label{
     margin-bottom: 15px;
     font-style: italic;
     display: block;
+    font-size: 16px;
 }
 .control {
     width:100%;
-    padding: 8px 8px;
+    padding: 4px 6px;
 }
 .boton-formulario {
     background-color:  RGB(045,064,122);
@@ -173,9 +171,11 @@ footer div i{
     color:#ffffff;
     padding: 5px 10px;
     border-radius: 5px;
+    margin-right: 10px;
 }
 form a{
     display: inline-block;
+    font-size: 15px;
     margin: 10px 0px;
 }
 @media (min-width: 361px) {
@@ -248,4 +248,16 @@ form a{
     .top-footer{
         justify-content: space-around;
     }
+    .control{
+        width: 50%;
+    }
 }
+    .h2{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 50px;
+        font-style: italic; 
+    
+    }
+
+   
+
