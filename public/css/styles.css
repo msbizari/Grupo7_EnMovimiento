@@ -94,6 +94,13 @@ article{
 .productos{
     margin-top: 10px;
 }
+.productos-carrito article{
+    padding: 15px 0px;
+}
+.productos-carrito article i{
+    font-size: 200px;
+    color: RGB(045,064,122);
+}
 .caja-datos-prod{
     border-top: 1px RGB(220,137,018) solid;
     padding: 15px;
@@ -178,17 +185,66 @@ form a{
     font-size: 15px;
     margin: 10px 0px;
 }
+
+.caja-datos-prod{
+    border-top: 1px RGB(220,137,018) solid;
+    padding: 15px;
+    background-color: white;
+}
+
+.botones-mas-menos {
+    background-color: white;
+    font-size: 15px;
+    margin: 15px 0px;
+    padding: 20px       
+}
+
+div .botones-mas-menos i{
+    color: RGB(045,064,122) ;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.detalles-prod{
+    padding: 15px;
+    text-justify: distribute;
+    background-color: white;
+}
+
+.titulo-prod {
+    padding-bottom: 15px;
+}
+
+.ticket{
+    background-color: white;
+    padding: 15px;
+}
+
+.boton-ticket {
+    background-color: RGB(045,064,122);
+    color: white;
+    text-align: center;
+    margin: 10px 5px 0px;
+    border-radius: 4px;
+}
 @media (min-width: 361px) {
     
     .productos{
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-content: space-around;
     }
     article{
         background-color: white;
         box-shadow: 0px 0px 10px RGB(100,100,100);
         width: 48%;
+    }
+    .productos-carrito article{
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 100%;
     }
     .top-footer{
         display:flex;
@@ -203,6 +259,21 @@ form a{
     }
 }
 @media (min-width: 769px) {
+    .productos-carrito{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .productos-carrito article{
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 30%;
+    }
+    .una-caja article{
+        width: 100%;
+    }
     .create-form{
         width: 50%;
         margin: auto;
@@ -250,6 +321,9 @@ form a{
     }
     .control{
         width: 50%;
+    }
+    .una-caja{
+        width: 30%;
     }
 }
     .h2{
