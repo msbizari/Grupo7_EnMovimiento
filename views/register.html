@@ -51,36 +51,53 @@
         <br>
     <div>
            <form action="/register" method="POST">
-            <p>
+            <p class="control-formulario">
                <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre">
+            <input type="text" name="nombre" id="nombre" class="control">
             </p>
 
             <br>
 
-            <p>>
+            <p class="control-formulario">
                 <label for="apellido">Apellido:</label> 
-                <input type="text" name="apellido" id="apellido">
+                <input type="text" name="apellido" id="apellido" class="control">
             </p>
-
             <br>
-            
-            <p>
+            <p class="control-formulario">
+                <label for="usuario">Nombre de usuari@:</label>
+                <input type="text" name="nombre-usuario" id="usuario" class="control">
+            </p>
+            <br>
+            <p class="control-formulario">
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="control">
+            </p>
+            <br>
+            <p class="control-formulario">
+                <label for="domicilio">Domicilio:</label>
+                <input type="text" name="domicilio" class="control" id="domicilio">
+            </p>
+            <br>
+            <p class="control-formulario">
                 <label for="contraseña">Contraseña:</label> 
-                <input type="password" name="contraseña" id="contraseña">
+                <input type="password" name="contraseña" id="contraseña" class="control">
             </p>
 
             <br>
 
-            <p>
+            <p class="control-formulario">
                 <label for="confirmar contraseña">Confirmar Contraseña:</label> 
-                <input type="password" name="Confirmar Contraseña" id="confirmar contraseña">
+                <input type="password" name="Confirmar Contraseña" id="confirmar contraseña" class="control">
             </p>
 
             <br>
-            <p>
-                <button type="submit">Enviar</button>
-            </p>
+            <div class="control-formulario">
+                <label>Desea recibir noticias sobre nuestros productos por email?:</label>
+                <label><input type="radio" name="noticias-email" value="si"> Si</label>
+                <label><input type="radio" name="noticias-email" value="no"> No</label>
+            </div>
+            <button type="reset" class="boton-formulario">Borrar</button>
+            <button type="submit" class="boton-formulario">Enviar</button>
             </form>
 
     </div>

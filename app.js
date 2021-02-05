@@ -13,13 +13,13 @@ app.get('/', (req,res) => {
 })
 
 app.get('/detalleDeProducto', (req,res)=>{
-    res.sendFile(__dirname + '/views/detalleDeproducto.html');
+    res.sendFile(path.resolve(__dirname + '/views/detalleDeproducto.html'));
 });
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+    res.sendFile(path.resolve(__dirname + '/views/register.html'));
 });
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
+    res.sendFile(path.resolve(__dirname + '/views/login.html'));
 });
