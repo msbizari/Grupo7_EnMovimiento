@@ -59,20 +59,25 @@ main{
     display: inline-block;
     color: black;
     padding: 3px 0px;
-    font-size: 14px;
+    font-size: 18px;
 }
 .main-nav-bar ul{
     list-style-type: none;
 }
+.main-nav-bar li{
+    /*border: rgb(140, 165, 173) solid 2px;*/
+    width:19%;
+    text-align: center;
+}
 .burger{
-    font-size: 16px;
+    font-size: 19px;
     text-align: center;
     display: block;
     background-color: RGB(045,064,122);
     color: #ffffff  ;
     border-radius: 4px;
     max-width: 43px;
-    padding: 15px 0px;
+    padding: 12px 0px;
     margin: auto;
 
 }
@@ -93,15 +98,18 @@ article{
     border-top: 1px RGB(220,137,018) solid;
     padding: 15px;
 }
+.icono-truck{
+    color:RGB(045,064,122);
+}
 footer{
     color:RGB(107,201,203);
     text-align: center;
     background-color: #222222;
 }
 .top-footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display:block;
+    margin: auto;
+    width:90%;
     padding:20px 15px; 
 }
 footer li{
@@ -119,11 +127,56 @@ footer div i{
     margin-top: 15px;
     margin-bottom: 7px;
 }
+.contacto{
+    margin:auto;
+    width: 80%;
+}
+.contacto li{
+    text-align: center;
+}
 .redes-sociales{
     align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:20px;
+    margin: auto;
+    width: 50%;
 }
+.redes-sociales li{
+        margin: 20px 0px;
+}
+
 .copyright{
     margin-top: 2em;
+}
+
+.create-form{
+    padding: 20px 15px;
+}
+.control-formulario label{
+    margin-bottom: 15px;
+    font-style: italic;
+    display: block;
+    font-size: 16px;
+}
+.control {
+    width:100%;
+    padding: 4px 6px;
+}
+.boton-formulario {
+    background-color:  RGB(045,064,122);
+    border: none;
+    font-size: 20px;
+    color:#ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+form a{
+    display: inline-block;
+    font-size: 15px;
+    margin: 10px 0px;
 }
 @media (min-width: 361px) {
     
@@ -137,10 +190,23 @@ footer div i{
         box-shadow: 0px 0px 10px RGB(100,100,100);
         width: 48%;
     }
-    
+    .top-footer{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:20px 15px; 
+    }
+    .redes-sociales{
+        font-size:22px;
+        margin: 5px 0px;
+        width: 90px;
+    }
 }
 @media (min-width: 769px) {
-
+    .create-form{
+        width: 50%;
+        margin: auto;
+    }
     .logo{
         width: 150px;
     }
@@ -173,13 +239,25 @@ footer div i{
         display: flex;
         justify-content: space-between;
     }
-    .main-nav-bar li{
-        margin: 5px;
-    }
     .burger{
         display:none;
     }
     article{
         width:24%;
     }
+    .top-footer{
+        justify-content: space-around;
+    }
+    .control{
+        width: 50%;
+    }
 }
+    .h2{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 50px;
+        font-style: italic; 
+    
+    }
+
+   
+
