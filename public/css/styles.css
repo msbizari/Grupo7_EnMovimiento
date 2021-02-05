@@ -333,5 +333,22 @@ div .botones-mas-menos i{
     
     }
 
-   
 
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+.nombre {
+    display: inline-block; 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-style: normal; 
+    font-weight: bold; 
+    line-height 5px;
+    background-color: #ebebeb; 
+    border: solid 2px grey; 
+    align-self: flex-start; 
+}
