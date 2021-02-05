@@ -227,6 +227,12 @@ div .botones-mas-menos i{
     margin: 10px 5px 0px;
     border-radius: 4px;
 }
+.icono-suelto{
+    color: RGB(045,064,122);
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
 @media (min-width: 361px) {
     
     .productos{
@@ -347,7 +353,7 @@ div .botones-mas-menos i{
     font-size: 18px;
     font-style: normal; 
     font-weight: bold; 
-    line-height 5px;
+    line-height: 20px;
     background-color: #ebebeb; 
     border: solid 2px grey; 
     align-self: flex-start; 
