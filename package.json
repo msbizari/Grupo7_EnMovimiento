@@ -4,7 +4,7 @@
   "description": "En Movimiento - sitio web de venta ropa de deporte",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
