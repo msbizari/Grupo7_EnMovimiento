@@ -13,8 +13,21 @@
 
 ## Retrospectiva Sprint_02
 
-* Hacer más: Juntarnos más y comunicarnos más. Fijarnos más en los detalles. Fijarnos más en otras páginas referentes.
-* Seguir haciendo: comunicándonos fluidamente como venimos haciendolo, seguir esforzandonos, continuar la camaradería.
-* Empezar a hacer: Ir más allá de lo que pide el sprint. Repartir mejor las tareas en el CSS y organizarlo mejor.
-* Hacer menos: fiaca.
-* Dejar de hacer: dejar de patear la tarea
+- Hacer mas: 
+Juntarnos y comunicarnos más. Fijar más en los detalles y en otras páginas referentes.
+Si bien somos organizados, entendemos que un poco mas, nos llevara a tener mas tiempo para ajustar detalles de cada entrega. 
+Ponernos deadline para cada parte del sprint. 
+   
+- Empezar a hacer: 
+Ir más allá de lo que pide el sprint. Delimitar de forma mas eficiente las tareas en el CSS y organizarlo mejor.
+
+- Continuar haciendo: 
+Comunicándonos fluidamente como venimos haciendolo, seguir esforzandonos y continuar la camaradería, especialmente con los modulos venideros que tienen cierto grado de complejidad.
+
+- Hacer menos:
+Fiaca y dejar de determinar los tiempos de ejecucción sobre la marcha sino a cada lanzamiento de sprint.
+
+- Dejar de hacer: 
+Dejar de patear la tarea. 
+
+## Retrospectiva Sprint_03
