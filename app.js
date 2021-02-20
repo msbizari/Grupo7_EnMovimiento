@@ -1,41 +1,44 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const mainRoutes = require('./routes/main');
-const app = express();
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const publicPath = path.resolve(__dirname , './public')
+var mainRouter = require('./routes/main');
+var userRouter = require('./routes/users');
+var productosRouter = require('./routes/productos');
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use( express.static (publicPath) );
 
-app.listen(3000, () => console.log("Servidor corriendo en el puerto 3000"));
+var app = express();
 
-app.use('/', mainRoutes);
-app.use('/login', mainRoutes);
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-/* app.get('/', (req,res) => {
-    res.sendFile(path.resolve(__dirname, "./views/index.html"))
-}) */
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/detalleDeProducto', (req,res)=>{
-    res.sendFile(path.resolve(__dirname + '/views/detalleDeproducto.html'));
+app.use('/', mainRouter);
+app.use('/users', userRouter);
+app.use('/productos', productosRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-app.get('/register', (req,res)=>{
-    res.sendFile(path.resolve(__dirname + '/views/register.html'));
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
-/* app.get('/login', (req,res)=>{
-    res.sendFile(path.resolve(__dirname + '/views/login.html'));
-}); */
-
-app.get('/carrito', (req,res)=>{
-    res.sendFile(path.resolve(__dirname + '/views/carrito.html'));
-});
-app.post('/register', (req,res) => {
-    res.send(req.body);
-})
-app.post('/login', (req,res) => {
-    res.send(req.body);
-})
+module.exports = app;
