@@ -7,6 +7,7 @@ const mainController= {
     register: (req,res) => res.render(path.resolve("./views/register.ejs")),
     detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")),
     carrito: (req,res) => res.render(path.resolve("./views/carrito.ejs")),
+    administrador: (req,res) => res.render(path.resolve("./views/administrador.ejs")),
 }
 
 module.exports = mainController;

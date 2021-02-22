@@ -15,6 +15,9 @@ main{
     width:90%;
     margin: auto;
 }
+
+/* HEADER */
+
 .main-header {
     background-color: RGB(107,201,203);
     padding: 20px;
@@ -81,6 +84,9 @@ main{
     margin: auto;
 
 }
+
+/* INDEX */
+
 .banner{
     width: 100%;
 
@@ -94,20 +100,19 @@ article{
 .productos{
     margin-top: 10px;
 }
-.productos-carrito article{
-    padding: 15px 0px;
-}
-.productos-carrito article i{
-    font-size: 200px;
-    color: RGB(045,064,122);
-}
+
 .caja-datos-prod{
     border-top: 1px RGB(220,137,018) solid;
     padding: 15px;
+    background-color: white;
 }
 .icono-truck{
     color:RGB(045,064,122);
 }
+
+
+/* FOOTER */
+
 footer{
     color:RGB(107,201,203);
     text-align: center;
@@ -158,6 +163,8 @@ footer div i{
     margin-top: 2em;
 }
 
+/*FORMULARIOS*/
+
 .create-form{
     padding: 20px 15px;
 }
@@ -186,10 +193,14 @@ form a{
     margin: 10px 0px;
 }
 
-.caja-datos-prod{
-    border-top: 1px RGB(220,137,018) solid;
-    padding: 15px;
-    background-color: white;
+/*CARRITO*/
+
+.productos-carrito article{
+    padding: 15px 0px;
+}
+.productos-carrito article i{
+    font-size: 200px;
+    color: RGB(045,064,122);
 }
 
 .botones-mas-menos {
@@ -262,6 +273,12 @@ div .botones-mas-menos i{
         background-color: white;
         box-shadow: 0px 0px 10px RGB(100,100,100);
         width: 48%;
+    }
+    .historiaMarketingImage{
+        width: 100%;
+    }
+    .historiaMarketingText{
+        width: 100%;
     }
     .productos-carrito article{
         margin-top: 10px;
@@ -338,6 +355,20 @@ div .botones-mas-menos i{
     }
     article{
         width:24%;
+    }
+    .historiaMarketing{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .historiaMarketingImage{
+        width: 48%;
+    }
+    .historiaMarketingText{
+        width: 48%;
+        font-size: 18px;
+        padding: 30px 20px;
     }
     .top-footer{
         justify-content: space-around;
