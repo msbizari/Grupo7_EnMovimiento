@@ -233,6 +233,23 @@ div .botones-mas-menos i{
     margin: 10px 0px;
 }
 
+/* PAG ADMINISTRADOR*/
+
+.login {
+    border: none;
+    font-size: 14px;
+    margin: 25px 0px;
+    
+    width: 75%;
+    border-radius: 5px;
+    background-color: white;
+    color: #666;
+    padding: 2px;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
 @media (min-width: 361px) {
     
     .productos{
