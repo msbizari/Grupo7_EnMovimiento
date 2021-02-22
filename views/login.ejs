@@ -1,44 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>En Movimiento</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/9ce3f86914.js" crossorigin="anonymous"></script>
-        <link href="/css/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="main-header">
-            <div class="main-header-top-bar">
-                <a href="/"><img src="/images/LogoNew5.png" alt ="logo de En Movimiento"  class="logo"></a>
-                <form action="/" method="POST"class="form-busqueda">
-                    <input type="text" placeholder="Search.." class="barra-busqueda"><button type="submit"><i class="fas fa-search busqueda"></i></button>
-                </form>
-                <div class="right-top-header">
-                    <ul>
-                        <li><a href="/users/login"><i class="fas fa-user"></i></a></li>
-                        <li><a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="main-nav-bar">
-                    <ul>
-                        <li><a href=# >Ofertas</a></li>
-                        <li><a href=# >Novedades</a></li>
-                        <li><a href=# >Hombre</a></li>
-                        <li><a href=# >Mujer</a></li>
-                        <li><a href=# >Niños</a></li>
-                        <li><a href=# >Marcas</a></li>
-                        <li><a href=# >Deporte</a></li>
-                    </ul>
-            </nav> 
-            <div><i class="fas fa-bars burger"></i>
-            </div>
-        </header>
-    <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
-    </div>
+    <%- include("./partials/header") %> 
+    <link href="/css/styles.css" rel="stylesheet">
+
+<body>
+    <%- include("./partials/head") %> 
+<main>
 
     <body>
          <main>
@@ -89,31 +56,7 @@
     <br>
 
 
-    <footer>
-        <div class="top-footer">
-        <section>
-            <h3>Contacto</h3>
-            <ul class="contacto">
-                <li>Dirección</li>
-                <li>Telefono</li>
-                <li>Mail</li>
-            </ul>
-        </section>
-        <section>
-            <h3><a href=# >About us</a></h3>
-        </section>
-        <section>
-            <h3><a href=# >Terminos y Condiciones</a></h3>
-        </section>
-        <section class="redes-sociales">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-        </section>
-        </div>
-        <section>
-            <p class="copyright">Copyright © 1999-2020 EN MOVIMIENTO S.R.L.</p>
-        </section>
-    </footer>
+
 </body>
+<%- include("./partials/footer")%> 
 </html>

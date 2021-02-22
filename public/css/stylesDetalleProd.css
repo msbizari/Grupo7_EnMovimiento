@@ -1,0 +1,399 @@
+/* colores de marca:  RGB(045,064,122); RGB(107,201,203); RGB(220,137,018) */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    background-image: url(../images/fondogrungy_en_baja.jpg);
+}
+main{
+    width:90%;
+    margin: auto;
+}
+.main-header {
+    background-color: RGB(107,201,203);
+    padding: 20px;
+}
+.main-header-top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 15px 10px 5px;
+}
+.logo{
+    width: 30%;
+    max-width: 150px;
+    display: inline-block;
+    min-width: 100px;
+}
+.form-busqueda{
+    display: none; /* hago desaparecer la barra de busqueda y dejo la lupa para moblie y tablet?*/
+}
+
+.right-top-header{
+    width: 55px;
+}
+.right-top-header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.right-top-header li{
+    margin: 5px;
+}
+.right-top-header a{
+    display: inline-block;
+    font-size: 28px;
+    color: rgb(69, 77, 87);
+}
+.main-nav-bar{
+    display: none;
+}
+.main-nav-bar a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 3px 0px;
+    font-size: 18px;
+}
+.main-nav-bar ul{
+    list-style-type: none;
+}
+.main-nav-bar li{
+    /*border: rgb(140, 165, 173) solid 2px;*/
+    width:19%;
+    text-align: center;
+}
+.burger{
+    font-size: 19px;
+    text-align: center;
+    display: block;
+    background-color: RGB(045,064,122);
+    color: #ffffff  ;
+    border-radius: 4px;
+    max-width: 43px;
+    padding: 12px 0px;
+    margin: auto;
+
+}
+.banner{
+    width: 100%;
+
+}
+section{
+    margin:20px 0px;
+}
+article{
+    margin-bottom: 10px;
+}
+.productos{
+    margin-top: 10px;
+}
+.productos-carrito article{
+    padding: 15px 0px;
+}
+.productos-carrito article i{
+    font-size: 200px;
+    color: RGB(045,064,122);
+}
+.caja-datos-prod{
+    border-top: 1px RGB(220,137,018) solid;
+    padding: 15px;
+}
+.icono-truck{
+    color:RGB(045,064,122);
+}
+footer{
+    color:RGB(107,201,203);
+    text-align: center;
+    background-color: #222222;
+}
+.top-footer{
+    display:block;
+    margin: auto;
+    width:90%;
+    padding:20px 15px; 
+}
+footer li{
+    text-align: left;
+    list-style-type: none;
+}
+footer a{
+    text-decoration: none;
+    display: inline-block;
+    color:RGB(107,201,203);
+}
+footer div i{
+    display:block;
+    width: 20px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+.contacto{
+    margin:auto;
+    width: 80%;
+}
+.contacto li{
+    text-align: center;
+}
+.redes-sociales{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:20px;
+    margin: auto;
+    width: 50%;
+}
+.redes-sociales li{
+        margin: 20px 0px;
+}
+
+.copyright{
+    margin-top: 2em;
+}
+
+.create-form{
+    padding: 20px 15px;
+}
+.control-formulario label{
+    margin-bottom: 15px;
+    font-style: italic;
+    display: block;
+    font-size: 16px;
+}
+.control {
+    width:100%;
+    padding: 4px 6px;
+}
+.boton-formulario {
+    background-color:  RGB(045,064,122);
+    border: none;
+    font-size: 20px;
+    color:#ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+form a{
+    display: inline-block;
+    font-size: 15px;
+    margin: 10px 0px;
+}
+
+.caja-datos-prod{
+    border-top: 1px RGB(220,137,018) solid;
+    padding: 15px;
+    background-color: white;
+}
+
+.botones-mas-menos {
+    background-color: white;
+    font-size: 15px;
+    margin: 15px 0px;
+    padding: 20px       
+}
+
+div .botones-mas-menos i{
+    color: RGB(045,064,122) ;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.detalles-prod{
+    padding: 15px;
+    text-justify: distribute;
+    background-color: white;
+}
+
+.titulo-prod {
+    padding-bottom: 15px;
+}
+
+.ticket{
+    background-color: white;
+    padding: 15px;
+}
+
+.boton-ticket {
+    background-color: RGB(045,064,122);
+    color: white;
+    text-align: center;
+    margin: 10px 5px 0px;
+    border-radius: 4px;
+}
+.icono-suelto{
+    color: RGB(045,064,122);
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+/* PAG ADMINISTRADOR*/
+
+.login {
+    border: none;
+    font-size: 14px;
+    margin: 25px 0px;
+    
+    width: 75%;
+    border-radius: 5px;
+    background-color: white;
+    color: #666;
+    padding: 2px;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (min-width: 361px) {
+    
+    .productos{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+    article{
+        background-color: white;
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 48%;
+    }
+    .productos-carrito article{
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 100%;
+    }
+    .top-footer{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:20px 15px; 
+    }
+    .redes-sociales{
+        font-size:22px;
+        margin: 5px 0px;
+        width: 90px;
+    }
+}
+@media (min-width: 769px) {
+    .productos-carrito{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .productos-carrito article{
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px RGB(100,100,100);
+        width: 30%;
+    }
+    .una-caja article{
+        width: 100%;
+    }
+    .create-form{
+        width: 50%;
+        margin: auto;
+    }
+    .logo{
+        width: 150px;
+    }
+    .form-busqueda{
+        display: flex;
+        width: 40%;
+        margin: auto;
+        text-align: right;
+        padding-right: 5%;
+        font-size: 42px;
+    }
+    .barra-busqueda{
+        width: 80%;
+        height: 26px;
+    }
+    .busqueda{
+        background-color: #ebebeb;
+        font-size: 18px;
+        padding: 3px 3px;
+        border: solid black 1px;
+        border-radius: 3px;
+    }
+    .main-nav-bar{
+        display: block;
+        width: 85%;
+        margin:auto;
+        margin-top: 20px;
+    }
+    .main-nav-bar ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    .burger{
+        display:none;
+    }
+    article{
+        width:24%;
+    }
+    .top-footer{
+        justify-content: space-around;
+    }
+    .control{
+        width: 50%;
+    }
+    .una-caja{
+        width: 30%;
+    }
+}
+    .h2{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 50px;
+        font-style: italic; 
+    
+    }
+
+
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    
+    }
+    
+    .nombre {
+        display: inline-block; 
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+        font-style: normal; 
+        font-weight: bold; 
+        line-height: 20px;
+        background-color: #ebebeb; 
+        border: solid 2px grey; 
+        align-self: flex-start; 
+    }
+
+h2 {
+    display: inline-block; 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-style: normal; 
+    font-weight: bold; 
+    line-height: 20px;
+    background-color: #ebebeb; 
+    border: solid 2px grey; 
+    align-self: flex-start; 
+}
+
+
+ul, p, h4, li {
+
+        text-align: center; 
+    }
+
+buttom {
+        text-align: center;
+    
+}
