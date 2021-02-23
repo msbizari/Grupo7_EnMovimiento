@@ -4,103 +4,73 @@
         <link href="/css/styles.css" rel="stylesheet">
     <body>
         <%- include("./partials/header") %>
+        
         <body>
-            <header class="main-header">
-                <div class="main-header-top-bar">
-                    <a href="/"><img src="/images/LogoNew5.png" alt ="logo de En Movimiento"  class="logo"></a>
-                    <form action="/" method="POST"class="form-busqueda">
-                        <input type="text" placeholder="Search.." class="barra-busqueda"><button type="submit"><i class="fas fa-search busqueda"></i></button>
-                    </form>
-                    <div class="right-top-header">
-                        <ul>
-                            <li><a href="/users/login"><i class="fas fa-user"></i></a></li>
-                            <li><a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <nav class="main-nav-bar">
-                        <ul>
-                            <li><a href=# >Ofertas</a></li>
-                            <li><a href=# >Novedades</a></li>
-                            <li><a href=# >Hombre</a></li>
-                            <li><a href=# >Mujer</a></li>
-                            <li><a href=# >Niños</a></li>
-                            <li><a href=# >Marcas</a></li>
-                            <li><a href=# >Deporte</a></li>
-                        </ul>
-                </nav> 
-                <div><i class="fas fa-bars burger"></i>
-                </div>
-            </header>
-    <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
-    </div>
+            <main>
+            <div>
+                <h2>
+                <p>REGISTRO DE USUARIO</p>
+                </h2>
+            </div>
 
-    <body>
-           <main>
+            <br>
         <div>
-            <h2>
-            <p>REGISTRO DE USUARIO</p>
-            </h2>
+            <form action="/register" method="POST">
+                <p class="control-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" class="control">
+                </p>
+
+                <br>
+
+                <p class="control-formulario">
+                    <label for="apellido">Apellido:</label> 
+                    <input type="text" name="apellido" id="apellido" class="control">
+                </p>
+                <br>
+                <p class="control-formulario">
+                    <label for="usuario">Nombre de usuari@:</label>
+                    <input type="text" name="nombre-usuario" id="usuario" class="control">
+                </p>
+                <br>
+                <p class="control-formulario">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="control">
+                </p>
+                <br>
+                <p class="control-formulario">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" name="domicilio" class="control" id="domicilio">
+                </p>
+                <br>
+                <p class="control-formulario">
+                    <label for="contraseña">Contraseña:</label> 
+                    <input type="password" name="contraseña" id="contraseña" class="control">
+                </p>
+
+                <br>
+
+                <p class="control-formulario">
+                    <label for="confirmar contraseña">Confirmar Contraseña:</label> 
+                    <input type="password" name="Confirmar Contraseña" id="confirmar contraseña" class="control">
+                </p>
+
+                <br>
+                <div class="control-formulario">
+                    <label>Desea recibir noticias sobre nuestros productos por email?:</label>
+                    <label><input type="radio" name="noticias-email" value="si"> Si</label>
+                    <label><input type="radio" name="noticias-email" value="no"> No</label>
+                </div>
+                <button type="reset" class="boton-formulario">Borrar</button>
+                <button type="submit" class="boton-formulario">Enviar</button>
+                </form>
+
         </div>
 
+        </main>
+        </body>
+
         <br>
-    <div>
-           <form action="/register" method="POST">
-            <p class="control-formulario">
-               <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" class="control">
-            </p>
-
-            <br>
-
-            <p class="control-formulario">
-                <label for="apellido">Apellido:</label> 
-                <input type="text" name="apellido" id="apellido" class="control">
-            </p>
-            <br>
-            <p class="control-formulario">
-                <label for="usuario">Nombre de usuari@:</label>
-                <input type="text" name="nombre-usuario" id="usuario" class="control">
-            </p>
-            <br>
-            <p class="control-formulario">
-                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="control">
-            </p>
-            <br>
-            <p class="control-formulario">
-                <label for="domicilio">Domicilio:</label>
-                <input type="text" name="domicilio" class="control" id="domicilio">
-            </p>
-            <br>
-            <p class="control-formulario">
-                <label for="contraseña">Contraseña:</label> 
-                <input type="password" name="contraseña" id="contraseña" class="control">
-            </p>
-
-            <br>
-
-            <p class="control-formulario">
-                <label for="confirmar contraseña">Confirmar Contraseña:</label> 
-                <input type="password" name="Confirmar Contraseña" id="confirmar contraseña" class="control">
-            </p>
-
-            <br>
-            <div class="control-formulario">
-                <label>Desea recibir noticias sobre nuestros productos por email?:</label>
-                <label><input type="radio" name="noticias-email" value="si"> Si</label>
-                <label><input type="radio" name="noticias-email" value="no"> No</label>
-            </div>
-            <button type="reset" class="boton-formulario">Borrar</button>
-            <button type="submit" class="boton-formulario">Enviar</button>
-            </form>
-
-    </div>
-
-    </main>
     </body>
-
-    <br>
-</body>
         <%- include("./partials/footer")%> 
 </html>

@@ -261,6 +261,12 @@ div .botones-mas-menos i{
     align-content: center;
 }
 
+.login input {
+    border: none;
+    background-color: white;
+    
+}
+
 @media (min-width: 361px) {
     
     .productos{
