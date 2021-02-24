@@ -50,13 +50,13 @@ const mainController= {
     index: (req,res) => res.render(path.resolve("./views/index.ejs")),
     login: (req,res) => res.render(path.resolve("./views/login.ejs")),
     register: (req,res) => res.render(path.resolve("./views/register.ejs")),
-    detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")),
+    /* detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")), */
     carrito: (req,res) => res.render(path.resolve("./views/carrito.ejs")),
     administrador: (req,res) => res.render(path.resolve("./views/administrador.ejs")),
     edicionProductos: (req,res) => res.render(path.resolve("./views/edicionProductos.ejs")),
     listadoProductos: (req,res) => 
     res.render(path.resolve("./views/listadoProductos.ejs"),{listaProductos: listaProductos}),
-/*     detalleDeproducto: (req,res) => {
+    detalleDeproducto: (req,res) => {
         let productoid = Number(req.params.id);
         let productoBuscado = {};
         for (let i = 0; i < listaProductos.length; i++) {
@@ -65,7 +65,7 @@ const mainController= {
             }
         }            
         res.render(path.resolve("./views/detalleDeproducto.ejs"), {producto:productoBuscado, listaProductos: listaProductos});
-    } */
+    }
 }
 
 module.exports = mainController;
