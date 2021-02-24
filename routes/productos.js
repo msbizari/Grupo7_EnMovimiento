@@ -4,5 +4,6 @@ const router = express.Router();
 
 router.get('/detalleDeproducto', mainController.detalleDeproducto);
 router.get('/carrito', mainController.carrito);
+router.get('/listadoProductos', mainController.listadoProductos);
 
 module.exports = router;
