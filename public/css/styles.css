@@ -109,6 +109,19 @@ article{
 .icono-truck{
     color:RGB(045,064,122);
 }
+.historiaMarketing{
+    margin: 40px 0px;
+}
+.historiaMarketingImage{
+    width: 100%;
+}
+.historiaMarketingText{
+    width: 100%;
+    color:RGB(045,064,122);
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 800;
+}
 
 
 /* FOOTER */
@@ -138,6 +151,9 @@ footer div i{
     width: 20px;
     margin-top: 15px;
     margin-bottom: 7px;
+}
+footer h3{
+    font-size: 1.4em;
 }
 .contacto{
     margin:auto;
@@ -275,17 +291,12 @@ div .botones-mas-menos i{
         justify-content: space-between;
         align-content: space-around;
     }
-    article{
+    .article-productos{
         background-color: white;
         box-shadow: 0px 0px 10px RGB(100,100,100);
         width: 48%;
     }
-    .historiaMarketingImage{
-        width: 100%;
-    }
-    .historiaMarketingText{
-        width: 100%;
-    }
+
     .productos-carrito article{
         margin-top: 10px;
         background-color: white;
@@ -359,7 +370,7 @@ div .botones-mas-menos i{
     .burger{
         display:none;
     }
-    article{
+    .article-productos{
         width:24%;
     }
     .historiaMarketing{
@@ -369,12 +380,12 @@ div .botones-mas-menos i{
         align-items: flex-start;
     }
     .historiaMarketingImage{
-        width: 48%;
+        width: 65%;
     }
     .historiaMarketingText{
-        width: 48%;
-        font-size: 18px;
-        padding: 30px 20px;
+        width: 33%;
+        font-size: 1.7em;
+        padding: 50px 10px;
     }
     .top-footer{
         justify-content: space-around;
