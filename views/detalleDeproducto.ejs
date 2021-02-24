@@ -2,7 +2,7 @@
 <html lang="en">
         
 <%- include("./partials/head") %> 
-<link href="/css/stylesDetalleProd.css" rel="stylesheet">    
+<link href="/css/styles.css" rel="stylesheet">    
 
     <body>
         <%- include("./partials/header") %>
@@ -14,37 +14,21 @@
                     <article class="producto1"></article>
                     
                     <br>
-                <article><img src="/images/bolso.jpg" width=100% alt= "foto ropa"></article>
-                        <h2>Bolso Unisex Sports</h2>
-                    <h4 class="especificaciones1">Especificaciones de Producto</h4>
-                                <ul>
-                                <p>Dimensiones: Largo: 62 cm. x Ancho: 29 cm. x Alto: 36 cm.</p>
-                                <p>Amplio compartimiento principal.</p>
-                                <p>Bolsillo lateral izquierdo con pequeño bolsillo interno de red con cierre.</p>
-                                <p>Correas acolchadas para trasportar como mochila.</p>
-                                <p>Tira desmontable con ajuste regulable.</p>
-                                <p>Incluye asa para transporte.</p>
-                                </ul>
+                    <ul>
+                        <% for( let i = 0; i < listaProductos.length; i++ ) { %>
+                        <li><%=listaProductos[i].img %> </li>
+                        <li><%=listaProductos[i].titulo %> </li>
+                        <li><%=listaProductos[i].img %> </li>
+                        <li><%=listaProductos[i].especificacionesDeProducto %> </li>
+                        <li><%=listaProductos[i].precio %> </li>
+                        <li><%=listaProductos[i].formaDePago %> </li>
+                        <li><%=listaProductos[i].colores %> </li>
+                        <% } %>
+                    </ul>
                         
-                            <h4 class="especificaciones">Precio</h4>
-                               <p class= "importe">$ 6.770</p>
-                            <h4 class="especificaciones">Formas de Pago</h4>
-                              <p class= "pago"> Tarjeta de Credito 3 y 6 cuotas sin interes</p>
-                            <h4 class="especificaciones">Colores</h4>
-                              <p class= "color"> Color: Negro</p>
+                            <button class="boton-ticket">COMPRAR</button>
                         
-                            <button class="boton-ticket">AÑADIR AL CARRITO</button>
-                        
-                    </article>
-
-                   
-
-
-
-
-
-                    
-                
+                    </article>                   
     </main>
         
 </body>
