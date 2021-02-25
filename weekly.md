@@ -14,7 +14,11 @@ Coordinaremos arreglos de detalles de los sprints anteriores en la app.
 # DAILY - Semana 2
 
 ## Qué se hizo: 
+Trabajamos bastante sobre dar mas estilo. 
+Mucha colaboracion entre todos
 
 ## Se encontró algún impedimento: 
+Tal vez quisimos implementar cosas q por ahi no las teniamos como aprendidas xq se dan luego de la entrega. Lo mas remarcable es que lo intentamos de muchas formas
 
-## Qué se va a realizar hoy: 
+## Qué se realizó esta semana: 
+Ultimamos detalles del sprint
