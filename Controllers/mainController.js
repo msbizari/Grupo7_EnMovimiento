@@ -8,16 +8,18 @@ const listaProductos = [
         titulo: 'Bolso Unisex Sports',
         especificacionesDeProducto: "Dimensiones: Largo: 62 cm. x Ancho: 29 cm. x Alto: 36 cm. / Amplio compartimiento principal / Bolsillo lateral izquierdo con pequeño bolsillo interno de red con cierre. / Correas acolchadas para trasportar como mochila / Tira desmontable con ajuste regulable", 
         precio: "$ 6.770",
+        descuento: 40,
         formaDePago: "Tarjeta de Credito 3 y 6 cuotas sin interes", 
         colores: "Negro"
         
     },
     { 
         producto:2, 
-        img: 'camisetaargentina.jpg', 
+        img: 'camisetaargentina_2.jpg', 
         titulo:"Camiseta Argentina Oficial",
         especificacionesDeProducto: "Material: 100% poliéster / Incluye firma Diego Maradona / Tecnología ClimaChill", 
         precio: "$ 230.000",
+        descuento: 20,
         formaDePago: "Promo Mundial: 12 cuotas sin interes / Tarjeta de todos los bancos",
         medidas: "Talles: XS - S - L - M - XL", 
         colores: "Color: Blanco/Celeste/Azul/Dorado"
@@ -29,6 +31,7 @@ const listaProductos = [
         titulo: 'Kit de 2 Mancuernas',
         especificacionesDeProducto: "Material: metal / Peso Máximo: 10 kg.", 
         precio: "$ 70.500",
+        descuento: 10,
         formaDePago: "Efectivo o Tarjeta de Credito en un pago", 
         colores: "Color: Blanco/Celeste/Azul/Dorado"
 
@@ -39,15 +42,15 @@ const listaProductos = [
         titulo: 'Zapatillas Air Pegasus 47',
         especificacionesDeProducto: "Beneficios: Amortiguación, Composición: Capellada: Malla y Sintético / Suela: Goma, Caña: Baja / Ajuste: Con Cordones /Tecnología: Flywire",
         precio: "$ 23.200",
+        descuento: 5,
         formaDePago: " 3 y 6 cuotas sin interes", 
         tallesZapatillas: "36 - 38 - 40 - 44", 
         colores: "Verde / Azul", 
-
     }
 ]; 
 
 const mainController= {
-    index: (req,res) => res.render(path.resolve("./views/index.ejs")),
+    index: (req,res) => res.render(path.resolve("./views/index.ejs"),{listaProductos: listaProductos}),
     login: (req,res) => res.render(path.resolve("./views/login.ejs")),
     register: (req,res) => res.render(path.resolve("./views/register.ejs")),
     /* detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")), */

@@ -14,79 +14,35 @@
         <section>
             <h2>NOVEDADES</h2>
             <div class="productos">
-
-            <article class="article-productos"><a href="/productos/detalleDeproducto/1"><img src="/images/bolso.jpg" width=100% alt= "foto ropa"></a>
+                <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
+            <article class="article-productos"><a href="/productos/detalleDeproducto/<%= listaProductos[i].producto %>"><img src="/images/<%= listaProductos[i].img %>" width=100% alt= "foto ropa"></a>
                 <div class="caja-datos-prod">
                     <i class="fas fa-truck icono-truck"></i></a>
-                    <p class="precios">$6.770</p>
-                    <p class="descuentos">40% off</p>
-                    <h4 class="oculto-enmobile">Bolso Unisex Sports</a></h4>
+                    <p class="precios"><%= listaProductos[i].precio %></p>
+                    <p class="descuentos"><%= listaProductos[i].descuento %>% off</p>
+                    <h4 class="oculto-enmobile"><%= listaProductos[i].titulo %></a></h4>
                 </ul>
-
+                
                 </div>
             </article>
-            <article class="article-productos"> <a href="/productos/detalleDeproducto/2"><img src="/images/camisetaargentina_2.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$230.000</p>
-                    <p class="descuentos">20% off</p>
-                    <h4 class="oculto-enmobile">Camiseta Argentina</h4>
-                </div>
-            </article>
-            <article class="article-productos"><a href="/productos/detalleDeproducto/3"><img src="/images/pesas.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$70.500</p>
-                    <p class="descuentos">10% off</p>
-                    <h4 class="oculto-enmobile">Mancuernas</h4>
-                </div>
-            </article>
-            <article class="article-productos"> <a href="/productos/detalleDeproducto/4"><img src="/images/zapatillas.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$23.200</p>
-                    <p class="descuentos">5% off</p>
-                    <h4 class="oculto-enmobile">Zapatillas muy lindas</h4>
-                </div>
-            </article>
+            <% }%>
             </div>
         </section>
         <section>
             <h2>OFERTAS</h2>
             <div class="productos">
-
-            <article class="article-productos"><a href="/productos/detalleDeproducto/1"></a><img src="/images/bolso.jpg" width="100%" alt="foto ropa">
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$6.770</p>
-                    <p class="descuentos">40% off</p>
-                    <h4 class="oculto-enmobile">Bolso Unisex Sports</h4>
-                </div>
-            </article>
-            <article class="article-productos"><a href="/productos/detalleDeproducto/2"><img src="/images/camisetaargentina_2.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$230.000</p>
-                    <p class="descuentos">20% off</p>
-                    <h4 class="oculto-enmobile">Camiseta Argentina</h4>
-                </div>
-            </article>
-            <article class="article-productos"><a href="/productos/detalleDeproducto/3"><img src="/images/pesas.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$70.500</p>
-                    <p class="descuentos">10% off</p>
-                    <h4 class="oculto-enmobile">Mancuernas</h4>
-                </div>
-            </article>
-            <article class="article-productos"><a href="/productos/detalleDeproducto/4"><img src="/images/zapatillas.jpg" width="100%" alt="foto ropa"></a>
-                <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i>
-                    <p class="precios">$23.200</p>
-                    <p class="descuentos">5% off</p>
-                    <h4 class="oculto-enmobile">Zapatillas muy lindas</h4>
-                </div>
-            </article>
+                <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
+                    <article class="article-productos"><a href="/productos/detalleDeproducto/<%= listaProductos[i].producto %>"><img src="/images/<%= listaProductos[i].img %>" width=100% alt= "foto ropa"></a>
+                        <div class="caja-datos-prod">
+                            <i class="fas fa-truck icono-truck"></i></a>
+                            <p class="precios"><%= listaProductos[i].precio %></p>
+                            <p class="descuentos"><%= listaProductos[i].descuento %>% off</p>
+                            <h4 class="oculto-enmobile"><%= listaProductos[i].titulo %></a></h4>
+                        </ul>
+                        
+                        </div>
+                    </article>
+                    <% }%>
             </div>
         </section>
         <section class='historiaMarketing'>
