@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %> 
+    <link href="/css/styles.css" rel="stylesheet">
+
+<body>
+    <%- include("./partials/header") %>
+<main>
+
+    <body>
+         <main>
+    
+           <form action="/login" method="POST" class="create-form">
+            <div class="inicio"> 
+            <h2>
+            <p>INICIO DE SESION</p>
+            </h2>
+        </div>
+        <br>
+   
+            <p class="control-formulario">
+               <label for="email">E-mail:</label>
+            <input type="text" name="email" id="email">
+            </p>
+
+            <br>
+            
+            <p class="control-formulario">
+                <label for="contraseña">Contraseña:</label> 
+                <input type="password" name="contraseña" id="contraseña">
+                
+            </p>
+
+            <p><a href=#>Restaurar Contraseña</a></p>
+            <p>
+                <button type="submit" class="boton-formulario">Ingresar</button>
+            </p>
+            <br>
+            <div>
+                <h2>
+                <p>NUEVO USUARIO</p>
+                </h2>
+            </div>
+            
+            <a href="/users/register">Registrarse como nuevo usuario</a>
+            <br>
+
+            
+            </form>
+
+    </div>
+
+    </main>
+    </body>
+
+    <br>
+
+
+
+</body>
+<%- include("./partials/footer")%> 
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+     "id": 1,
+     "name": "BOLSO",
+     "price": 100,
+     "category": "visited",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 2,
+     "name": "CAMISETA",
+     "price": 500,
+     "category": "in-sale",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 3,
+     "name": "PESAS",
+     "price": 100,
+     "category": "visited",
+     "description": "",
+     "image": ""
+    },
+    {
+     "id": 4,
+     "name": "ZAPATILLAS",
+     "price": 500,
+     "category": "in-sale",
+     "description": "",
+     "image": ""
+    }
+   ]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+        <link href="/css/styles.css" rel="stylesheet">
+
+    <body>
+        <%- include("./partials/header") %>    
+        <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
+        </div>
+    <main>
+        
+        <section class="product">
+            <main>
+                <section class="listaproductos">
+                   
+                    <br>
+                    <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
+                        <h3><%= listaProductos[i].titulo%></h3>  
+                    <ul>
+                      <li>Descirpción:<%= listaProductos[i].especificacionesDeProducto%> </li>
+                      <li>PRECIO: $<%= listaProductos[i].precio%> </li>
+                      <li>Forma de Pago: <%= listaProductos[i].formaDePago%> </li>
+                      <li>Color: <%= listaProductos[i].colores%> </li>
+                    </ul>
+                    <br>
+                    <% } %>
+
+                    
+                            
+                        </ul>
+    </main>
+        
+</body>
+    <%- include("./partials/footer")%> 
+</html>
