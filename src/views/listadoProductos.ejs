@@ -15,7 +15,9 @@
                    
                     <br>
                     <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
-                        <h3><%= listaProductos[i].titulo%></h3>  
+                        <h3><%= listaProductos[i].titulo%></h3>
+                        <a href="/productos/detalleDeproducto/<%= listaProductos[i].producto %>"><img src="/images/<%= listaProductos[i].img %>" width=60% alt= "foto ropa"></a>
+                        <ul>  
                     <ul>
                       <li>Descirpción:<%= listaProductos[i].especificacionesDeProducto%> </li>
                       <li>PRECIO: $<%= listaProductos[i].precio%> </li>

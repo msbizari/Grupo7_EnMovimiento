@@ -50,15 +50,15 @@ const listaProductos = [
 ]; 
 
 const mainController= {
-    index: (req,res) => res.render(path.resolve("./views/index.ejs"),{listaProductos: listaProductos}),
-    login: (req,res) => res.render(path.resolve("./views/login.ejs")),
-    register: (req,res) => res.render(path.resolve("./views/register.ejs")),
+    index: (req,res) => res.render('index',{listaProductos: listaProductos}),
+    login: (req,res) => res.render('login'),
+    register: (req,res) => res.render('register'),
     /* detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")), */
-    carrito: (req,res) => res.render(path.resolve("./views/carrito.ejs")),
-    administrador: (req,res) => res.render(path.resolve("./views/administrador.ejs")),
-    edicionProductos: (req,res) => res.render(path.resolve("./views/edicionProductos.ejs")),
+    carrito: (req,res) => res.render('carrito'),
+    administrador: (req,res) => res.render('administrador.ejs'),
+    edicionProductos: (req,res) => res.render('edicionProductos'),
     listadoProductos: (req,res) => 
-    res.render(path.resolve("./views/listadoProductos.ejs"),{listaProductos: listaProductos}),
+    res.render('listadoProductos' , {listaProductos: listaProductos}),
     detalleDeproducto: (req,res) => {
         let productoid = Number(req.params.id);
         let productoBuscado = {};
@@ -67,7 +67,7 @@ const mainController= {
                 productoBuscado = listaProductos[i];
             }
         }            
-        res.render(path.resolve("./views/detalleDeproducto.ejs"), {producto:productoBuscado, listaProductos: listaProductos});
+        res.render('detalleDeproducto', {producto:productoBuscado, listaProductos: listaProductos});
     }
 }
 
