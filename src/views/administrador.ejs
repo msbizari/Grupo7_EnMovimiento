@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+        <link href="/css/styles.css" rel="stylesheet">
+
+    <body>
+        <%- include("./partials/header") %>    
+<main>
+    <section class="register-body">
+        <form action="/productos" method="POST" enctype="multipart/form-data">
+            
+            <p class="login">
+                <label for="name">Nombre del producto</label>   
+                <input type="text" id="name" name="name">
+            </p>                
+
+            <p class="login">
+                <label for="description">Descripción</label>   
+                <input type="text" id="description" name="description">
+            </p>
+
+            <h3>Imagen del producto</h3>
+            <br>
+            
+                <label for="myfile"></label>
+                <input type="file" id="myfile" name="myfile">
+
+            <p class="login">
+                <label for="category">Categoría</label>   
+                <input type="text" id="category" name="category">
+            </p>
+
+            <p class="login">
+                <label for="colors">Colores disponibles</label>   
+                <input type="text" id="colors" name="colors">
+            </p>
+
+            <p class="login">
+                <label for="size">Talles</label>   
+                <input type="text" id="size" name="size">
+            </p>
+
+            <p class="login">
+                <label for="price">Precio</label>   
+                <input type="text" id="price" name="price">
+            </p>
+
+            <button type="submit" class="botones-juntos">Guardar</button>
+            <button type="reset" class="botones-juntos">Borrar</button>
+                
+
+        </form>
+    </section>
+</main>
+</body>
+<%- include("./partials/footer")%> 
+</html>
