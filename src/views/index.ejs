@@ -15,12 +15,12 @@
             <h2>NOVEDADES</h2>
             <div class="productos">
                 <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
-            <article class="article-productos"><a href="/productos/detalleDeproducto/<%= listaProductos[i].producto %>"><img src="/images/<%= listaProductos[i].img %>" width=100% alt= "foto ropa"></a>
+            <article class="article-productos"><a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto"><img src="/images/<%= listaProductos[i].image %>" width=100% alt= "<%= listaProductos[i].name %>"></a>
                 <div class="caja-datos-prod">
                     <i class="fas fa-truck icono-truck"></i></a>
-                    <p class="precios"><%= listaProductos[i].precio %></p>
-                    <p class="descuentos"><%= listaProductos[i].descuento %>% off</p>
-                    <h4 class="oculto-enmobile"><%= listaProductos[i].titulo %></a></h4>
+                    <p class="precios">$<%= listaProductos[i].price %></p>
+                    <!-- <p class="descuentos"><%= listaProductos[i].discount %>% off</p> -->
+                    <h4 class="oculto-enmobile"><%= listaProductos[i].name %></a></h4>
                 </ul>
                 
                 </div>
@@ -32,12 +32,12 @@
             <h2>OFERTAS</h2>
             <div class="productos">
                 <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
-                    <article class="article-productos"><a href="/productos/detalleDeproducto/<%= listaProductos[i].producto %>"><img src="/images/<%= listaProductos[i].img %>" width=100% alt= "foto ropa"></a>
+                    <article class="article-productos"><a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto %>"><img src="/images/<%= listaProductos[i].image %>" width=100% alt= "<%= listaProductos[i].name %>"></a>
                         <div class="caja-datos-prod">
                             <i class="fas fa-truck icono-truck"></i></a>
-                            <p class="precios"><%= listaProductos[i].precio %></p>
-                            <p class="descuentos"><%= listaProductos[i].descuento %>% off</p>
-                            <h4 class="oculto-enmobile"><%= listaProductos[i].titulo %></a></h4>
+                            <p class="precios">$<%= listaProductos[i].price %></p>
+                            <!-- <p class="descuentos"><%= listaProductos[i].descuento %>% off</p> -->
+                            <h4 class="oculto-enmobile"><%= listaProductos[i].name %></a></h4>
                         </ul>
                         
                         </div>

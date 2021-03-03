@@ -16,13 +16,12 @@
                     
                     <br>
                     
-                            <h3><%= producto.titulo%></h3>
-                            <a href="/productos/detalleDeproducto/<%= producto.producto %>"><img src="/images/<%= producto.img %>" width=60% alt= "<%= producto.titulo %> "></a>
+                            <h3><%= producto.name%></h3>
+                            <a href="/productos/detalleDeproducto/<%= producto.id %>"><img src="/images/<%= producto.image %>" width=60% alt= "<%= producto.name %> "></a>
                         <ul>
-                            <li><%= producto.img %> </li>
-                            <li><%= producto.titulo %> </li>
-                            <li><%= producto.especificacionesDeProducto %> </li>
-                            <li><%= producto.precio %> </li>
+                            <li><%= producto.name %> </li>
+                            <li><%= producto.description %> </li>
+                            <li><%= producto.price %> </li>
                             <li><%= producto.formaDePago %> </li>
                             <li><%= producto.colores %> </li>
                         </ul>

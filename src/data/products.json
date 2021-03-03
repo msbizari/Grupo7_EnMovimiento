@@ -1,34 +1,43 @@
 [
-    {
-     "id": 1,
-     "name": "BOLSO",
-     "price": 100,
-     "category": "visited",
-     "description": "",
-     "image": ""
-    },
-    {
-     "id": 2,
-     "name": "CAMISETA",
-     "price": 500,
-     "category": "in-sale",
-     "description": "",
-     "image": ""
-    },
-    {
-     "id": 3,
-     "name": "PESAS",
-     "price": 100,
-     "category": "visited",
-     "description": "",
-     "image": ""
-    },
-    {
-     "id": 4,
-     "name": "ZAPATILLAS",
-     "price": 500,
-     "category": "in-sale",
-     "description": "",
-     "image": ""
-    }
-   ]
+ {
+  "id": 1,
+  "name": "BOLSO",
+  "price": 100,
+  "category": "visited",
+  "description": "",
+  "image": "bolso.jpg"
+ },
+ {
+  "id": 2,
+  "name": "CAMISETA",
+  "price": 500,
+  "category": "in-sale",
+  "description": "",
+  "image": "camisetaargentina_2.jpg"
+ },
+ {
+  "id": 3,
+  "name": "PESAS",
+  "price": 100,
+  "category": "visited",
+  "description": "",
+  "image": "pesas.jpg"
+ },
+ {
+  "id": 4,
+  "name": "ZAPATILLAS",
+  "price": 500,
+  "category": "in-sale",
+  "description": "",
+  "image": "zapatillas.jpg"
+ },
+ {"id": 5,
+  "name": "Calzas Nike",
+  "description": "calzas",
+  "category": "",
+  "colors": "",
+  "size": "",
+  "price": "1000",
+  "image": "myfile-1614785466630.jpg"
+ }
+]
