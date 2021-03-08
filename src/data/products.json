@@ -31,7 +31,8 @@
   "description": "",
   "image": "zapatillas.jpg"
  },
- {"id": 5,
+ {
+  "id": 5,
   "name": "Calzas Nike",
   "description": "calzas",
   "category": "",
