@@ -74,15 +74,7 @@ const mainController= {
             }
         }      
         res.render('detalleDeproducto', {producto:productoBuscado, listaProductos: listaProductos});
-    }, 
-
-        destroy : (req, res) => {
-            let id = req.params.id;
-            let finalProducts = products.filter(product => product.id != id);
-            fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-            res.redirect('/');
-        }
-    };
-    
+    }
+}
 
 module.exports = mainController;
