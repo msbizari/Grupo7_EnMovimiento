@@ -12,9 +12,10 @@ const mainController= {
         res.render('index',{novedades:novedades , enOferta:enOferta})},
     login: (req,res) => res.render('login'),
     register: (req,res) => res.render('register'),
+    
     /* detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")), */
-    carrito: (req,res) => res.render('carrito'),
-    administrador: (req,res) => res.render('administrador'),
+    carrito: (req,res) => {res.render('carrito')},
+    administrador: (req,res) => {res.render('administrador')},
     //METODO PARA CREAR PRODUCTO
     store: (req, res) => {
 		let nuevoProducto = req.body;
