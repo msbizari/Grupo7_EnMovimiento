@@ -16,13 +16,12 @@
                     <br>
                     <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
                         <h3><%= listaProductos[i].name%></h3>
-                        <a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto"><img src="/images/<%= listaProductos[i].image %>" width=60% alt= "<%= listaProductos[i].name%><"></a>
+                        <a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto"><img src="/images/<%= listaProductos[i].image %>" width=35% alt= "<%= listaProductos[i].name%><"></a>
                         <ul>  
                     <ul>
-                      <li>Descirpción:<%= listaProductos[i].description%> </li>
-                      <li>PRECIO: $<%= listaProductos[i].price%> </li>
-                      <li>Forma de Pago: <%= listaProductos[i].formaDePago%> </li>
-                      <li>Color: <%= listaProductos[i].colores%> </li>
+                      <li>Descripción:     <%= listaProductos[i].description%> </li>
+                      <li>Precio: $        <%= listaProductos[i].price%> </li>
+                      <li>Color:           <%= listaProductos[i].color%> </li>
                     </ul>
                     <br>
                     <% } %>

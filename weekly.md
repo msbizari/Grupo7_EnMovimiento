@@ -1,4 +1,4 @@
-# DAILY - Semana 1
+# WEEKLY - Semana 1
 
 ## Qué se hizo: 
 Estudiamos los puntos a entregar
@@ -12,13 +12,14 @@ Arrancamos con los puntos menos complicados como ser Trello, daily y retro.
 Dimos el punta pie inicial a los archivos.json. 
 Coordinamos pasos a seguir y meeting para la proxima semana. 
 
-# DAILY - Semana 2
+# WEEKLY - Semana 2
 
 ## Qué se hizo: 
+Trabajamos en la relacion de las diferentes configuraciones, para enlazar. 
 
 
-## Se encontró algún impedimento: 
-
+## Se encontró algún impedimento:
+Cuesta coordinar efectivamente, como llevar a cabo el trabajo en la tarea de uno para que luego se relacione con el resto y no pisarnos. 
 
 ## Qué se realizó esta semana: 
-
+Ajustes finales y testeos de las nuevas herramientas como el Mockaroo

@@ -31,3 +31,30 @@ Fiaca y dejar de determinar los tiempos de ejecucción sobre la marcha sino a ca
 Dejar de patear la tarea. 
 
 ## Retrospectiva Sprint_03
+- Hacer mas: 
+Ponernos deadline para cada parte del sprint. 
+   
+- Empezar a hacer: 
+Una asignacion rapida de los puntos a cumplimentar
+
+- Continuar haciendo: 
+Comunicándonos fluidamente como venimos haciendolo, seguir esforzandonos y continuar la camaradería. 
+El apoyo mutuo para llegar a cada stage y seguir avanzando es lo fundamental para remarcar. 
+
+- Hacer menos:
+
+
+- Dejar de hacer: 
+Retrasar la primera meeting de cada nuevo sprint
+
+## Retrospectiva Sprint_04
+- Hacer mas: 
+
+- Empezar a hacer: 
+
+- Continuar haciendo: 
+
+- Hacer menos:
+
+- Dejar de hacer: 
+

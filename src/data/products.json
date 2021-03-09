@@ -1,264 +1,298 @@
 [
  {
   "id": 1,
-  "name": "BOLSO",
-  "price": 100,
-  "category": "visitado",
-  "description": "",
-  "image": "bolso.jpg"
+  "name": "Bolso Sport Unisex",
+  "description": "Practico bolso para ir al gimnasio, con correa regulable y compartimentos varios",
+  "price": 6770, 
+  "discount": 0,
+  "image": "bolso.jpg",
+  "category": "novedad",
+  "color": "Aquamarine",
+  "size": "Unico"
  },
  {
   "id": 2,
-  "name": "CAMISETA",
-  "price": 500,
+  "name": "Camiseta Argentina", 
+  "description": "camiseta selección Argentina - Mundial",
+  "price": 25000,
+  "discount": 0, 
+  "image": "camisetaargentina_2.jpg",
   "category": "en-oferta",
-  "description": "",
-  "image": "camisetaargentina_2.jpg"
+  "color": "Clasica: blanca y celeste - Azul",
+  "size": "XS - S - M - L - XL"
+  
  },
  {
   "id": 3,
-  "name": "PESAS",
-  "price": 100,
+  "name": "Pesas de entrenamiento MIR",
+  "description": "pesas de metal, NO SE OXIDAN  ",
+  "price": 4500,
+  "discount": 0, 
+  "image": "pesas.jpg",
   "category": "",
-  "description": "",
-  "image": "pesas.jpg"
+  "color": "ROJO - NEGRO",
+  "size": "5 Kg - 10 Kg"
+  
  },
  {
   "id": 4,
-  "name": "ZAPATILLAS",
-  "price": 500,
+  "name": "Zapatillas Urbanas Model.0 ",
+  "description": "calzado de uso diario, modelo bota con abrojo",
+  "price": 7990,
+  "discount": 0,  
+  "image": "zapatillas.jpg",
   "category": "en-oferta",
-  "description": "",
-  "image": "zapatillas.jpg"
+  "color": "BLANCO",
+  "size": "36 - 38"
+ 
  },
  {
   "id": 5,
   "name": "Calzas Nike",
-  "description": "calzas",
+  "description": "calzas de mujer, 100% lycra. Tecnología GORE-TECH",
+  "price": 3450,
+  "discount": 0, 
+  "image": "myfile-1614785466630.jpg",
   "category": "novedad",
-  "colors": "",
-  "size": "",
-  "price": "1000",
-  "image": "myfile-1614785466630.jpg"
- },
+  "color": "NEGRA - AZUL - VERDE",
+  "size": "S - L"
+
+},
  {
   "id": 6,
-  "name": "botines-adidas",
-  "description": "duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium",
-  "price": 2028,
+  "name": "Botines de Futlbol ADIDAS ",
+  "description": "Botines para fútbol, con tapones intercambiables",
+  "price": 15500,
+  "discount": 10,
   "image": "botines-adidas.jpg",
   "category": "visitado",
   "color": "Aquamarine",
-  "size": 20,
-  "discount": 10
+  "size": "40-44"
+
  },
  {
   "id": 7,
-  "name": "botines-puma",
-  "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis",
-  "price": 6074,
+  "name": "Botines Borussia TT",
+  "description": "Los botines Puma Borussia TT mantienen el diseño típico, además del confort interno, para que sientas control de la pelota",
+  "price": 6100,
+  "discount": 10,
   "image": "botines-puma.jpg",
   "category": "novedad",
   "color": "Aquamarine",
-  "size": 41,
-  "discount": 10
+  "size": 41
+  
  },
  {
   "id": 8,
-  "name": "camiseta_deportiva",
-  "description": "duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
-  "price": 1904,
+  "name": "Remera Deportiva Adidas",
+  "description": "camiseta tecnología DRI-FIT",
+  "price": 3700,
+  "discount": 10,
   "image": "camiseta_deportiva.jpg",
   "category": "novedad",
   "color": "Mauv",
-  "size": 26,
-  "discount": 10
+  "size": 26
+  
  },
  {
   "id": 9,
-  "name": "camiseta_deportiva_2",
-  "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue",
-  "price": 4191,
+  "name": "Camiseta Deportiva Style Deluxe",
+  "description": "Camiseta con redes laterales para una mejor circulacion de aire",
+  "price": 4200,
+  "discount": 0,
   "image": "camiseta_deportiva_2.jpg",
   "category": "en-oferta",
   "color": "Crimson",
-  "size": 29,
-  "discount": 0
+  "size": 29
+  
  },
  {
   "id": 10,
-  "name": "camiseta-entrenamiento",
-  "description": "blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula",
-  "price": 9848,
+  "name": "Camiseta Nike",
+  "description": "camiseta para entrenamiento",
+  "price": 9900,
+  "discount": 10, 
   "image": "camiseta-entrenamiento.png",
   "category": "en-oferta",
   "color": "Indigo",
-  "size": 37,
-  "discount": 10
+  "size": 40
+  
  },
  {
   "id": 11,
-  "name": "camiseta-entrenamiento_2",
-  "description": "leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod",
+  "name": "Remera Barcelona - RAKUTEN",
+  "description": "remera de futbol Club Barcelona",
   "price": 9153,
+  "discount": 0, 
   "image": "camiseta-entrenamiento_2.jpg",
   "category": "novedad",
   "color": "Violet",
-  "size": 17,
-  "discount": 0
+  "size": 17
+  
  },
  {
   "id": 12,
-  "name": "camiseta-mujer-2",
-  "description": "nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a",
+  "name": "Remera mujer deportiva ADIDAS",
+  "description": "remera deportiva, fibra altamente resistente",
   "price": 4618,
-  "image": "camiseta-mujer-2.jpg",
-  "category": null,
+   "discount": 10,
+   "image": "camiseta-mujer-2.jpg",
+  "category": "novedad",
   "color": "Purple",
-  "size": 31,
-  "discount": 10
+  "size": "S-L-M-XL"
+ 
  },
  {
   "id": 13,
-  "name": "camiseta-mujer-violeta",
-  "description": "rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel",
+  "name": "Camiseta Mujer Salomon",
+  "description": "remera deportiva",
   "price": 6958,
+  "discount": 5,
   "image": "camiseta-mujer-violeta.jpg",
   "category": "visitado",
   "color": "Pink",
-  "size": 25,
-  "discount": 5
+  "size": "Unico"
  },
  {
   "id": 14,
-  "name": "camiseta-nigeria",
-  "description": "ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
+  "name": "Camiseta de fultbol Nigeria",
+  "description": "camiseta oficial Nigeria",
   "price": 8014,
+  "discount": 15,
   "image": "camiseta-nigeria.jpg",
   "category": "en-oferta",
   "color": "Violet",
-  "size": 41,
-  "discount": 15
+  "size": "XS - S - M - L - XL"
+  
  },
  {
   "id": 15,
-  "name": "camiseta-PSG",
-  "description": "sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
+  "name": "Camiseta oficial Club PSG",
+  "description": "Está inspirada en los colores de la bandera francesa y con tecnología Dri-Fit para que te mantengas cómodo durante todo el partidos",
   "price": 9305,
+  "discount": 0,
   "image": "camiseta-PSG.jpg",
   "category": "en-oferta",
   "color": "Mauv",
-  "size": 23,
-  "discount": 0
+  "size": "XS - S - M - L - XL"
  },
  {
   "id": 16,
-  "name": "pantalon-corto-running-mujer",
-  "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit",
-  "price": 787,
+  "name": "Pantalon Sportswear Gym Vntg ",
+  "description": "pantalon corto entrenamiento para mujer",
+  "price": 4500,
+  "discount": 10,
   "image": "pantalon-corto-running-mujer.jpg",
   "category": "novedad",
   "color": "Goldenrod",
-  "size": 36,
-  "discount": 10
+  "size": 36
+  
  },
  {
   "id": 17,
-  "name": "pantalon-corto-running-mujer-2",
-  "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est",
-  "price": 1903,
-  "image": "pantalon-corto-running-mujer-2.jpg",
+  "name": "Pantalon Corto Salomon",
+  "description": "Pantalón corto, con malla interna",
+  "price": 1990,
+   "discount": 5,
+   "image": "pantalon-corto-running-mujer-2.jpg",
   "category": "visitado",
   "color": "Yellow",
-  "size": 35,
-  "discount": 5
+  "size": "36 - 40"
+ 
  },
  {
   "id": 18,
-  "name": "running-jacket",
-  "description": "integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce",
-  "price": 1082,
+  "name": "Campera deportiva Nike Jacket 2.0",
+  "description": "Campera capucha ajustable",
+  "price": 5500,
+  "discount": 10,
   "image": "running-jacket.jpg",
   "category": "visitado",
   "color": "Turquoise",
-  "size": 31,
-  "discount": 10
+  "size": 40
+ 
  },
  {
   "id": 19,
-  "name": "running-jacket_2",
-  "description": "vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi",
+  "name": "Campera Jacket",
+  "description": "Campera impermeable, con cuello y cierre",
   "price": 4714,
+  "discount": 0,
   "image": "running-jacket_2.jpg",
   "category": "novedad",
   "color": "Orange",
-  "size": 34,
-  "discount": 0
+  "size": 38
+  
  },
  {
   "id": 20,
-  "name": "running-socks",
-  "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor",
-  "price": 7543,
+  "name": "Par de medias Running Fresh",
+  "description": "medias 100% algodon",
+  "price": 7500,
+  "discount": 15, 
   "image": "running-socks.jpg",
   "category": "novedad",
-  "color": "Red",
-  "size": 32,
-  "discount": 15
+  "color": "GREEN",
+  "size": "Unico"
  },
  {
   "id": 21,
-  "name": "short_deporte",
-  "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit",
-  "price": 5655,
+  "name": "Short Deportivo Nike",
+  "description": "pantalon corto liso, de algodon para hombre ",
+  "price": 6500,
+  "discount": 25, 
   "image": "short_deporte.jpg",
   "category": "visitado",
   "color": "Orange",
-  "size": 28,
-  "discount": 25
+  "size": "40 - 44"
+  
  },
  {
   "id": 22,
-  "name": "short-nike-running",
+  "name": "Short Nike Running II",
   "description": "ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula",
   "price": 4925,
+  "discount": 20, 
   "image": "short-nike-running.jpg",
   "category": "novedad",
   "color": "Puce",
-  "size": 41,
-  "discount": 20
+  "size": "S - L"
+  
  },
  {
   "id": 23,
-  "name": "zapatillas_2",
-  "description": "in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit",
-  "price": 4568,
+  "name": "AIRMAX Shoes",
+  "description": "zapatillas de mujer con camara de aire",
+  "price": 7200,
+  "discount": 20, 
   "image": "zapatillas_2.jpg",
   "category": "visitado",
   "color": "Red",
-  "size": 31,
-  "discount": 20
+  "size": "36-38-40-44"
+  
  },
  {
   "id": 24,
-  "name": "zapatillas_asics",
-  "description": "felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque",
-  "price": 4366,
+  "name": "Zapatillas ASICS, modelo Spring 2020",
+  "description": "zapatillas ",
+  "price": 4350,
+  "discount": 0,
   "image": "zapatillas_asics.jpg",
   "category": "en-oferta",
   "color": "Puce",
-  "size": 40,
-  "discount": 0
+  "size": 40
+  
  },
  {
   "id": 25,
-  "name": "zapatillas_Nike",
-  "description": "risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at",
+  "name": "Calzado New Balance - Edición 2021",
+  "description": "Zapatillas marca Nike, edicion Post Pandemia",
   "price": 6229,
+  "discount": 20,
   "image": "zapatillas_Nike.jpg",
-  "category": null,
+  "category": "novedad",
   "color": "Purple",
-  "size": 15,
-  "discount": 20
+  "size": 36
+
  }
 ]

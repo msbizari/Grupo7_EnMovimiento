@@ -16,17 +16,32 @@
                     
                     <br>
                     
-                            <h3><%= producto.name%></h3>
-                            <a href="/productos/detalleDeproducto/<%= producto.id %>"><img src="/images/<%= producto.image %>" width=60% alt= "<%= producto.name %> "></a>
-                        <ul>
-                            <li><%= producto.name %> </li>
-                            <li><%= producto.description %> </li>
-                            <li><%= producto.price %> </li>
-                            <li><%= producto.formaDePago %> </li>
-                            <li><%= producto.colores %> </li>
-                        </ul>
-                       
-                            <button class="boton-ticket">COMPRAR</button>
+                            <h2><%= producto.name%></h2>
+                    <br>
+
+                            <a href="/productos/detalleDeproducto/<%= producto.id %>"><img src="/images/<%= producto.image %>" width=45% alt= "<%= producto.name %> "></a>
+                    <br>
+                    <br>
+                            <ul>
+                            <li>DESCRIPCION:         <%= producto.description%> </li>
+                            <li>PRECIO: $            <%= producto.price %> </li>
+                            <li>COLORES DISPONIBLES: <%= producto.color %> </li>
+                            <li>SIZE:                <%= producto.size %> </li>
+                            <li><p><i class="fas fa-credit-card"></i>   Pagá en 12 cuotas sin interes</p></li>
+                            <li><p><i class="fas fa-store"> </i>        Retiro gratis en locales del vendedor</p></li>
+                        </ul> 
+                        
+                        <br>
+
+                        <section class="botones"> 
+                        <div>
+                            <button class="boton-ticket"> COMPRAR </button>
+                            <button class="boton-ticket"> AGREGAR A FAVORITOS</button>
+                        <br>
+                            <button class="boton-ticket">   EDITAR </button>
+                            <button class="boton-ticket">   ELIMINAR </button>
+                        </div>
+                         </section>  
                         
                     </article>
                 </section>               
