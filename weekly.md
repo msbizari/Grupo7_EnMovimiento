@@ -22,4 +22,4 @@ Trabajamos en la relacion de las diferentes configuraciones, para enlazar.
 Cuesta coordinar efectivamente, como llevar a cabo el trabajo en la tarea de uno para que luego se relacione con el resto y no pisarnos. 
 
 ## Qué se realizó esta semana: 
-Ajustes finales y testeos de las nuevas herramientas como el Mockaroo
+Metodo de EDIT de productos, ajustes finales y testeos de las nuevas herramientas como el Mockaroo

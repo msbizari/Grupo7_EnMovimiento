@@ -62,7 +62,12 @@ const mainController= {
     res.redirect('/');
 },
 
-    destroy: (req,res) => res.send('Falta hacer el código'),
+    destroy: (req,res) =>{
+		let id = req.params.id;
+		let finalProducts = listaProductos.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	},
     listadoProductos: (req,res) => 
     res.render('listadoProductos' , {listaProductos: listaProductos}),
     detalleDeproducto: (req,res) => {

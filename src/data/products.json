@@ -3,7 +3,7 @@
   "id": 1,
   "name": "Bolso Sport Unisex",
   "description": "Practico bolso para ir al gimnasio, con correa regulable y compartimentos varios",
-  "price": 6770, 
+  "price": 6770,
   "discount": 0,
   "image": "bolso.jpg",
   "category": "novedad",
@@ -12,60 +12,48 @@
  },
  {
   "id": 2,
-  "name": "Camiseta Argentina", 
+  "name": "Camiseta Argentina",
   "description": "camiseta selección Argentina - Mundial",
   "price": 25000,
-  "discount": 0, 
+  "discount": 0,
   "image": "camisetaargentina_2.jpg",
   "category": "en-oferta",
   "color": "Clasica: blanca y celeste - Azul",
   "size": "XS - S - M - L - XL"
-  
  },
  {
   "id": 3,
   "name": "Pesas de entrenamiento MIR",
   "description": "pesas de metal, NO SE OXIDAN  ",
   "price": 4500,
-  "discount": 0, 
+  "discount": 0,
   "image": "pesas.jpg",
   "category": "",
   "color": "ROJO - NEGRO",
   "size": "5 Kg - 10 Kg"
-  
  },
  {
   "id": 4,
   "name": "Zapatillas Urbanas Model.0 ",
   "description": "calzado de uso diario, modelo bota con abrojo",
   "price": 7990,
-  "discount": 0,  
+  "discount": 0,
   "image": "zapatillas.jpg",
   "category": "en-oferta",
   "color": "BLANCO",
   "size": "36 - 38"
- 
  },
  {
   "id": 5,
   "name": "Calzas Nike",
   "description": "calzas de mujer, 100% lycra. Tecnología GORE-TECH",
   "price": 3450,
-  "discount": 0, 
+  "discount": 0,
   "image": "myfile-1614785466630.jpg",
   "category": "novedad",
-<<<<<<< HEAD
   "color": "NEGRA - AZUL - VERDE",
   "size": "S - L"
-
-},
-=======
-  "color": "",
-  "size": "",
-  "price": "1000",
-  "image": "myfile-1614785466630.jpg"
  },
->>>>>>> b85d27cb9dbd39992a257e45730878b319537a9f
  {
   "id": 6,
   "name": "Botines de Futlbol ADIDAS ",
@@ -76,7 +64,6 @@
   "category": "visitado",
   "color": "Aquamarine",
   "size": "40-44"
-
  },
  {
   "id": 7,
@@ -88,7 +75,6 @@
   "category": "novedad",
   "color": "Aquamarine",
   "size": 41
-  
  },
  {
   "id": 8,
@@ -100,7 +86,6 @@
   "category": "novedad",
   "color": "Mauv",
   "size": 26
-  
  },
  {
   "id": 9,
@@ -112,54 +97,39 @@
   "category": "en-oferta",
   "color": "Crimson",
   "size": 29
-  
  },
  {
   "id": 10,
-<<<<<<< HEAD
-  "name": "Camiseta Nike",
-  "description": "camiseta para entrenamiento",
-  "price": 9900,
-  "discount": 10, 
-  "image": "camiseta-entrenamiento.png",
-  "category": "en-oferta",
-  "color": "Indigo",
-  "size": 40
-  
-=======
   "name": "camiseta-entrenamiento-brasil",
-  "description": "blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula",
+  "description": "Camiseta de entrenamiento dri-fit del equipo nacional de Brasil",
   "category": "novedad",
   "color": "Indigo",
   "size": "38",
   "price": "12000",
   "discount": "10",
   "image": "camiseta-entrenamiento.png"
->>>>>>> b85d27cb9dbd39992a257e45730878b319537a9f
  },
  {
   "id": 11,
   "name": "Remera Barcelona - RAKUTEN",
   "description": "remera de futbol Club Barcelona",
   "price": 9153,
-  "discount": 0, 
+  "discount": 0,
   "image": "camiseta-entrenamiento_2.jpg",
   "category": "novedad",
   "color": "Violet",
   "size": 17
-  
  },
  {
   "id": 12,
   "name": "Remera mujer deportiva ADIDAS",
   "description": "remera deportiva, fibra altamente resistente",
   "price": 4618,
-   "discount": 10,
-   "image": "camiseta-mujer-2.jpg",
+  "discount": 10,
+  "image": "camiseta-mujer-2.jpg",
   "category": "novedad",
   "color": "Purple",
   "size": "S-L-M-XL"
- 
  },
  {
   "id": 13,
@@ -182,7 +152,6 @@
   "category": "en-oferta",
   "color": "Violet",
   "size": "XS - S - M - L - XL"
-  
  },
  {
   "id": 15,
@@ -205,19 +174,17 @@
   "category": "novedad",
   "color": "Goldenrod",
   "size": 36
-  
  },
  {
   "id": 17,
   "name": "Pantalon Corto Salomon",
   "description": "Pantalón corto, con malla interna",
   "price": 1990,
-   "discount": 5,
-   "image": "pantalon-corto-running-mujer-2.jpg",
+  "discount": 5,
+  "image": "pantalon-corto-running-mujer-2.jpg",
   "category": "visitado",
   "color": "Yellow",
   "size": "36 - 40"
- 
  },
  {
   "id": 18,
@@ -229,7 +196,6 @@
   "category": "visitado",
   "color": "Turquoise",
   "size": 40
- 
  },
  {
   "id": 19,
@@ -241,54 +207,50 @@
   "category": "novedad",
   "color": "Orange",
   "size": 38
-  
  },
  {
   "id": 20,
   "name": "Par de medias Running Fresh",
   "description": "medias 100% algodon",
-  "price": 7500,
-  "discount": 15, 
   "image": "running-socks.jpg",
   "category": "novedad",
   "color": "GREEN",
-  "size": "Unico"
+  "size": "Unico",
+  "price": "7500",
+  "discount": "15"
  },
  {
   "id": 21,
   "name": "Short Deportivo Nike",
   "description": "pantalon corto liso, de algodon para hombre ",
   "price": 6500,
-  "discount": 25, 
+  "discount": 25,
   "image": "short_deporte.jpg",
   "category": "visitado",
   "color": "Orange",
   "size": "40 - 44"
-  
  },
  {
   "id": 22,
   "name": "Short Nike Running II",
   "description": "ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula",
   "price": 4925,
-  "discount": 20, 
+  "discount": 20,
   "image": "short-nike-running.jpg",
   "category": "novedad",
   "color": "Puce",
   "size": "S - L"
-  
  },
  {
   "id": 23,
   "name": "AIRMAX Shoes",
   "description": "zapatillas de mujer con camara de aire",
   "price": 7200,
-  "discount": 20, 
+  "discount": 20,
   "image": "zapatillas_2.jpg",
   "category": "visitado",
   "color": "Red",
   "size": "36-38-40-44"
-  
  },
  {
   "id": 24,
@@ -300,7 +262,6 @@
   "category": "en-oferta",
   "color": "Puce",
   "size": 40
-  
  },
  {
   "id": 25,
@@ -312,6 +273,5 @@
   "category": "novedad",
   "color": "Purple",
   "size": 36
-
  }
 ]
