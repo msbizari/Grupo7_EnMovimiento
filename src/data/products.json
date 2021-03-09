@@ -54,10 +54,18 @@
   "discount": 0, 
   "image": "myfile-1614785466630.jpg",
   "category": "novedad",
+<<<<<<< HEAD
   "color": "NEGRA - AZUL - VERDE",
   "size": "S - L"
 
 },
+=======
+  "color": "",
+  "size": "",
+  "price": "1000",
+  "image": "myfile-1614785466630.jpg"
+ },
+>>>>>>> b85d27cb9dbd39992a257e45730878b319537a9f
  {
   "id": 6,
   "name": "Botines de Futlbol ADIDAS ",
@@ -108,6 +116,7 @@
  },
  {
   "id": 10,
+<<<<<<< HEAD
   "name": "Camiseta Nike",
   "description": "camiseta para entrenamiento",
   "price": 9900,
@@ -117,6 +126,16 @@
   "color": "Indigo",
   "size": 40
   
+=======
+  "name": "camiseta-entrenamiento-brasil",
+  "description": "blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula",
+  "category": "novedad",
+  "color": "Indigo",
+  "size": "38",
+  "price": "12000",
+  "discount": "10",
+  "image": "camiseta-entrenamiento.png"
+>>>>>>> b85d27cb9dbd39992a257e45730878b319537a9f
  },
  {
   "id": 11,

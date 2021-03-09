@@ -30,7 +30,7 @@ router.get('/:id/detalleDeproducto', mainController.detalleDeproducto);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', mainController.edicionProductos); 
-router.patch('/:id', mainController.update); 
+router.patch('/:id', upload.single('image'), mainController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
