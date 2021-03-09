@@ -97,6 +97,17 @@ section{
 article{
     margin-bottom: 10px;
 }
+hr{
+    border-width: 3px;
+    color: RGB(220,137,018);
+}
+.titulo-category-home{
+    font-size: 26px;
+    color: RGB(220,137,018);
+    background-color: rgb(160, 221, 204);
+    margin: 20px 0px;
+    padding: 10px;
+}
 .productos{
     margin-top: 10px;
 }

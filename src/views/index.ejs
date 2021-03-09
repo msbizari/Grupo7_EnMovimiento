@@ -12,7 +12,7 @@
             <p>INSERTAR CARRUSEL</p>
         </div>
         <section>
-            <h2>NOVEDADES</h2>
+            <h2 class="titulo-category-home">NOVEDADES</h2>
             <div class="productos">
                 <% for( let i = 0;  i < novedades.length; i++ ) { %>
             <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>"></a>
@@ -29,7 +29,7 @@
             </div>
         </section>
         <section>
-            <h2>OFERTAS</h2>
+            <h2 class="titulo-category-home">OFERTAS</h2>
             <div class="productos">
                 <% for( let i = 0;  i < enOferta.length; i++ ) { %>
                     <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>"></a>
@@ -45,6 +45,7 @@
                     <% }%>
             </div>
         </section>
+        <hr>
         <section class='historiaMarketing'>
             <article class='historiaMarketingImage'><img src="/images/deportista.jpg" width=100% alt="foto deportista"></article>
             <article class='historiaMarketingText'><p> No puedes poner un límite a nada. Cuanto más sueñas, más lejos llegas. - Michael Phelps</p></article>
