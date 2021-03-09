@@ -5,6 +5,8 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const mainController= {
     index: (req,res) => {
         let novedades = listaProductos.filter(product => product.category == 'novedad');
@@ -12,8 +14,6 @@ const mainController= {
         res.render('index',{novedades:novedades , enOferta:enOferta})},
     login: (req,res) => res.render('login'),
     register: (req,res) => res.render('register'),
-    
-    /* detalleDeproducto: (req,res) => res.render(path.resolve("./views/detalleDeproducto.ejs")), */
     carrito: (req,res) => {res.render('carrito')},
     administrador: (req,res) => {res.render('administrador')},
     //METODO PARA CREAR PRODUCTO
@@ -34,8 +34,34 @@ const mainController= {
 		res.redirect('/')
 	},
     
-    edicionProductos: (req,res) => res.render('edicionProductos'),
-    update: (req,res) => res.send('Falta hacer el código'),
+    edicionProductos: (req,res) => 	{let productToEdit = listaProductos.find(producto => producto.id == req.params.id);
+    res.render('edicionProductos', {productToEdit, toThousand})},
+    update: (req,res) => {let id = req.params.id;
+    let productToEdit = listaProductos.find(product => product.id == id)
+    let image
+    if(req.file != undefined){
+        image = req.file.filename
+    } else {
+        image = productToEdit.image
+    }
+
+    productToEdit = {
+        id: productToEdit.id,
+        ...req.body,
+        image: image,
+    };
+    
+    let nuevosProductos = listaProductos.map(product => {
+        if (product.id == productToEdit.id) {
+            return product = {...productToEdit};
+        }
+        return product;
+    })
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(nuevosProductos, null, ' '));
+    res.redirect('/');
+},
+
     destroy: (req,res) => res.send('Falta hacer el código'),
     listadoProductos: (req,res) => 
     res.render('listadoProductos' , {listaProductos: listaProductos}),
@@ -46,7 +72,7 @@ const mainController= {
             if (productoid == listaProductos[i].id) {
                 productoBuscado = listaProductos[i];
             }
-        }           
+        }      
         res.render('detalleDeproducto', {producto:productoBuscado, listaProductos: listaProductos});
     }
 }

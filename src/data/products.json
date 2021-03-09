@@ -36,7 +36,7 @@
   "name": "Calzas Nike",
   "description": "calzas",
   "category": "novedad",
-  "colors": "",
+  "color": "",
   "size": "",
   "price": "1000",
   "image": "myfile-1614785466630.jpg"
@@ -87,14 +87,14 @@
  },
  {
   "id": 10,
-  "name": "camiseta-entrenamiento",
+  "name": "camiseta-entrenamiento-brasil",
   "description": "blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula",
-  "price": 9848,
-  "image": "camiseta-entrenamiento.png",
-  "category": "en-oferta",
+  "category": "novedad",
   "color": "Indigo",
-  "size": 37,
-  "discount": 10
+  "size": "38",
+  "price": "12000",
+  "discount": "10",
+  "image": "camiseta-entrenamiento.png"
  },
  {
   "id": 11,
