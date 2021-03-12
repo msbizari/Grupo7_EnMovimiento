@@ -48,11 +48,17 @@ El apoyo mutuo para llegar a cada stage y seguir avanzando es lo fundamental par
 Retrasar la primera meeting de cada nuevo sprint
 
 ## Retrospectiva Sprint_04
+
 - Hacer mas: 
+Organizarnos más
+Mayor frecuencia de reuniones
 
 - Empezar a hacer: 
+Resolver con mayor agilidad las micro-tareas
 
 - Continuar haciendo: 
+Seguir poniendole onda
+Mantener la buena comunicación y la fluidez
 
 - Hacer menos:
 
