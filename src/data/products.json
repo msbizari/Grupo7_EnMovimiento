@@ -208,16 +208,15 @@
   "color": "Orange",
   "size": 38
  },
- {
-  "id": 20,
-  "name": "Par de medias Running Fresh",
-  "description": "medias 100% algodon",
-  "image": "running-socks.jpg",
-  "category": "novedad",
-  "color": "GREEN",
-  "size": "Unico",
-  "price": "7500",
-  "discount": "15"
+ {"id": 20,
+ "name": "Medias para correr",
+ "description": "Medias cortas para correr",
+ "price": 7543,
+ "image": "running-socks.jpg",
+ "category": "novedad",
+ "color": "Red",
+ "size": 32,
+ "discount": 15
  },
  {
   "id": 21,
