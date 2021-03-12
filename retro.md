@@ -61,6 +61,8 @@ Seguir poniendole onda
 Mantener la buena comunicación y la fluidez
 
 - Hacer menos:
+la definicion de la tarea de cada sprint, sobre la marcha
 
 - Dejar de hacer: 
+Dividir las tareas el mismo día en que se larga el sprint
 
