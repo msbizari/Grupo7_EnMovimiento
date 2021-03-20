@@ -1,65 +1,62 @@
 [
-    {
-        "id":1,
-        "name":"Susanna",
-        "lastName":"Hatfield",
-        "user":"shatfield0",
-        "bithDate":"1/14/2019",
-        "address":"750 Knutson Circle",
-        "email":"shatfield0@mapquest.com",
-        "password":"qT0UPpGMn",
-        "passwordConfirm":"I0uT0CKdk39",
-        "newsletter":true
-    },
-    {
-        "id":2,
-        "name":"Sidonia",
-        "lastName":"Bagott",
-        "user":"sbagott1",
-        "bithDate":"12/19/2018",
-        "address":"9 Atwood Circle",
-        "email":"sbagott1@paginegialle.it",
-        "password":"lbik7u9",
-        "passwordConfirm":"gup2vtXSsY0",
-        "newsletter":false
-    },
-    {
-    
-        "id":3,
-        "name":"Jerrilyn",
-        "lastName":"Stowte",
-        "user":"jstowte2",
-        "bithDate":"4/13/2019",
-        "address":"3555 Rigney Crossing",
-        "email":"jstowte2@list-manage.com",
-        "password":"oUs9iFQM6",
-        "passwordConfirm":"xzX7cRZrw",
-        "newsletter":true
-    },
-    {
-    
-        "id":4,
-        "name":"Cathryn",
-        "lastName":"Doughartie",
-        "user":"cdoughartie3",
-        "bithDate":"10/8/2019",
-        "address":"59 Darwin Circle",
-        "email":"cdoughartie3@columbia.edu",
-        "password":"WIIFAjj8ZRac",
-        "passwordConfirm":"1xmeDfE0WJxX",
-        "newsletter":true
-    },
-    {
-    
-        "id":5,
-        "name":"Waylon",
-        "lastName":"Hoys",
-        "user":"whoys4",
-        "bithDate":"1/26/2019",
-        "address":"8746 Lakewood Terrace",
-        "email":"whoys4@auda.org.au",
-        "password":"XD5mPG",
-        "passwordConfirm":"3LTXzcm6O5k",
-        "newsletter":true
-    }
-    ]
+ {
+  "id": 1,
+  "name": "Susanna",
+  "lastName": "Hatfield",
+  "user": "shatfield0",
+  "birthDate": "1/14/2019",
+  "address": "750 Knutson Circle",
+  "email": "shatfield0@mapquest.com",
+  "password": "qT0UPpGMn",
+  "passwordConfirm": "I0uT0CKdk39",
+  "newsletter": true
+ },
+ {
+  "id": 2,
+  "name": "Sidonia",
+  "lastName": "Bagott",
+  "user": "sbagott1",
+  "birthDate": "12/19/2018",
+  "address": "9 Atwood Circle",
+  "email": "sbagott1@paginegialle.it",
+  "password": "lbik7u9",
+  "passwordConfirm": "gup2vtXSsY0",
+  "newsletter": false
+ },
+ {
+  "id": 3,
+  "name": "Jerrilyn",
+  "lastName": "Stowte",
+  "user": "jstowte2",
+  "birthDate": "4/13/2019",
+  "address": "3555 Rigney Crossing",
+  "email": "jstowte2@list-manage.com",
+  "password": "oUs9iFQM6",
+  "passwordConfirm": "xzX7cRZrw",
+  "newsletter": true
+ },
+ {
+  "id": 4,
+  "name": "Cathryn",
+  "lastName": "Doughartie",
+  "user": "cdoughartie3",
+  "birthDate": "10/8/2019",
+  "address": "59 Darwin Circle",
+  "email": "cdoughartie3@columbia.edu",
+  "password": "WIIFAjj8ZRac",
+  "passwordConfirm": "1xmeDfE0WJxX",
+  "newsletter": true
+ },
+ {
+  "id": 5,
+  "name": "Waylon",
+  "lastName": "Hoys",
+  "user": "whoys4",
+  "birthDate": "1/26/2019",
+  "address": "8746 Lakewood Terrace",
+  "email": "whoys4@auda.org.au",
+  "password": "XD5mPG",
+  "passwordConfirm": "3LTXzcm6O5k",
+  "newsletter": true
+ }
+]

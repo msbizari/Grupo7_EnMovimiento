@@ -5,6 +5,9 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const usuariosFilePath = path.join(__dirname, '../data/users.json');
+const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController= {
@@ -12,10 +15,26 @@ const mainController= {
         let novedades = listaProductos.filter(product => product.category == 'novedad');
         let enOferta = listaProductos.filter(product => product.category == 'en-oferta');
         res.render('index',{novedades:novedades , enOferta:enOferta})},
-    login: (req,res) => res.render('login'),
-    register: (req,res) => res.render('register'),
+    login: (req,res) => res.render('users/login'),
+    register: (req,res) => res.render('users/register'),
+    storeUser:(req, res) => {
+		let nuevoUsuario = req.body;
+		nuevoUsuario.id = listaUsuarios.length + 1;
+		let imagen;
+		if (!req.file) {
+			imagen = 'default-image.png'
+		}else{
+			imagen = req.file.filename
+		}
+		nuevoUsuario.image = imagen;
+		listaUsuarios.push(nuevoUsuario);
+		let nuevosUsuarios = JSON.stringify(listaUsuarios, null, " ");
+		fs.writeFileSync(usuariosFilePath,nuevosUsuarios)
+		
+		res.redirect('../')
+	},
     carrito: (req,res) => {res.render('carrito')},
-    administrador: (req,res) => {res.render('administrador')},
+    administrador: (req,res) => {res.render('users/administrador')},
     //METODO PARA CREAR PRODUCTO
     store: (req, res) => {
 		let nuevoProducto = req.body;
@@ -69,7 +88,7 @@ const mainController= {
 		res.redirect('/');
 	},
     listadoProductos: (req,res) => 
-    res.render('listadoProductos' , {listaProductos: listaProductos}),
+    res.render('users/listadoProductos' , {listaProductos: listaProductos}),
     detalleDeproducto: (req,res) => {
         let productoid = Number(req.params.id);
         let productoBuscado = {};
