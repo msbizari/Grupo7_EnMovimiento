@@ -37,26 +37,14 @@
  },
  {
   "id": 4,
-  "name": "Cathryn",
-  "lastName": "Doughartie",
-  "user": "cdoughartie3",
-  "birthDate": "10/8/2019",
-  "address": "59 Darwin Circle",
-  "email": "cdoughartie3@columbia.edu",
-  "password": "WIIFAjj8ZRac",
-  "passwordConfirm": "1xmeDfE0WJxX",
-  "newsletter": true
- },
- {
-  "id": 5,
-  "name": "Waylon",
-  "lastName": "Hoys",
-  "user": "whoys4",
-  "birthDate": "1/26/2019",
-  "address": "8746 Lakewood Terrace",
-  "email": "whoys4@auda.org.au",
-  "password": "XD5mPG",
-  "passwordConfirm": "3LTXzcm6O5k",
-  "newsletter": true
+  "name": "Juan",
+  "lastName": "Lopez",
+  "birthDate": "1980-05-05",
+  "address": "Libertador 333",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$QKc8ZR3GiOIZ.ax8qHfp4OIR0CSq8agwlsFU3gPmsDdbFFWaa4pvq",
+  "passwordConfirm": "12345",
+  "newsletter": "true",
+  "image": "default-image.png"
  }
 ]

@@ -3,7 +3,7 @@ const mainController = require('../controllers/mainController');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-
+const {body} = require('express-validator')
 
 router.get('/login', mainController.login);
 router.get('/register', mainController.register);
@@ -18,7 +18,12 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage : storage });
-router.post('/', upload.single('myfile'), mainController.storeUser);
+const validations = [
+    body('lastName').notEmpty().withMessage('Debe escribir un apellido'),
+    body('email').notEmpty().withMessage('Debe escribir un email'),
+    body('password').notEmpty().withMessage('Debe escribir un password'),
+]
+router.post('/', upload.single('myfile'), validations, mainController.storeUser);
 
 router.get('/administrador', mainController.administrador);
 router.get('/edicionProductos', mainController.edicionProductos);

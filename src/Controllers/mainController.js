@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path')
 const fs = require('fs');
+const bcryptjs = require('bcryptjs')
+const {validationResult} = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -17,9 +19,35 @@ const mainController= {
         res.render('index',{novedades:novedades , enOferta:enOferta})},
     login: (req,res) => res.render('users/login'),
     register: (req,res) => res.render('users/register'),
+    //METODO PARA CREAR USUARIO
     storeUser:(req, res) => {
-		let nuevoUsuario = req.body;
-		nuevoUsuario.id = listaUsuarios.length + 1;
+        //VALIDACION ERRORES DE CARGA:
+        const resultadoValidacion = validationResult(req)
+        if (resultadoValidacion.errors.length >0) {
+            return res.render('users/register', {
+                errors: resultadoValidacion.mapped(),
+                oldData: req.body
+            })
+        }
+        // VALIDACION SI EXISTE USUARIO:
+        let userFound = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
+		if (userFound) {
+            return res.render('users/register', {
+                errors: {
+                    email: {
+                        msg: 'Ya existe un usuario con este email'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+        //CARGA DE NUEVO USUARIO:
+        let ultimoUsuario = listaUsuarios[listaUsuarios.length -1];
+        let nuevoUsuario = {
+            id: ultimoUsuario.id + 1,
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password,10)
+        }
 		let imagen;
 		if (!req.file) {
 			imagen = 'default-image.png'
