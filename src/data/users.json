@@ -46,5 +46,17 @@
   "passwordConfirm": "12345",
   "newsletter": "true",
   "image": "default-image.png"
+ },
+ {
+  "id": 5,
+  "name": "blanca",
+  "lastName": "nieves",
+  "birthDate": "1900-04-28",
+  "address": "havaii 1001",
+  "email": "blancanieves@mail.com",
+  "password": "$2a$10$JzktkgwDJFIaNuGv2AVzx.1srN/uug1wOvYQLcHQO049DQjve3KF.",
+  "passwordConfirm": "hola123",
+  "newsletter": "false",
+  "image": "default-image.png"
  }
 ]

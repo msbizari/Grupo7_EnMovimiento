@@ -11,6 +11,8 @@ const usuariosFilePath = path.join(__dirname, '../data/users.json');
 const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const User = {
+	fileName: './database/users.json'}
 
 const mainController= {
     index: (req,res) => {
@@ -61,7 +63,25 @@ const mainController= {
 		
 		res.redirect('../')
 	},
-    carrito: (req,res) => {res.render('carrito')},
+
+    loginProcess: (req, res) => {
+        //let userToLogin = listaUsuarios.findByField('email, req.body.email')
+        let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
+        if (userToLogin) {
+            return res.redirect('/')
+        } else {
+            return res.render ('/users/login', {
+                errors: {
+                    email: {
+                        msg: 'El email no se encuentra registrado'
+                    }
+                }
+            })
+        }
+        
+    },
+    carrito: (req, res) => { res.render ('carrito') },
+    
     administrador: (req,res) => {res.render('users/administrador')},
     //METODO PARA CREAR PRODUCTO
     store: (req, res) => {

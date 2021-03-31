@@ -28,5 +28,8 @@ router.post('/', upload.single('myfile'), validations, mainController.storeUser)
 router.get('/administrador', mainController.administrador);
 router.get('/edicionProductos', mainController.edicionProductos);
 
+//PARA HACER LOGINPROCESS DE LOS USARIOS//
+router.post('/login', mainController.loginProcess);
+
 
 module.exports = router;
