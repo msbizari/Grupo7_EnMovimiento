@@ -36,7 +36,7 @@ router.post('/', upload.single('myfile'), validations, mainController.storeUser)
 router.get('/administrador', authMiddleware, mainController.administrador);
 
 //solo para autorizados - edicion de productos
-router.get('/edicionProductos', authMiddleware, mainController.edicionProductos);
+//router.get('/edicionProductos', authMiddleware, mainController.edicionProductos);
 
 //PARA HACER LOGINPROCESS DE LOS USARIOS//
 router.post('/login', mainController.loginProcess);

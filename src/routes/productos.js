@@ -3,6 +3,7 @@ const mainController = require('../controllers/mainController');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/carrito', mainController.carrito);
 
@@ -29,7 +30,7 @@ router.post('/', upload.single('myfile'), mainController.store);
 router.get('/:id/detalleDeproducto', mainController.detalleDeproducto); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', mainController.edicionProductos); 
+router.get('/:id/edit', authMiddleware, mainController.edicionProductos); 
 router.patch('/:id', upload.single('image'), mainController.update); 
 
 
