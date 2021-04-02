@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs');
 const bcryptjs = require('bcryptjs')
 const {validationResult} = require('express-validator')
-const session = require ('express-session');
+const session = require ('express-session'); //es necesario requerirlo acá? o en el app.js es suficiente?
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -64,7 +64,7 @@ const mainController= {
 		
 		res.redirect('../')
 	},
-
+    //INGRESO DE USUARIO - REDIRECCIÓN A LA HOME
     loginProcess: (req, res) => {
         //let userToLogin = listaUsuarios.findByField('email, req.body.email')
         let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
