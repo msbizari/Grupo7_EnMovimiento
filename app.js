@@ -9,7 +9,7 @@ var mainRouter = require('./src/routes/main');
 var userRouter = require('./src/routes/users');
 var productosRouter = require('./src/routes/productos');
 const session = require('express-session'); //luego de escribir la constante en mainControlle.js, aparecio solita aca tmb.
-
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 var app = express();
 
@@ -23,8 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-app.use (session({secret: "Nuestro mensaje secreto"}));
+app.use(session({secret: "Nuestro mensaje secreto"}));
 
+
+app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter);
 app.use('/users', userRouter);

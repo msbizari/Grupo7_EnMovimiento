@@ -69,9 +69,13 @@ const mainController= {
         //let userToLogin = listaUsuarios.findByField('email, req.body.email')
         let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
         if (userToLogin) {
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
             return res.redirect('/')
         } else {
-            return res.render ('/users/login', {
+            return res.render ('users/login', {
                 errors: {
                     email: {
                         msg: 'El email no se encuentra registrado'
@@ -80,6 +84,7 @@ const mainController= {
             })
         }
         
+    }
     },
     carrito: (req, res) => { res.render ('carrito') },
     
