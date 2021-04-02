@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs');
 const bcryptjs = require('bcryptjs')
 const {validationResult} = require('express-validator')
+const session = require ('express-session');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

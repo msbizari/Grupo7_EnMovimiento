@@ -8,6 +8,7 @@ const methodOverride =  require('method-override');
 var mainRouter = require('./src/routes/main');
 var userRouter = require('./src/routes/users');
 var productosRouter = require('./src/routes/productos');
+const session = require('express-session'); //luego de escribir la constante en mainControlle.js, aparecio solita aca tmb.
 
 
 var app = express();
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use (session({secret: "Nuestro mensaje secreto"}));
 
 
 app.use('/', mainRouter);
