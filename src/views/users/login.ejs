@@ -10,7 +10,7 @@
     <body>
          <main>
     
-           <form action="/login" method="POST" class="create-form">
+           <form action="/users/login" method="POST" class="create-form">
             <div class="inicio"> 
             <h2>
             <p>INICIO DE SESION</p>
@@ -21,6 +21,9 @@
             <p class="control-formulario">
                <label for="email">E-mail:</label>
             <input type="text" name="email" id="email">
+            <!-- que aparezca frase con el error % if (locals.errors && errors.email) { %>
+             
+            <% } %> -->
             </p>
 
             <br>
