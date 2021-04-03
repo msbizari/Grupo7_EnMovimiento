@@ -73,6 +73,9 @@ const mainController= {
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+                if(req.body.remember_me) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
+				}
             return res.redirect('/')
         } else {
             return res.render ('users/login', {

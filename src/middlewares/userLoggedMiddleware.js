@@ -5,10 +5,8 @@ const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
-
-	let emailInCookie = req.cookies.userEmail;
 	
-    let userFromCookie = listaUsuarios.find(oneUser => oneUser.email === req.body.email);
+    let userFromCookie = listaUsuarios.find(oneUser => oneUser.email === req.cookies.userEmail);
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
