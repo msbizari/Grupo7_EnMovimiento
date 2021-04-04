@@ -8,8 +8,8 @@ const session = require ('express-session'); //es necesario requerirlo acá? o e
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const usuariosFilePath = path.join(__dirname, '../data/users.json');
-const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+//const usuariosFilePath = path.join(__dirname, '../data/users.json');
+//const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const User = {
@@ -20,7 +20,9 @@ const mainController= {
         let novedades = listaProductos.filter(product => product.category == 'novedad');
         let enOferta = listaProductos.filter(product => product.category == 'en-oferta');
         res.render('index',{novedades:novedades , enOferta:enOferta})},
-    login: (req,res) => res.render('users/login'),
+
+    //TODO LO REFERIDO A USUARIOS, SE PASÓ A userController        
+    /*login: (req,res) => res.render('users/login'),
     register: (req,res) => res.render('users/register'),
     //METODO PARA CREAR USUARIO
     storeUser:(req, res) => {
@@ -88,7 +90,8 @@ const mainController= {
         }
         
     }
-    },
+    },*/
+    
     carrito: (req, res) => { res.render ('carrito') },
     
     administrador: (req,res) => {res.render('users/administrador')},

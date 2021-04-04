@@ -1,5 +1,6 @@
 const express = require('express');
 const mainController = require('../controllers/mainController');
+const userController = require('../controllers/userController');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
@@ -8,10 +9,10 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 //Formulario de Login 
-router.get('/login', guestMiddleware, mainController.login);
+router.get('/login', guestMiddleware, userController.login);
 
 //Formulario de Registro
-router.get('/register', guestMiddleware, mainController.register);
+router.get('/register', guestMiddleware, userController.register);
 
 //MULTER PARA USUARIOS:
 const storage = multer.diskStorage({
@@ -30,16 +31,16 @@ const validations = [
     body('password').notEmpty().withMessage('Debe escribir un password'),
 ]
 
-router.post('/', upload.single('myfile'), validations, mainController.storeUser);
+router.post('/', upload.single('myfile'), validations, userController.storeUser);
 
 //solo para autorizados
-router.get('/administrador', authMiddleware, mainController.administrador);
+router.get('/administrador', authMiddleware, mainController.administrador); //quedó ligado al mainController
 
 //solo para autorizados - edicion de productos
 //router.get('/edicionProductos', authMiddleware, mainController.edicionProductos);
 
 //PARA HACER LOGINPROCESS DE LOS USARIOS//
-router.post('/login', mainController.loginProcess);
+router.post('/login', userController.loginProcess);
 
 
 module.exports = router;
