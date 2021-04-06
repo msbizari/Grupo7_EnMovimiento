@@ -50,9 +50,10 @@ main{
 }
 .right-top-header a{
     display: inline-block;
-    font-size: 28px;
+    font-size: 15px;
     color: rgb(69, 77, 87);
 }
+
 .main-nav-bar{
     display: none;
 }
@@ -440,5 +441,7 @@ div .botones-mas-menos i{
     border: solid 2px grey; 
     align-self: flex-start; 
 }
+
+
 
 

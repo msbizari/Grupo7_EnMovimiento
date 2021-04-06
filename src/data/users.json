@@ -58,5 +58,29 @@
   "passwordConfirm": "ani123",
   "newsletter": "false",
   "image": "myfile-1617550772914.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Ricardo",
+  "lastName": "Fort",
+  "birthDate": "2021-04-01",
+  "address": "Cochabamba 999",
+  "email": "rickyfelfort@hotmail.com",
+  "password": "$2a$10$FHxGylz5HsB4aZTaFIJTm.Wh3jMVXZGjJoFH/E7DhdDWE7m5CsMY2",
+  "passwordConfirm": "cortastelaloz",
+  "newsletter": "true",
+  "image": "myfile-1617583518125.jpeg"
+ },
+ {
+  "id": 7,
+  "name": "Esmeralda",
+  "lastName": "Mitre",
+  "birthDate": "2021-05-01",
+  "address": "La Recoleta",
+  "email": "esmemoney@gmail.com",
+  "password": "$2a$10$lHee8bQVyHTN2b.1N0n2A.2MAIEYNgVgx2V1kCyCa0yn7ohFhIZOK",
+  "passwordConfirm": "alplax2021",
+  "newsletter": "true",
+  "image": "myfile-1617587052793.jpeg"
  }
 ]
