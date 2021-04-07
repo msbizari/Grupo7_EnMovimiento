@@ -64,6 +64,7 @@ const userController = {
     //INGRESO DE USUARIO - REDIRECCIÓN A LA HOME
     loginProcess: (req, res) => {
         let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
+
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
@@ -89,6 +90,7 @@ const userController = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
+        
 	}
 }
 

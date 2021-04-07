@@ -43,7 +43,7 @@ router.get('/administrador', authMiddleware, mainController.administrador); //qu
 router.post('/login', userController.loginProcess);
 
 // Logout
-router.get('/logout/', userController.logout);
+router.get('/logout', userController.logout);
 
 
 module.exports = router;
