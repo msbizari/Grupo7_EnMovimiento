@@ -63,12 +63,12 @@ const userController = {
     
     //INGRESO DE USUARIO - REDIRECCIÓN A LA HOME
     loginProcess: (req, res) => {
+        console.log(listaUsuarios);
         let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
 
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
-                delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 if(req.body.remember_me) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
