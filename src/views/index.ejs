@@ -16,12 +16,13 @@
             <h2 class="titulo-category-home">NOVEDADES</h2>
             <div class="productos">
                 <% for( let i = 0;  i < novedades.length; i++ ) { %>
-            <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/productos/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>"></a>
+            <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/productos/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>">
                 <div class="caja-datos-prod">
-                    <i class="fas fa-truck icono-truck"></i></a>
+                    <i class="fas fa-truck icono-truck"></i>
                     <p class="precios">$<%= novedades[i].price %></p>
                     <!-- <p class="descuentos"><%= novedades[i].discount %>% off</p> -->
-                    <h4 class="oculto-enmobile"><%= novedades[i].name %></a></h4>
+                    <h4 class="oculto-enmobile"><%= novedades[i].name %> </h4>
+                    <h4 class="oculto-enmobile">Marca <%= novedades[i].brand.name %></h4></a>
                 </ul>
                 
                 </div>
@@ -33,12 +34,13 @@
             <h2 class="titulo-category-home">OFERTAS</h2>
             <div class="productos">
                 <% for( let i = 0;  i < enOferta.length; i++ ) { %>
-                    <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/productos/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>"></a>
+                    <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/productos/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>">
                         <div class="caja-datos-prod">
-                            <i class="fas fa-truck icono-truck"></i></a>
+                            <i class="fas fa-truck icono-truck"></i>
                             <p class="precios">$<%= enOferta[i].price %></p>
-                            <!-- <p class="descuentos"><%= enOferta[i].descuento %>% off</p> -->
-                            <h4 class="oculto-enmobile"><%= enOferta[i].name %></a></h4>
+                            <!-- <p class="descuentos"><%= enOferta[i].discount %>% off</p> -->
+                            <h4 class="oculto-enmobile"><%= enOferta[i].name %></h4>
+                            <h4 class="oculto-enmobile">Marca <%= enOferta[i].brand.name %></h4></a>
                         </ul>
                         
                         </div>

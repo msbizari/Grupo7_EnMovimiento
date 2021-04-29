@@ -3,100 +3,53 @@ const path = require('path')
 const fs = require('fs');
 const bcryptjs = require('bcryptjs')
 const {validationResult} = require('express-validator')
-const session = require ('express-session'); //es necesario requerirlo acá? o en el app.js es suficiente?
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const Product = require('../database/models/Product');
+const Category = require('../database/models/Category');
+const Color = require('../database/models/Color');
+const Brand = require('../database/models/Brand');
+
+const Products = db.Product;
+const Categorys = db.Category;
+const Colors = db.Colors
+const Brands = db.Brands
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-//const usuariosFilePath = path.join(__dirname, '../data/users.json');
-//const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const User = {
 	fileName: './database/users.json'}
 
 const mainController= {
-    index: (req,res) => {
-        let novedades = listaProductos.filter(product => product.category == 'novedad');
-        let enOferta = listaProductos.filter(product => product.category == 'en-oferta');
-        res.render('index',{novedades:novedades , enOferta:enOferta})},
+    index: async function(req,res) {
+        /* let novedades = listaProductos.filter(product => product.category == 'novedad');
+        let enOferta = listaProductos.filter(product => product.category == 'en-oferta'); */
+        let novedades = await db.Product.findAll({
+            include:["category","brand", "colors"],
+            where: {
+            category_id: "1"
+            }
+        })
+        console.log(novedades);
+        let enOferta = await db.Product.findAll({
+            include:['category',"brand", "colors"],
+            where: {
+            category_id: "2"
+            }
+        })
+    
 
-    //TODO LO REFERIDO A USUARIOS, SE PASÓ A userController        
-    /*login: (req,res) => res.render('users/login'),
-    register: (req,res) => res.render('users/register'),
-    //METODO PARA CREAR USUARIO
-    storeUser:(req, res) => {
-        //VALIDACION ERRORES DE CARGA:
-        const resultadoValidacion = validationResult(req)
-        if (resultadoValidacion.errors.length >0) {
-            return res.render('users/register', {
-                errors: resultadoValidacion.mapped(),
-                oldData: req.body
-            })
-        }
-        // VALIDACION SI EXISTE USUARIO:
-        let userFound = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
-		if (userFound) {
-            return res.render('users/register', {
-                errors: {
-                    email: {
-                        msg: 'Ya existe un usuario con este email'
-                    }
-                },
-                oldData: req.body
-            });
-        }
-        //CARGA DE NUEVO USUARIO:
-        let ultimoUsuario = listaUsuarios[listaUsuarios.length -1];
-        let nuevoUsuario = {
-            id: ultimoUsuario.id + 1,
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10)
-        }
-		let imagen;
-		if (!req.file) {
-			imagen = 'default-image.png'
-		}else{
-			imagen = req.file.filename
-		}
-		nuevoUsuario.image = imagen;
-		listaUsuarios.push(nuevoUsuario);
-		let nuevosUsuarios = JSON.stringify(listaUsuarios, null, " ");
-		fs.writeFileSync(usuariosFilePath,nuevosUsuarios)
-		
-		res.redirect('../')
-	},
-    //INGRESO DE USUARIO - REDIRECCIÓN A LA HOME
-    loginProcess: (req, res) => {
-        //let userToLogin = listaUsuarios.findByField('email, req.body.email')
-        let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
-        if (userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-                if(req.body.remember_me) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
-				}
-            return res.redirect('/')
-        } else {
-            return res.render ('users/login', {
-                errors: {
-                    email: {
-                        msg: 'El email no se encuentra registrado'
-                    }
-                }
-            })
-        }
-        
-    }
-    },*/
+        res.render('index',{novedades:novedades , enOferta:enOferta})},
     
     carrito: (req, res) => { res.render ('carrito') },
     
     administrador: (req,res) => {res.render('users/administrador')},
     //METODO PARA CREAR PRODUCTO
-    store: (req, res) => {
+    store: async function (req, res) {
 		let nuevoProducto = req.body;
 		nuevoProducto.id = listaProductos.length + 1;
 		let imagen;
@@ -106,6 +59,20 @@ const mainController= {
 			imagen = req.file.filename
 		}
 		nuevoProducto.image = imagen;
+       /*       PARA HACERLO CON BASE DE DATOS SQL, PERO HAY QUE CAMBIAR LA VISTA=
+
+            await db.Product.create({
+                name:req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                image:req.body.image,
+                category_id: req.body.category_id,
+                size:req.body.size,
+                brand_id: req.body.brand_id,
+            }); 
+            res.redirect('/');*/
+    
 		listaProductos.push(nuevoProducto);
 		let nuevosProductos = JSON.stringify(listaProductos, null, " ");
 		fs.writeFileSync(productsFilePath,nuevosProductos)
