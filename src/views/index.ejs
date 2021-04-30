@@ -10,19 +10,22 @@
     <main>
         
         <div>
-            <p>INSERTAR CARRUSEL</p>
+            <p>INSERTAR CARRUSEL <h4 class="oculto-enmobile"></p>
         </div>
         <section>
             <h2 class="titulo-category-home">NOVEDADES</h2>
             <div class="productos">
                 <% for( let i = 0;  i < novedades.length; i++ ) { %>
-            <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/productos/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>">
+            <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/productos/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>"></a>
                 <div class="caja-datos-prod">
                     <i class="fas fa-truck icono-truck"></i>
                     <p class="precios">$<%= novedades[i].price %></p>
                     <!-- <p class="descuentos"><%= novedades[i].discount %>% off</p> -->
                     <h4 class="oculto-enmobile"><%= novedades[i].name %> </h4>
-                    <h4 class="oculto-enmobile">Marca <%= novedades[i].brand.name %></h4></a>
+                    <h4 class="oculto-enmobile">Marca: <%= novedades[i].brand.name %></h4>
+                    <% for( let j = 0;  j < novedades[i].colors.length; j++ ) { %>
+                    <h4 class="oculto-enmobile">Color: <%= novedades[i].colors[j].name %></h4>
+                    <% }%>
                 </ul>
                 
                 </div>
@@ -34,13 +37,16 @@
             <h2 class="titulo-category-home">OFERTAS</h2>
             <div class="productos">
                 <% for( let i = 0;  i < enOferta.length; i++ ) { %>
-                    <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/productos/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>">
+                    <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/productos/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>"></a>
                         <div class="caja-datos-prod">
                             <i class="fas fa-truck icono-truck"></i>
                             <p class="precios">$<%= enOferta[i].price %></p>
                             <!-- <p class="descuentos"><%= enOferta[i].discount %>% off</p> -->
                             <h4 class="oculto-enmobile"><%= enOferta[i].name %></h4>
-                            <h4 class="oculto-enmobile">Marca <%= enOferta[i].brand.name %></h4></a>
+                            <h4 class="oculto-enmobile">Marca: <%= enOferta[i].brand.name %></h4>
+                            <% for( let j = 0;  j < enOferta[i].colors.length; j++ ) { %>
+                                <h4 class="oculto-enmobile">Color: <%= enOferta[i].colors[j].name %></h4>
+                                <% }%>
                         </ul>
                         
                         </div>

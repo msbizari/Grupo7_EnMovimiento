@@ -28,23 +28,25 @@ const mainController= {
     index: async function(req,res) {
         /* let novedades = listaProductos.filter(product => product.category == 'novedad');
         let enOferta = listaProductos.filter(product => product.category == 'en-oferta'); */
-        let novedades = await db.Product.findAll({
-            include:["category","brand", "colors"],
+        
+         let novedades = await db.Product.findAll({
+            include:[{association:"category"},{association:"brand"},{association:"colors"}],
+            /* nest : true, */
             where: {
             category_id: "1"
             }
+            
         })
-        console.log(novedades);
+        console.log(novedades)
         let enOferta = await db.Product.findAll({
-            include:['category',"brand", "colors"],
+            include:[{association:"category"},{association:"brand"},{association:"colors"} ],
             where: {
             category_id: "2"
             }
         })
     
-
         res.render('index',{novedades:novedades , enOferta:enOferta})},
-    
+     
     carrito: (req, res) => { res.render ('carrito') },
     
     administrador: (req,res) => {res.render('users/administrador')},

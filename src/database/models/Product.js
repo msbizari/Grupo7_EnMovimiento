@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         discount: DataTypes.INTEGER,
         image:DataTypes.STRING(100),
         category_id: DataTypes.INTEGER,
-        size:DataTypes.INTEGER,
+        size:DataTypes.STRING(100),
         brand_id: DataTypes.INTEGER,
     };
     // cambiar los nombres de las columnas 
