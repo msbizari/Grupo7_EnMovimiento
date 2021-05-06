@@ -8,12 +8,10 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const Product = require('../database/models/Product');
 const Category = require('../database/models/Category');
-const Color = require('../database/models/Color');
 const Brand = require('../database/models/Brand');
 
 const Products = db.Product;
 const Categorys = db.Category;
-const Colors = db.Color
 const Brands = db.Brand
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -30,7 +28,7 @@ const mainController= {
         let enOferta = listaProductos.filter(product => product.category == 'en-oferta'); */
         
          let novedades = await db.Product.findAll({
-            include:[{association:"category"},{association:"brand"},{association:"colors"}],
+            include:[{association:"category"},{association:"brand"}],
             /* nest : true, */
             where: {
             category_id: "1"
@@ -38,7 +36,7 @@ const mainController= {
             
         })
         let enOferta = await db.Product.findAll({
-            include:[{association:"category"},{association:"brand"},{association:"colors"} ],
+            include:[{association:"category"},{association:"brand"}],
             where: {
             category_id: "2"
             }
@@ -53,7 +51,7 @@ const mainController= {
         let allCategories = await db.Category.findAll();
         console.log(allCategories)
         res.render('users/administrador', {allBrands, allCategories})},
-        
+
     //METODO PARA CREAR PRODUCTO
     store: async function (req, res) {
 
@@ -111,9 +109,11 @@ const mainController= {
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
 		res.redirect('/');
 	},
-    listadoProductos: (req,res) => 
-    res.render('users/listadoProductos' , {listaProductos: listaProductos}),
-    detalleDeproducto: (req,res) => {
+    listadoProductos: async function(req,res) {
+        let listaProductos = await db.Product.findAll()
+        res.render('users/listadoProductos' , {listaProductos: listaProductos})
+    },
+    detalleDeproducto: function(req,res) {
         let productoid = Number(req.params.id);
         let productoBuscado = {};
         for (let i = 0; i < listaProductos.length; i++) {

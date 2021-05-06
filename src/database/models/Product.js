@@ -38,13 +38,6 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         })
 
-        Product.belongsToMany(models.Color,{
-            as: "colors",
-            through: 'products_color',
-            foreignKey: 'product_id',
-            otherKey: 'color_id',
-            timestamps: false
-        })
     }
     return Product;
 }

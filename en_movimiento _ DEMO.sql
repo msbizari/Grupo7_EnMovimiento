@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 06-05-2021 a las 22:22:27
--- Versión del servidor: 5.7.24
--- Versión de PHP: 7.2.19
+-- Host: localhost:3306
+-- Generation Time: May 06, 2021 at 10:45 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `en_movimiento`
+-- Database: `en_movimiento`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `brands`
+-- Table structure for table `brands`
 --
 
 CREATE TABLE `brands` (
@@ -33,7 +34,7 @@ CREATE TABLE `brands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `brands`
+-- Dumping data for table `brands`
 --
 
 INSERT INTO `brands` (`id`, `name`) VALUES
@@ -43,12 +44,13 @@ INSERT INTO `brands` (`id`, `name`) VALUES
 (4, 'Salomon'),
 (5, 'Generico'),
 (6, 'Asics'),
-(7, 'New Balance');
+(7, 'New Balance'),
+(8, 'Pepe');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categorys`
+-- Table structure for table `categorys`
 --
 
 CREATE TABLE `categorys` (
@@ -57,7 +59,7 @@ CREATE TABLE `categorys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `categorys`
+-- Dumping data for table `categorys`
 --
 
 INSERT INTO `categorys` (`id`, `name`) VALUES
@@ -68,7 +70,7 @@ INSERT INTO `categorys` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -84,7 +86,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
@@ -117,7 +119,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -134,57 +136,57 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `brands`
+-- Indexes for table `brands`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `categorys`
+-- Indexes for table `categorys`
 --
 ALTER TABLE `categorys`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `brands`
+-- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `categorys`
+-- AUTO_INCREMENT for table `categorys`
 --
 ALTER TABLE `categorys`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
