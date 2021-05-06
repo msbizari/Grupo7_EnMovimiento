@@ -8,7 +8,11 @@
     <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
     </div>
     <main>
-        
+        <!-- la opción de acceder al listado de productos sólo aparece si el usuario está logueado-->
+        <% if (locals.isLogged) { %>
+            <h2 class="titulo-category-home">Hola <%= locals.userLogged.name %>! Edita tu lista de productos <a href="/productos">aquí  <i class="fas fa-clipboard"></i></a></h2>
+
+        <% } %>
         <div>
             <p>INSERTAR CARRUSEL <h4 class="oculto-enmobile"></p>
         </div>

@@ -13,8 +13,8 @@ const Brand = require('../database/models/Brand');
 
 const Products = db.Product;
 const Categorys = db.Category;
-const Colors = db.Colors
-const Brands = db.Brands
+const Colors = db.Color
+const Brands = db.Brand
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -37,7 +37,6 @@ const mainController= {
             }
             
         })
-        console.log(novedades)
         let enOferta = await db.Product.findAll({
             include:[{association:"category"},{association:"brand"},{association:"colors"} ],
             where: {
@@ -49,37 +48,33 @@ const mainController= {
      
     carrito: (req, res) => { res.render ('carrito') },
     
-    administrador: (req,res) => {res.render('users/administrador')},
+    administrador: async (req,res) => {
+        let allBrands = await db.Brand.findAll();
+        let allCategories = await db.Category.findAll();
+        console.log(allCategories)
+        res.render('users/administrador', {allBrands, allCategories})},
+        
     //METODO PARA CREAR PRODUCTO
     store: async function (req, res) {
-		let nuevoProducto = req.body;
-		nuevoProducto.id = listaProductos.length + 1;
-		let imagen;
+
 		if (!req.file) {
 			imagen = 'default-image.png'
 		}else{
 			imagen = req.file.filename
 		}
-		nuevoProducto.image = imagen;
-       /*       PARA HACERLO CON BASE DE DATOS SQL, PERO HAY QUE CAMBIAR LA VISTA=
+
 
             await db.Product.create({
                 name:req.body.name,
                 description: req.body.description,
                 price: req.body.price,
                 discount: req.body.discount,
-                image:req.body.image,
+                image:imagen,
                 category_id: req.body.category_id,
                 size:req.body.size,
                 brand_id: req.body.brand_id,
             }); 
-            res.redirect('/');*/
-    
-		listaProductos.push(nuevoProducto);
-		let nuevosProductos = JSON.stringify(listaProductos, null, " ");
-		fs.writeFileSync(productsFilePath,nuevosProductos)
-		
-		res.redirect('/')
+            res.redirect('/');
 	},
     
     edicionProductos: (req,res) => 	{let productToEdit = listaProductos.find(producto => producto.id == req.params.id);

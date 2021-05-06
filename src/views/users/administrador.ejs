@@ -21,18 +21,22 @@
 
             <h3>Imagen del producto</h3>
             <br>
-            
                 <label for="myfile"></label>
                 <input type="file" id="myfile" name="myfile">
-
-            <p class="login">
-                <label for="category">Categoría</label>   
-                <input type="text" id="category" name="category">
+             
+            <h3>Categoría</h3>
+            <p class="login-selects">
+                <select name="category_id" required>
+                    <option value="" disabled selected>- seleccionar categoria - </option>
+                    <% allCategories.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                </select>
             </p>
 
             <p class="login">
-                <label for="color">Colores disponibles</label>   
-                <input type="text" id="color" name="color">
+                <label for="discount">Descuento</label>   
+                <input type="text" id="discount" name="discount">
             </p>
 
             <p class="login">
@@ -44,9 +48,19 @@
                 <label for="price">Precio</label>   
                 <input type="text" id="price" name="price">
             </p>
-
-            <button type="submit" class="botones-juntos">Guardar</button>
-            <button type="reset" class="botones-juntos">Borrar</button>
+           
+            <h3>Marca</h3>
+            <p class="login-selects">
+                <select name="brand_id" required>
+                    <option value="" disabled selected>- seleccionar marca - </option>
+                    <% allBrands.forEach(brand => { %>
+                    <option value="<%= brand.id %>"><%= brand.name %></option>
+                    <% }); %>
+                </select>
+            </p>
+            <br>
+            <button type="submit" class="boton-formulario">Guardar</button>
+            <button type="reset" class="boton-formulario">Borrar</button>
                 
 
         </form>

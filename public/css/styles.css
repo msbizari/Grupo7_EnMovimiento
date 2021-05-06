@@ -278,6 +278,9 @@ div .botones-mas-menos i{
 }
 
 /* PAG ADMINISTRADOR*/
+form h3{
+    margin-top: 25px;
+}
 
 .login {
     border: none;
@@ -293,6 +296,9 @@ div .botones-mas-menos i{
     justify-content: center;
     align-content: center;
     
+}
+.login-selects {
+    margin: 10px 0px; 
 }
 
 .login input {
