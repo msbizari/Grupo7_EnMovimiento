@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-05-2021 a las 22:22:27
+-- Tiempo de generación: 07-05-2021 a las 23:42:00
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `en_movimiento`
 --
+CREATE DATABASE IF NOT EXISTS `en_movimiento` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `en_movimiento`;
 
 -- --------------------------------------------------------
 
@@ -27,16 +29,23 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `brands`
 --
 
-CREATE TABLE `brands` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `brands`;
+CREATE TABLE IF NOT EXISTS `brands` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncar tablas antes de insertar `brands`
+--
+
+TRUNCATE TABLE `brands`;
 --
 -- Volcado de datos para la tabla `brands`
 --
 
-INSERT INTO `brands` (`id`, `name`) VALUES
+INSERT DELAYED IGNORE INTO `brands` (`id`, `name`) VALUES
 (1, 'Nike'),
 (2, 'Adidas'),
 (3, 'Puma'),
@@ -51,16 +60,23 @@ INSERT INTO `brands` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `categorys`
 --
 
-CREATE TABLE `categorys` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `categorys`;
+CREATE TABLE IF NOT EXISTS `categorys` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncar tablas antes de insertar `categorys`
+--
+
+TRUNCATE TABLE `categorys`;
 --
 -- Volcado de datos para la tabla `categorys`
 --
 
-INSERT INTO `categorys` (`id`, `name`) VALUES
+INSERT DELAYED IGNORE INTO `categorys` (`id`, `name`) VALUES
 (1, 'novedad'),
 (2, 'en-oferta'),
 (3, 'visitado');
@@ -71,8 +87,9 @@ INSERT INTO `categorys` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
@@ -80,14 +97,20 @@ CREATE TABLE `products` (
   `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `category_id` int(11) NOT NULL,
   `size` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `brand_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `brand_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncar tablas antes de insertar `products`
+--
+
+TRUNCATE TABLE `products`;
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
+INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
 (1, 'Bolso Sport Unisex', 'Practico bolso para ir al gimnasio, con correa regulable y compartimentos varios', '6770.00', 0, 'bolso.jpg', 1, '30', 1),
 (2, 'Camiseta Argentina', 'camiseta selección Argentina - Mundial', '250000.00', 10, 'camisetaargentina_2.jpg', 2, 'XS - S - M - L - XL', 1),
 (3, 'Pesas de entrenamiento MIR', 'pesas de metal, NO SE OXIDAN', '4500.00', 0, 'pesas.jpg', 1, '5kg - 10 kg', 5),
@@ -120,74 +143,32 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image
 -- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `lastName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `birthDate` date NOT NULL,
   `adress` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `passwordConfirme` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `newsletter` tinyint(4) NOT NULL,
-  `image` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Índices para tablas volcadas
+-- Truncar tablas antes de insertar `users`
 --
 
+TRUNCATE TABLE `users`;
 --
--- Indices de la tabla `brands`
---
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `categorys`
---
-ALTER TABLE `categorys`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
+-- Volcado de datos para la tabla `users`
 --
 
---
--- AUTO_INCREMENT de la tabla `brands`
---
-ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT de la tabla `categorys`
---
-ALTER TABLE `categorys`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de la tabla `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+INSERT DELAYED IGNORE INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
+(4, 'pedro', 'picapiedra', '1900-01-01', 'cuevana 01', 'pedro.notiene@mail.com', '$2a$10$03atCKu/GWwTdAU070By8uc0qiUqhwZozhRgWeGtMBjYUYvNhIMMu', 'pedro123', 1, '1620429583225-pedropicapiedra.jpeg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -212,12 +212,12 @@
   "id": 20,
   "name": "Medias para correr",
   "description": "Medias cortas para correr",
-  "price": 7543,
   "image": "running-socks.jpg",
   "category": "novedad",
   "color": "Red",
-  "size": 32,
-  "discount": 15
+  "size": "32",
+  "price": "7543",
+  "discount": "15"
  },
  {
   "id": 21,
