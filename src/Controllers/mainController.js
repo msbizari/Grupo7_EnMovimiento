@@ -101,12 +101,26 @@ const mainController= {
     res.redirect('/');
 },
 
+    /* ANTIGUO, CUANDO SE CONECTABA AL JSON -->
     destroy: (req,res) =>{
 		let id = req.params.id;
 		let finalProducts = listaProductos.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
 		res.redirect('/');
-	},
+	},*/
+
+    /*delete: async function (req,res) {
+
+        let Product = await db.Movie.findByPk(req.params.id);
+        res.render('moviesDelete',{Movie});
+    },*/
+
+    destroy:async function (req,res) {
+        let product = await db.Product.findByPk(req.params.id,{include:['Brand', 'Category']});
+        await product.destroy();
+        res.redirect('/Productos')
+    },
+
     listadoProductos: async function(req,res) {
         let listaProductos = await db.Product.findAll()
         res.render('users/listadoProductos' , {listaProductos: listaProductos})
