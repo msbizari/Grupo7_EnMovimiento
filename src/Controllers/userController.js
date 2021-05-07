@@ -5,6 +5,10 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const session = require ('express-session');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const User = require('../database/models/User');
 
 const usuariosFilePath = path.join(__dirname, '../data/users.json');
 const listaUsuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
@@ -16,7 +20,7 @@ const userController = {
     register: (req,res) => res.render('users/register'),
     
     //METODO PARA CREAR USUARIO
-    storeUser:(req, res) => {
+    storeUser: (req, res) => {
         //VALIDACION ERRORES DE CARGA:
         const resultadoValidacion = validationResult(req)
         if (resultadoValidacion.errors.length >0) {
@@ -27,8 +31,10 @@ const userController = {
         }
         
         // VALIDACION SI EXISTE USUARIO:
-        let userFound = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
-		if (userFound) {
+		db.User.findAll({
+            where:{email: req.body.email}
+        }).then(userFound => {
+            if (userFound.length>0) {
             return res.render('users/register', {
                 errors: {
                     email: {
@@ -36,37 +42,40 @@ const userController = {
                     }
                 },
                 oldData: req.body
-            });
-        }
+            })}
+        else{
+            //CARGA DE NUEVO USUARIO:
+            let imagen;
+            if (!req.file) {
+                imagen = 'default-image.png'
+            }else{
+                imagen = req.file.filename
+            }
+                db.User.create({
+                name: req.body.name,
+                lastName: req.body.lastName,
+                birthDate: req.body.birthDate,
+                adress: req.body.address,
+                email: req.body.email,
+                image: imagen,
+                password: bcryptjs.hashSync(req.body.password,10),
+                passwordConfirme: req.body.passwordConfirm,
+                newsletter: req.body.newsletter,
+            }).then( function() {
+                res.redirect('../')
+            }) 
+
+        }})
         
-        //CARGA DE NUEVO USUARIO:
-        let ultimoUsuario = listaUsuarios[listaUsuarios.length -1];
-        let nuevoUsuario = {
-            id: ultimoUsuario.id + 1,
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10)
-        }
-		let imagen;
-		if (!req.file) {
-			imagen = 'default-image.png'
-		}else{
-			imagen = req.file.filename
-		}
-		nuevoUsuario.image = imagen;
-		listaUsuarios.push(nuevoUsuario);
-		let nuevosUsuarios = JSON.stringify(listaUsuarios, null, " ");
-		fs.writeFileSync(usuariosFilePath,nuevosUsuarios)
-		
-		res.redirect('../')
+        
 	},
     
     
-    //INGRESO DE USUARIO - REDIRECCIÓN A LA HOME
-    loginProcess: (req, res) => {
-        console.log(listaUsuarios);
-        let userToLogin = listaUsuarios.find(oneUser => oneUser.email === req.body.email)
-
-        if (userToLogin) {
+    //INGRESO DE USUARIO Y REDIRECCIÓN A LA HOME
+    loginProcess: async function(req, res) {
+        
+        let userToLogin = await db.User.findOne({where: {email:req.body.email}})
+        if (userToLogin.email) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 req.session.userLogged = userToLogin;
@@ -74,7 +83,7 @@ const userController = {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
                 }
             return res.redirect('/')
-            } else {
+            }
             return res.render ('users/login', {
                 errors: {
                     email: {
@@ -82,7 +91,7 @@ const userController = {
                     }
                 }
             })
-            }
+             
         }
     }, 
 

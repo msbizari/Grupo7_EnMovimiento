@@ -24,8 +24,6 @@ const User = {
 
 const mainController= {
     index: async function(req,res) {
-        /* let novedades = listaProductos.filter(product => product.category == 'novedad');
-        let enOferta = listaProductos.filter(product => product.category == 'en-oferta'); */
         
          let novedades = await db.Product.findAll({
             include:[{association:"category"},{association:"brand"}],

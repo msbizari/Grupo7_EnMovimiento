@@ -34,14 +34,14 @@
  },
  {
   "id": 4,
-  "name": "Zapatillas Urbanas Model.0 ",
+  "name": "Zapatillas Urbanas Model.0",
   "description": "calzado de uso diario, modelo bota con abrojo",
   "price": 7990,
   "discount": 0,
   "image": "zapatillas.jpg",
-  "category": "en-oferta",
-  "color": "BLANCO",
-  "size": "36 - 38"
+  "category": 1,
+  "color": 1,
+  "size": 36
  },
  {
   "id": 5,

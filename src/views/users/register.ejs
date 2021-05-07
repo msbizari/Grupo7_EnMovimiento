@@ -25,7 +25,7 @@
                 <br>
                 <p class="control-formulario">
                     <label for="lastName">Apellido:</label> 
-                    <input type="text" name="lastName" id="lastName" class="control" value="<%= locals.oldData ? oldData.Lastname : null %>">
+                    <input type="text" name="lastName" id="lastName" class="control" value="<%= locals.oldData ? oldData.lastName : null %>">
                     <% if (locals.errors && errors.lastName) { %>
                         <p class = "error-message"> <%= errors.lastName.msg %></p>
                     <% } %> 
