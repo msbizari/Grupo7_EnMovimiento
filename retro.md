@@ -66,3 +66,21 @@ la definicion de la tarea de cada sprint, sobre la marcha
 - Dejar de hacer: 
 Dividir las tareas el mismo día en que se larga el sprint
 
+## Retrospectiva Sprint_05
+
+
+- Hacer mas: 
+Mayor organización y frecuencia de reuniones
+
+- Empezar a hacer: 
+Resolver con mayor agilidad las micro-tareas
+
+- Continuar haciendo: 
+Seguir poniendole onda
+Mantener la buena comunicación y la fluidez
+
+- Hacer menos:
+división de tareas sobre la marcha
+
+- Dejar de hacer: 
+empezar tarde con la resolución del sprint
