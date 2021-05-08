@@ -35,7 +35,7 @@ router.patch('/:id', upload.single('image'), mainController.update);
 
 
 /*** DELETE ONE PRODUCT***/ 
-router.post('delete/:id', mainController.destroy); 
+router.post('/delete/:id', mainController.destroy); 
 //router.post('/movies/delete/:id', moviesController.destroy
 
 

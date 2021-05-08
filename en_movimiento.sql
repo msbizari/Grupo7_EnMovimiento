@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 07-05-2021 a las 23:42:00
--- Versión del servidor: 5.7.24
--- Versión de PHP: 7.2.19
+-- Host: localhost:3306
+-- Generation Time: May 08, 2021 at 02:39 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `en_movimiento`
+-- Database: `en_movimiento`
 --
 CREATE DATABASE IF NOT EXISTS `en_movimiento` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `en_movimiento`;
@@ -26,7 +27,7 @@ USE `en_movimiento`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `brands`
+-- Table structure for table `brands`
 --
 
 DROP TABLE IF EXISTS `brands`;
@@ -37,15 +38,15 @@ CREATE TABLE IF NOT EXISTS `brands` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncar tablas antes de insertar `brands`
+-- Truncate table before insert `brands`
 --
 
 TRUNCATE TABLE `brands`;
 --
--- Volcado de datos para la tabla `brands`
+-- Dumping data for table `brands`
 --
 
-INSERT DELAYED IGNORE INTO `brands` (`id`, `name`) VALUES
+INSERT INTO `brands` (`id`, `name`) VALUES
 (1, 'Nike'),
 (2, 'Adidas'),
 (3, 'Puma'),
@@ -57,7 +58,7 @@ INSERT DELAYED IGNORE INTO `brands` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categorys`
+-- Table structure for table `categorys`
 --
 
 DROP TABLE IF EXISTS `categorys`;
@@ -68,15 +69,15 @@ CREATE TABLE IF NOT EXISTS `categorys` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncar tablas antes de insertar `categorys`
+-- Truncate table before insert `categorys`
 --
 
 TRUNCATE TABLE `categorys`;
 --
--- Volcado de datos para la tabla `categorys`
+-- Dumping data for table `categorys`
 --
 
-INSERT DELAYED IGNORE INTO `categorys` (`id`, `name`) VALUES
+INSERT INTO `categorys` (`id`, `name`) VALUES
 (1, 'novedad'),
 (2, 'en-oferta'),
 (3, 'visitado');
@@ -84,7 +85,7 @@ INSERT DELAYED IGNORE INTO `categorys` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `products`
+-- Table structure for table `products`
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -102,15 +103,15 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncar tablas antes de insertar `products`
+-- Truncate table before insert `products`
 --
 
 TRUNCATE TABLE `products`;
 --
--- Volcado de datos para la tabla `products`
+-- Dumping data for table `products`
 --
 
-INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
 (1, 'Bolso Sport Unisex', 'Practico bolso para ir al gimnasio, con correa regulable y compartimentos varios', '6770.00', 0, 'bolso.jpg', 1, '30', 1),
 (2, 'Camiseta Argentina', 'camiseta selección Argentina - Mundial', '250000.00', 10, 'camisetaargentina_2.jpg', 2, 'XS - S - M - L - XL', 1),
 (3, 'Pesas de entrenamiento MIR', 'pesas de metal, NO SE OXIDAN', '4500.00', 0, 'pesas.jpg', 1, '5kg - 10 kg', 5),
@@ -130,7 +131,6 @@ INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `di
 (17, 'Pantalon Corto Salomon', 'Pantalón corto, con malla interna', '1990.00', 5, 'pantalon-corto-running-mujer-2.jpg', 3, '38', 4),
 (18, 'Campera deportiva Nike Jacket 2.0', 'Campera capucha ajustable', '5500.00', 10, 'running-jacket.jpg', 3, '38', 1),
 (19, 'Campera Jacket', 'Campera impermeable, con cuello y cierre', '4714.00', 0, 'running-jacket_2.jpg', 1, '38', 5),
-(20, 'Medias para correr', 'Medias cortas para correr', '7543.00', 0, 'running-socks.jpg', 1, '38', 5),
 (21, 'Short Deportivo Nike', 'pantalon corto liso, de algodon para hombre', '6500.00', 25, 'short_deporte.jpg', 3, '38', 1),
 (22, 'Short Nike Running II', 'Short de microfibra', '4925.00', 20, 'short-nike-running.jpg', 1, '38', 1),
 (23, 'AIRMAX Shoes', 'zapatillas de mujer con camara de aire', '7200.00', 20, 'zapatillas_2.jpg', 3, '38', 1),
@@ -140,7 +140,7 @@ INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `di
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -159,15 +159,15 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncar tablas antes de insertar `users`
+-- Truncate table before insert `users`
 --
 
 TRUNCATE TABLE `users`;
 --
--- Volcado de datos para la tabla `users`
+-- Dumping data for table `users`
 --
 
-INSERT DELAYED IGNORE INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
+INSERT INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
 (4, 'pedro', 'picapiedra', '1900-01-01', 'cuevana 01', 'pedro.notiene@mail.com', '$2a$10$03atCKu/GWwTdAU070By8uc0qiUqhwZozhRgWeGtMBjYUYvNhIMMu', 'pedro123', 1, '1620429583225-pedropicapiedra.jpeg');
 COMMIT;
 
