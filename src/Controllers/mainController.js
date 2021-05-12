@@ -9,7 +9,6 @@ const { Op } = require("sequelize");
 const Product = require('../database/models/Product');
 const Category = require('../database/models/Category');
 const Brand = require('../database/models/Brand');
-const { UPDATE } = require('sequelize/types/lib/query-types');
 const Products = db.Product;
 const Categorys = db.Category;
 const Brands = db.Brand
@@ -66,13 +65,15 @@ const mainController= {
         res.redirect('/');
 	},    
     edicionProductos: async function (req,res){
-        let productToEdit = await db.Product.findByPk(req.params.id,{include:['brand', 'category']});    
+        let productToEdit = await db.Product.findByPk(req.params.id,{include:['brand', 'category']});
+        let allBrands = await db.Brand.findAll();
+        let allCategories = await db.Category.findAll();    
         //{let productToEdit = listaProductos.find(producto => producto.id == req.params.id);
         //res.render('edicionProductos', {productToEdit, toThousand})},
-        res.render('edicionProductos', {productToEdit:productToEdit});
-        update: async (req,res) => {
+        res.render('edicionProductos', {productToEdit:productToEdit, allBrands, allCategories})},
+    update: async (req,res) => {
             let id= req.params.id
-        }; //el update está molestando, no encuentro el error!🤷🏻‍♀️
+        ; //el update está molestando, no encuentro el error!🤷🏻‍♀️
         
         let productToEdit = listaProductos.find(product => product.id == id);
         let image

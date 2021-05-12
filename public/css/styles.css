@@ -201,6 +201,13 @@ footer h3{
     display: block;
     font-size: 16px;
 }
+.selects{
+    width: 30%;
+    margin: 10px 0px 10px 0px;
+    font-size: 14px;
+    height: 24px;
+     
+}
 .control {
     width:100%;
     padding: 4px 6px;
