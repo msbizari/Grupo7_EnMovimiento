@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 08, 2021 at 02:39 AM
+-- Generation Time: May 12, 2021 at 10:19 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -46,7 +46,7 @@ TRUNCATE TABLE `brands`;
 -- Dumping data for table `brands`
 --
 
-INSERT INTO `brands` (`id`, `name`) VALUES
+INSERT DELAYED IGNORE INTO `brands` (`id`, `name`) VALUES
 (1, 'Nike'),
 (2, 'Adidas'),
 (3, 'Puma'),
@@ -77,7 +77,7 @@ TRUNCATE TABLE `categorys`;
 -- Dumping data for table `categorys`
 --
 
-INSERT INTO `categorys` (`id`, `name`) VALUES
+INSERT DELAYED IGNORE INTO `categorys` (`id`, `name`) VALUES
 (1, 'novedad'),
 (2, 'en-oferta'),
 (3, 'visitado');
@@ -111,7 +111,7 @@ TRUNCATE TABLE `products`;
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
+INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `category_id`, `size`, `brand_id`) VALUES
 (1, 'Bolso Sport Unisex', 'Practico bolso para ir al gimnasio, con correa regulable y compartimentos varios', '6770.00', 0, 'bolso.jpg', 1, '30', 1),
 (2, 'Camiseta Argentina', 'camiseta selección Argentina - Mundial', '250000.00', 10, 'camisetaargentina_2.jpg', 2, 'XS - S - M - L - XL', 1),
 (3, 'Pesas de entrenamiento MIR', 'pesas de metal, NO SE OXIDAN', '4500.00', 0, 'pesas.jpg', 1, '5kg - 10 kg', 5),
@@ -121,7 +121,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image
 (7, 'Botines Borussia TT', 'Los botines Puma Borussia TT mantienen el diseño típico, además del confort interno, para que sientas control de la pelota', '6100.00', 10, 'botines-puma.jpg', 1, '41', 1),
 (8, 'Remera Deportiva Adidas', 'camiseta tecnología DRI-FIT', '3700.00', 10, 'camiseta_deportiva.jpg', 1, '26', 2),
 (9, 'Camiseta Deportiva Style Deluxe', 'Camiseta con redes laterales para una mejor circulacion de aire', '4200.00', 0, 'camiseta_deportiva_2.jpg', 2, '29', 5),
-(10, 'Camiseta entrenamiento brasil', 'Camiseta de entrenamiento dri-fit del equipo nacional de Brasil', '12000.00', 10, 'camiseta-entrenamiento.png', 1, '38', 5),
+(10, 'Camiseta entrenamiento brasil', 'Camiseta de entrenamiento dri-fit del equipo nacional de Brasil', '12000.00', 10, 'image-1620857191298.jpg', 1, '38', 5),
 (11, 'Remera Barcelona - RAKUTEN', 'remera de futbol Club Barcelona', '9153.00', 0, 'camiseta-entrenamiento_2.jpg', 1, '38', 5),
 (12, 'Remera mujer deportiva ADIDAS', 'remera deportiva, fibra altamente resistente', '4618.00', 10, 'camiseta-mujer-2.jpg', 1, '38', 2),
 (13, 'Camiseta Mujer Salomon', 'remera deportiva', '6958.00', 5, 'camiseta-mujer-violeta.jpg', 3, '38', 4),
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `newsletter` tinyint(4) NOT NULL,
   `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Truncate table before insert `users`
@@ -167,8 +167,10 @@ TRUNCATE TABLE `users`;
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
-(4, 'pedro', 'picapiedra', '1900-01-01', 'cuevana 01', 'pedro.notiene@mail.com', '$2a$10$03atCKu/GWwTdAU070By8uc0qiUqhwZozhRgWeGtMBjYUYvNhIMMu', 'pedro123', 1, '1620429583225-pedropicapiedra.jpeg');
+INSERT DELAYED IGNORE INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
+(4, 'pedro', 'picapiedra', '1900-01-01', 'cuevana 01', 'pedro.notiene@mail.com', '$2a$10$03atCKu/GWwTdAU070By8uc0qiUqhwZozhRgWeGtMBjYUYvNhIMMu', 'pedro123', 1, '1620429583225-pedropicapiedra.jpeg'),
+(5, 'blanca', 'nieves', '1950-06-06', 'havaii 1000', 'blanca.nieves@mail.com', '$2a$10$zGANxuo9IgAUHbWVHJZDkOrRqcTRP2UClzdKEfVpRuSA0H/5V7nyW', 'hola123', 1, '1620857805259-blanca_nieves.jpeg'),
+(6, 'Ricky', 'Martin', '1980-10-10', 'meame 10', 'rickymartin@mail.com', '$2a$10$2bs1frqUvsTWR7UVhIHh6.tDOBVZ448Ooh.NhflKI4APfDfag7Vaa', 'ricky123', 0, '1620857886020-Ricky_Martin.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
