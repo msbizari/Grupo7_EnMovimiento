@@ -71,22 +71,28 @@ const mainController= {
         //{let productToEdit = listaProductos.find(producto => producto.id == req.params.id);
         //res.render('edicionProductos', {productToEdit, toThousand})},
         res.render('edicionProductos', {productToEdit:productToEdit, allBrands, allCategories})},
-    update: async (req,res) => {
-            let id= req.params.id
-        ; //el update está molestando, no encuentro el error!🤷🏻‍♀️
-        
-        let productToEdit = listaProductos.find(product => product.id == id);
+    
+    update: async function (req,res) {
+        let productToEdit = await db.Product.findByPk(req.params.id,{include:['brand', 'category']});
         let image
         if(req.file != undefined){
             image = req.file.filename
         } else {
             image = productToEdit.image
         };
-        productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            image: image,
-        };
+        console.log(image)
+        await db.Product.update(
+            {...req.body,
+            image:image
+            },
+
+            {
+                where: {id:req.params.id}
+            }
+
+        );
+        //let id= req.params.id
+        //let productToEdit = listaProductos.find(product => product.id == id);
         res.redirect('/');
     },  
     
