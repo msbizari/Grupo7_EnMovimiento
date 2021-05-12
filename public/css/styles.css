@@ -232,6 +232,11 @@ form a{
     color: red;
     font-size: 12px;
 }
+.is-invalid {
+    background-color: burlywood;
+    color: red;
+}
+
 
 /*CARRITO*/
 
