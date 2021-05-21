@@ -8,9 +8,10 @@ const validacionProductos = [
     body("myfile").custom((value,{req})=>{
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png" , ".gif"];
-        if(!file){
+        /* if(file){
           throw new Error("Tienes que subir una imagen");
-        }else{
+        }else{ */
+          if(file != null){
           let fileExtensions=path.extname(file.originalname);
           if(!acceptedExtensions.includes(fileExtensions)){
             throw new Error("Las extensiones aceptadas son "+ acceptedExtensions.join(","));

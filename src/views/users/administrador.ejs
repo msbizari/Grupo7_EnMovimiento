@@ -38,7 +38,7 @@
                 <select name="category_id" required>
                     <option value="" disabled selected>- seleccionar categoria - </option>
                     <% allCategories.forEach(category => { %>
-                        <% if (locals.oldData.category_id == category.id) { %>
+                        <% if (locals.oldData && locals.oldData.category_id == category.id) { %>
                             <option value="<%= category.id %>" selected><%= category.name %></option>
                         <% }else{ %>
                             <option value="<%= category.id %>"><%= category.name %></option>
@@ -67,7 +67,7 @@
                 <select name="brand_id" required>
                     <option value="" disabled selected>- seleccionar marca - </option>
                     <% allBrands.forEach(brand => { %>
-                        <% if (locals.oldData.brand_id == brand.id) { %>
+                        <% if (locals.oldData && locals.oldData.brand_id == brand.id) { %>
                             <option value="<%= brand.id %>" selected><%= brand.name %></option>
                         <% }else{ %>
                             <option value="<%= brand.id %>"><%= brand.name %></option>
