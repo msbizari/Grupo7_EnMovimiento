@@ -11,42 +11,55 @@
             
             <p class="login">
                 <label for="name">Nombre del producto</label>   
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
+                <% if (locals.errors && errors.name) { %>
+                    <p class = "error-message"> <%= errors.name.msg %></p>
+                <% } %> 
             </p>                
 
             <p class="login">
                 <label for="description">Descripción</label>   
-                <input type="text" id="description" name="description">
+                <input type="text" id="description" name="description" value="<%= locals.oldData ? oldData.description : null %>">
+                <% if (locals.errors && errors.description) { %>
+                    <p class = "error-message"> <%= errors.description.msg %></p>
+                <% } %> 
             </p>
 
             <h3>Imagen del producto</h3>
             <br>
                 <label for="myfile"></label>
                 <input type="file" id="myfile" name="myfile">
-             
+                <% if (locals.errors && errors.myfile) { %>
+                    <p class = "error-message"> <%= errors.myfile.msg %></p>
+                <% } %> 
+
             <h3>Categoría</h3>
             <p class="login-selects">
                 <select name="category_id" required>
                     <option value="" disabled selected>- seleccionar categoria - </option>
                     <% allCategories.forEach(category => { %>
-                    <option value="<%= category.id %>"><%= category.name %></option>
+                        <% if (locals.oldData.category_id == category.id) { %>
+                            <option value="<%= category.id %>" selected><%= category.name %></option>
+                        <% }else{ %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                        <% } %>
                     <% }); %>
                 </select>
             </p>
 
             <p class="login">
                 <label for="discount">Descuento</label>   
-                <input type="text" id="discount" name="discount">
+                <input type="text" id="discount" name="discount" value="<%= locals.oldData ? oldData.discount : null %>">
             </p>
 
             <p class="login">
                 <label for="size">Talles</label>   
-                <input type="text" id="size" name="size">
+                <input type="text" id="size" name="size" value="<%= locals.oldData ? oldData.size : null %>">
             </p>
 
             <p class="login">
                 <label for="price">Precio</label>   
-                <input type="text" id="price" name="price">
+                <input type="text" id="price" name="price" value="<%= locals.oldData ? oldData.price : null %>">
             </p>
            
             <h3>Marca</h3>
@@ -54,7 +67,11 @@
                 <select name="brand_id" required>
                     <option value="" disabled selected>- seleccionar marca - </option>
                     <% allBrands.forEach(brand => { %>
-                    <option value="<%= brand.id %>"><%= brand.name %></option>
+                        <% if (locals.oldData.brand_id == brand.id) { %>
+                            <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                        <% }else{ %>
+                            <option value="<%= brand.id %>"><%= brand.name %></option>
+                        <% } %>
                     <% }); %>
                 </select>
             </p>

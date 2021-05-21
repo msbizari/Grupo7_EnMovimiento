@@ -75,7 +75,7 @@ const userController = {
     loginProcess: async function(req, res) {
         
         let userToLogin = await db.User.findOne({where: {email:req.body.email}})
-        console.log(userToLogin)
+        
         if (userToLogin.email) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
@@ -88,11 +88,19 @@ const userController = {
             return res.render ('users/login', {
                 errors: {
                     email: {
-                        msg: 'El email no se encuentra registrado'
+                        msg: 'El password no coincide con el usuario'
                     }
                 }
             })
              
+        }else{
+            return res.render ('users/login', {
+            errors: {
+                email: {
+                    msg: 'El email no existe'
+                }
+            }
+        })
         }
     }, 
 

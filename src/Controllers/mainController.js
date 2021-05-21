@@ -43,10 +43,21 @@ const mainController= {
     administrador: async (req,res) => {
         let allBrands = await db.Brand.findAll();
         let allCategories = await db.Category.findAll();
-        console.log(allCategories);
+
         res.render('users/administrador', {allBrands, allCategories})},
     //METODO PARA CREAR PRODUCTO
     store: async function (req, res) {
+        const resultadoValidacion = validationResult(req)
+        if (resultadoValidacion.errors.length >0) {
+            let allBrands = await db.Brand.findAll();
+            let allCategories = await db.Category.findAll();
+            return res.render('users/administrador', {
+                errors: resultadoValidacion.mapped(),
+                oldData: req.body,
+                allBrands: allBrands,
+                allCategories: allCategories
+            })
+        }
 		if (!req.file) {
 			imagen = 'default-image.png'
 		}else{
@@ -80,7 +91,7 @@ const mainController= {
         } else {
             image = productToEdit.image
         };
-        console.log(image)
+        
         await db.Product.update(
             {...req.body,
             image:image

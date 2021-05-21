@@ -3,6 +3,8 @@ const mainController = require('../controllers/mainController');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer');
+const {body} = require('express-validator');
+const validacionProductos = require('../middlewares/validacionProductos');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/carrito', mainController.carrito);
@@ -22,8 +24,9 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({ storage : storage });
-router.post('/', upload.single('myfile'), mainController.store);
+const upload = multer({ storage : storage, });
+
+router.post('/', upload.single('myfile'), validacionProductos, mainController.store);
 
 
 /*** GET ONE PRODUCT ***/ 
