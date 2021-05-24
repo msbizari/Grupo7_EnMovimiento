@@ -34,7 +34,7 @@ router.get('/:id/detalleDeproducto', mainController.detalleDeproducto);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', authMiddleware, mainController.edicionProductos); 
-router.patch('/:id', upload.single('image'), mainController.update); 
+router.patch('/:id', upload.single('myfile'), validacionProductos, mainController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

@@ -12,25 +12,36 @@
             <p class="login">
                 <label for="name">Nombre del producto</label>   
                 <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
-            </p>                
+                <% if (locals.errors && errors.name) { %>
+                    <p class = "error-message-product"> <%= errors.name.msg %></p>
+                <% } %> 
+            </p>  
+                          
             
             <p class="login">
                 <label for="description">Descripción</label>   
-                <input type="text" id="description" name="description" value="<%= productToEdit.description %>">
+                <input type="text" id="description" name="description" size= 35 value="<%= productToEdit.description %>">
+                <% if (locals.errors && errors.description) { %>
+                    <p class = "error-message-product"> <%= errors.description.msg %></p>
+                <% } %> 
             </p>
             
             <h3>Modificar imagen del producto</h3>
             <br>
             
-            <label for="image"></label>
-            <input type="file" id="image" name="image">
-            
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile">
+            <% if (locals.errors && errors.myfile) { %>
+                <p class = "error-message-product"> <%= errors.myfile.msg %></p>
+            <% } %> 
+
             <h3>Categoría</h3>
 
             <select class= "selects" name="category_id" id="" required>
                 <% allCategories.forEach(category => { %>
                  <option value="<%= category.id %>" <% if (productToEdit.category_id == category.id) { %><%= 'selected' %><% }; %>><%=   category.name %></option>
                 <% }); %>
+                
             </select>
             
             <h3>Marca</h3>

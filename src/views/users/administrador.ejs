@@ -13,15 +13,15 @@
                 <label for="name">Nombre del producto</label>   
                 <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
                 <% if (locals.errors && errors.name) { %>
-                    <p class = "error-message"> <%= errors.name.msg %></p>
+                    <p class = "error-message-product"> <%= errors.name.msg %></p>
                 <% } %> 
             </p>                
 
             <p class="login">
                 <label for="description">Descripción</label>   
-                <input type="text" id="description" name="description" value="<%= locals.oldData ? oldData.description : null %>">
+                <input type="text" id="description" size= 35 name="description" value="<%= locals.oldData ? oldData.description : null %>">
                 <% if (locals.errors && errors.description) { %>
-                    <p class = "error-message"> <%= errors.description.msg %></p>
+                    <p class = "error-message-product"> <%= errors.description.msg %></p>
                 <% } %> 
             </p>
 
@@ -30,7 +30,7 @@
                 <label for="myfile"></label>
                 <input type="file" id="myfile" name="myfile">
                 <% if (locals.errors && errors.myfile) { %>
-                    <p class = "error-message"> <%= errors.myfile.msg %></p>
+                    <p class = "error-message-product"> <%= errors.myfile.msg %></p>
                 <% } %> 
 
             <h3>Categoría</h3>

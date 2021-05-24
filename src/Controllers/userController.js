@@ -75,8 +75,8 @@ const userController = {
     loginProcess: async function(req, res) {
         
         let userToLogin = await db.User.findOne({where: {email:req.body.email}})
-        
-        if (userToLogin.email) {
+        console.log(userToLogin)
+        if (userToLogin != null) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 req.session.userLogged = userToLogin;
