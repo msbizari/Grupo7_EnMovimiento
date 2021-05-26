@@ -314,6 +314,11 @@ form h3{
     
 }
 
+.is-invalid {
+    background-color: burlywood;
+    color: red;
+}
+
 @media (min-width: 361px) {
     
     .right-top-header{
