@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head") %> 
         <link href="/css/styles.css" rel="stylesheet">
-    <body>
+    
         <%- include("../partials/header") %>
         
         <body>
@@ -16,7 +16,13 @@
 
             <br>
         <div>
-            <form action="/users" method="POST" enctype="multipart/form-data">
+            <form class="form_register" action="/users" method="POST" enctype="multipart/form-data">
+                <div>
+                <ul class = "errors">
+
+                </ul>
+
+                </div>
                 <p class="control-formulario">
                 <label for="name">Nombre:</label>
                 <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
@@ -54,6 +60,7 @@
                     <label for="myfile">Imagen de perfil:</label>
                     <input type="file" id="myfile" name="myfile"  class="control">
                 </p>
+                
 
                 <br>
                 <p class="control-formulario">
@@ -84,9 +91,10 @@
         </div>
 
         </main>
-        </body>
+
 
         <br>
-    </body>
+        <script src="/js/registerValidation.js"></script> 
+    </body> 
         <%- include("../partials/footer")%> 
 </html>

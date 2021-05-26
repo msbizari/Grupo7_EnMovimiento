@@ -13,10 +13,8 @@ const Products = db.Product;
 const Categorys = db.Category;
 const Brands = db.Brand
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const listaProductos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const User = {
-	fileName: './database/users.json'}
+
 
 const mainController= {
     index: async function(req,res) {
@@ -43,10 +41,21 @@ const mainController= {
     administrador: async (req,res) => {
         let allBrands = await db.Brand.findAll();
         let allCategories = await db.Category.findAll();
-        console.log(allCategories);
+
         res.render('users/administrador', {allBrands, allCategories})},
     //METODO PARA CREAR PRODUCTO
     store: async function (req, res) {
+        let resultadoValidacion = validationResult(req)
+        if (resultadoValidacion.errors.length >0) {
+            let allBrands = await db.Brand.findAll();
+            let allCategories = await db.Category.findAll();
+            return res.render('users/administrador', {
+                errors: resultadoValidacion.mapped(),
+                oldData: req.body,
+                allBrands: allBrands,
+                allCategories: allCategories
+            })
+        }
 		if (!req.file) {
 			imagen = 'default-image.png'
 		}else{
@@ -73,6 +82,18 @@ const mainController= {
         res.render('edicionProductos', {productToEdit:productToEdit, allBrands, allCategories})},
     
     update: async function (req,res) {
+        let resultadoValidacion = validationResult(req)
+        if (resultadoValidacion.errors.length >0) {
+            let allBrands = await db.Brand.findAll();
+            let allCategories = await db.Category.findAll();
+            let productToEdit = await db.Product.findByPk(req.params.id,{include:['brand', 'category']});
+            return res.render('edicionProductos', {
+                errors: resultadoValidacion.mapped(),
+                productToEdit:productToEdit,
+                allBrands,
+                allCategories
+            })
+        }
         let productToEdit = await db.Product.findByPk(req.params.id,{include:['brand', 'category']});
         let image
         if(req.file != undefined){
@@ -80,7 +101,7 @@ const mainController= {
         } else {
             image = productToEdit.image
         };
-        console.log(image)
+        
         await db.Product.update(
             {...req.body,
             image:image

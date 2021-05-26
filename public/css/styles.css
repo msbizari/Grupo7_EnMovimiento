@@ -232,6 +232,18 @@ form a{
     color: red;
     font-size: 12px;
 }
+.error-message-product{
+    font-style: italic;
+    font-weight: 600;
+    color: red;
+    font-size: 12px;
+    margin-top: -15px;
+}
+.is-invalid {
+    background-color: burlywood;
+    color: red;
+}
+
 
 /*CARRITO*/
 
