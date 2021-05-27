@@ -73,35 +73,41 @@ const userController = {
     
     //INGRESO DE USUARIO Y REDIRECCIÓN A LA HOME
     loginProcess: async function(req, res) {
-        
-        let userToLogin = await db.User.findOne({where: {email:req.body.email}})
-        console.log(userToLogin)
-        if (userToLogin != null) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkThePassword) {
-                req.session.userLogged = userToLogin;
-                if(req.body.remember_me) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
+        const resultadoValidacion = validationResult(req)
+        if (resultadoValidacion.errors.length >0) {
+            return res.render('users/login', {
+                errors: resultadoValidacion.mapped(),
+            })
+        }
+            
+            let userToLogin = await db.User.findOne({where: {email:req.body.email}})
+            console.log(userToLogin)
+            if (userToLogin != null) {
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if (isOkThePassword) {
+                    req.session.userLogged = userToLogin;
+                    if(req.body.remember_me) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24})
+                    }
+                return res.redirect('/')
                 }
-            return res.redirect('/')
-            }
-            return res.render ('users/login', {
+                return res.render ('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'El password no coincide con el usuario'
+                        }
+                    }
+                })
+             
+            }else{
+                return res.render ('users/login', {
                 errors: {
                     email: {
-                        msg: 'El password no coincide con el usuario'
+                        msg: 'El email no existe'
+                        }
                     }
-                }
-            })
-             
-        }else{
-            return res.render ('users/login', {
-            errors: {
-                email: {
-                    msg: 'El email no existe'
-                }
+                })
             }
-        })
-        }
     }, 
 
     logout: (req, res) => {

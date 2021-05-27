@@ -7,6 +7,7 @@ const multer = require('multer');
 const {body} = require('express-validator');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validacionUserRegister = require('../middlewares/validacionUserRegister');
 
 //Formulario de Login 
 router.get('/login', guestMiddleware, userController.login);
@@ -25,13 +26,9 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage : storage });
-const validations = [
-    body('lastName').notEmpty().withMessage('Debe escribir un apellido'),
-    body('email').notEmpty().withMessage('Debe escribir un email'),
-    body('password').notEmpty().withMessage('Debe escribir un password'),
-]
 
-router.post('/', upload.single('myfile'), validations, userController.storeUser);
+
+router.post('/', upload.single('myfile'), validacionUserRegister, userController.storeUser);
 
 //solo para autorizados
 router.get('/administrador', authMiddleware, mainController.administrador); //quedó ligado al mainController
@@ -40,7 +37,13 @@ router.get('/administrador', authMiddleware, mainController.administrador); //qu
 //router.get('/edicionProductos', authMiddleware, mainController.edicionProductos);
 
 //PARA HACER LOGINPROCESS DE LOS USARIOS//
-router.post('/login', userController.loginProcess);
+const validacionLogin = [
+    body('email').notEmpty().withMessage('Este campo es obligatorio'),
+    body('email').isEmail().withMessage('Debe escribir un email válido'),
+    body('password').notEmpty().withMessage('Este campo es obligatorio')]
+
+//EL RESTO DE LAS VALIDACIONES ESTA EN EL CONTROLADOR
+router.post('/login', validacionLogin, userController.loginProcess);
 
 // Logout
 router.get('/logout', userController.logout);
