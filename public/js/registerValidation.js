@@ -3,6 +3,7 @@ window.onload = function(){
     form.addEventListener('submit', (e) => {
         let errors = [];
 
+        let name = document.querySelector('#Name');
         let lastName = document.querySelector('#lastName');
         let email = document.querySelector('#email');
         let password = document.querySelector('#password');
