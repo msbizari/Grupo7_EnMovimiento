@@ -16,7 +16,7 @@ window.onload = function(){
             lastName.classList.remove('is-invalid');
         } */;
         if (email.value == '') {
-            errors.push('El campo Apellido no puede estar vacío');
+            errors.push('El campo email no puede estar vacío');
             email.classList.add('is-invalid');
         } /* else {
             email.classList.add('is-valid');

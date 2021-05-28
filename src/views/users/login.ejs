@@ -32,7 +32,9 @@
             <p class="control-formulario">
                 <label for="password">Contraseña:</label> 
                 <input type="password" name="password" id="password">
-                
+                <% if (locals.errors && errors.password) { %>
+                    <p class = "error-message"> <%= errors.password.msg %></p>
+                    <% } %>
             </p>
 
             <br>
