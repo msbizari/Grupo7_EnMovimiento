@@ -4,14 +4,14 @@ window.onload = function(){
         let errors = [];
 
         let email = document.querySelector('#email');
-        let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+        //let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
         let password = document.querySelector('#password');
        
-        if (email.value == '' || !email.value.includes ('@') || !email.value.match (emailFormat)) {
+        if (email.value == '' || !email.value.includes ('@')) {
             errors.push('El campo email no puede estar vacío, debe contener un email valido');
             email.classList.add('is-invalid');
         };
-        
+
         if (password.value == '') {
             errors.push('El campo Password no puede estar vacío');
             password.classList.add('is-invalid');
