@@ -9,6 +9,11 @@
             <section class="register-body">
                 <form action="/productos" method="POST" enctype="multipart/form-data">
                     
+                    <div>
+                        <ul class = "errors">
+                        </ul>
+                    </div>
+
                     <p class="login">
                         <label for="name">Nombre del producto</label>   
                         <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
