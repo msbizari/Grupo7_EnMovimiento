@@ -14,7 +14,7 @@ window.onload = function(){
        
         if (name.value == '' || name.value.length < 2 ) {
             errors.push('El campo Apellido no puede estar vacío, debe contener al menos 2 carácteres');
-            lastName.classList.add('is-invalid')
+            name.classList.add('is-invalid')
         };
         
         if (lastName.value == '' || lastName.value.length < 2 ) {
