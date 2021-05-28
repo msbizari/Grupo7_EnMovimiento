@@ -32,34 +32,6 @@
                 <% } %> 
                 </p>
 
-                <br>
-                <p class="control-formulario">
-                    <label for="lastName">Apellido:</label> 
-                    <input type="text" name="lastName" id="lastName" class="control" value="<%= locals.oldData ? oldData.lastName : null %>">
-                    <% if (locals.errors && errors.lastName) { %>
-                        <p class = "error-message"> <%= errors.lastName.msg %></p>
-                    <% } %> 
-                </p>
-                <br>
-                <p class="control-formulario">
-                    <label for="birthDate">Fecha de Nacimiento:</label>
-                    <input type="date" name="birthDate" id="birthDate" class="control" value="<%= locals.oldData ? oldData.birthDate : null %>">
-                </p>
-                <br>
-                <p class="control-formulario">
-                    <label for="address">Domicilio:</label>
-                    <input type="text" name="address" class="control" id="address" value="<%= locals.oldData ? oldData.address : null %>">
-                </p>
-                <br>
-                <p class="control-formulario">
-                    <label for="email">email:</label>
-                    <input type="text" name="email" id="email" class="control" value="<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <p class = "error-message"> <%= errors.email.msg %></p>
-
-                    <% } %> 
-                    </p>
-
                     <br>
                     <p class="control-formulario">
                         <label for="lastName">Apellido:</label> 
