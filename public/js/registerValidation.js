@@ -1,4 +1,5 @@
 window.onload = function(){
+    
     let form = document.querySelector('.form_register');
     form.addEventListener('submit', (e) => {
         let errors = [];
@@ -6,6 +7,7 @@ window.onload = function(){
         let name = document.querySelector('#name');
         let lastName = document.querySelector('#lastName');
         let email = document.querySelector('#email');
+        let image = document.querySelector('#myfile')
         //let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
         let password = document.querySelector('#password');
         //let image = document.querySelector('#myfile');
@@ -41,7 +43,15 @@ window.onload = function(){
             errors.push('Las extensiones aceptadas son '+ acceptedExtensions.join(","));
             image.classList.add('is-invalid');
         };*/
+         let acceptedExtensions = ["jpg", "png" , "gif"];
+        if(image.value != ""){
+            let fileExtension =  image.value.split('.').pop() /* image.value.slice((image.value.lastIndexOf(".") - 1 >>> 0) + 2); */;
 
+            if(!acceptedExtensions.includes(fileExtension)){
+                console.log("paso por aca")
+                errors.push("Las extensiones aceptadas son "+ acceptedExtensions.join(", "));
+            }
+        }
         if (errors.length > 0){
             e.preventDefault();
 

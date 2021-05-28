@@ -15,20 +15,22 @@
             </div>
 
             <br>
-            <div>
-                <form class="form_register" action="/users" method="POST" enctype="multipart/form-data">
-                    <div>
-                    <ul class = "errors">
-                    </ul>
-                    </div>
-                    
-                    <p class="control-formulario">
-                    <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
-                    <% if (locals.errors && errors.name) { %>
-                        <p class = "error-message"> <%= errors.name.msg %></p>
-                    <% } %> 
-                    </p>
+
+        <div>
+            <form class="form_register" action="/users" method="POST" enctype="multipart/form-data">
+                <div>
+                <ul class = "errors">
+
+                </ul>
+
+                </div>
+                <p class="control-formulario">
+                <label for="name" id="labelName">Nombre:</label>
+                <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
+                <% if (locals.errors && errors.name) { %>
+                    <p class = "error-message"> <%= errors.name.msg %></p>
+                <% } %> 
+                </p>
 
                     <br>
                     <p class="control-formulario">
@@ -85,16 +87,15 @@
                         <label for="passwordConfirm">Confirmar Contraseña:</label> 
                         <input type="password" name="passwordConfirm" id="passwordConfirm" class="control">
                     </p>
-
-                    <br>
-                    <div class="control-formulario">
-                        <label>Desea recibir noticias sobre nuestros productos por email?:</label>
-                        <label><input type="radio" name="newsletter" value="true" checked> Si</label>
-                        <label><input type="radio" name="newsletter" value="false"> No</label>
-                    </div>
-                    <button type="reset" class="boton-formulario">Borrar</button>
-                    <button type="submit" class="boton-formulario">Enviar</button>
-                </form>
+                <br>
+                <div class="control-formulario">
+                    <label>Desea recibir noticias sobre nuestros productos por email?:</label>
+                    <label><input type="radio" name="newsletter" value="true" checked> Si</label>
+                    <label><input type="radio" name="newsletter" value="false"> No</label>
+                </div>
+                <button type="reset" class="boton-formulario">Borrar</button>
+                <button type="submit" class="boton-formulario">Enviar</button>
+            </form>
 
             </div>
 
