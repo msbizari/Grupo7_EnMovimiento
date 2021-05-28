@@ -4,24 +4,20 @@ window.onload = function(){
         let errors = [];
 
         let description = document.querySelector('#description');
-        let image = document.querySelector('#myfile');
-        let acceptedExtensions = [".jpg", ".png" , ".gif"];
-        let fileExtensions = path.extname(file.originalname);
-        let price = document.querySelector('#price');
-        //let email = document.querySelector('#email');
-        //let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-        //let password = document.querySelector('#password');
-        
+        //let image = document.querySelector('#myfile');
+        //let acceptedExtensions = [".jpg", ".png" , ".gif"];
+        //let fileExtensions = path.extname(file.originalname);
+        let price = document.querySelector('#price'); 
        
         if (description.value == '' || description.value.length < 10 ) {
             errors.push('El campo descripción no puede estar vacío');
             description.classList.add('is-invalid')
         };
 
-        if (!image.fileExtensions.includes (acceptedExtensions)){
+        /*if (!image.fileExtensions.includes (acceptedExtensions)){
             errors.push('Las extensiones aceptadas son '+ acceptedExtensions.join(","));
             image.classList.add('is-invalid');
-        };
+        };*/
 
         if (price.value == '' || price.value.length < 2 ) {
             errors.push('El campo precio no puede estar vacío');
