@@ -6,7 +6,7 @@ window.onload = function(){
         let name = document.querySelector('#name');
         let lastName = document.querySelector('#lastName');
         let email = document.querySelector('#email');
-        let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+        //let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
         let password = document.querySelector('#password');
         /*let image = document.querySelector('#myfile');
         let acceptedExtensions = [".jpg", ".png" , ".gif"];
@@ -22,7 +22,7 @@ window.onload = function(){
             lastName.classList.add('is-invalid');
         }
 
-        if (email.value == '' || !email.value.includes ('@') || !email.value.match (emailFormat)) {
+        if (email.value == '' || !email.value.includes ('@') /*|| !email.value.match (emailFormat)*/) {
             errors.push('El campo email no puede estar vacío, debe contener un email valido');
             email.classList.add('is-invalid');
         };
