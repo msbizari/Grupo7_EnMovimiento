@@ -18,14 +18,14 @@ window.onload = function(){
         };
         
         if (lastName.value == '' || lastName.value.length < 2 ) {
-            errors.push('El campo Apellido no puede estar vacío');
+            errors.push('El campo Apellido no puede estar vacío, debe contener al menos 2 carácteres');
             lastName.classList.add('is-invalid');
         }/*  else {
             lastName.classList.add('is-valid');
             lastName.classList.remove('is-invalid');
         } */;
         if (email.value == '' || !email.value.includes ('@') || !email.value.match (emailFormat)) {
-            errors.push('El campo email no puede estar vacío');
+            errors.push('El campo email no puede estar vacío, debe contener un email valido');
             email.classList.add('is-invalid');
         } /* else {
             email.classList.add('is-valid');
