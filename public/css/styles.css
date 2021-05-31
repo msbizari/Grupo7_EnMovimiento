@@ -251,9 +251,18 @@ form a{
     font-size: 12px;
     margin-top: -15px;
 }
-.is-invalid {
+.is-invalid{
     background-color: burlywood;
     color: red;
+}
+.errors{
+    background-color: burlywood;
+    margin-bottom: 10px;
+}
+.errors li{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 3px;
 }
 
 

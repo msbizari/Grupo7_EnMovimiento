@@ -28,7 +28,7 @@ window.onload = function(){
             errors.push('El campo email no puede estar vacío');
             email.classList.add('is-invalid');
         } else if (/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/.test(email.value))
-            { return (true)
+            {
         } else {
             errors.push('Debe ingresar un email valido');
             email.classList.add('is-invalid')
@@ -37,9 +37,7 @@ window.onload = function(){
         if (password.value == '') {
             errors.push('El campo Password no puede estar vacío');
             password.classList.add('is-invalid');
-        };
-
-        if (password.value.length < 5 || password.value.length > 10) {
+        } else if (password.value.length < 5 || password.value.length > 10) {
             errors.push('El campo password debe ser entre 5 y 10 caracteres');
             password.classList.add('is-invalid');
         };
@@ -49,7 +47,6 @@ window.onload = function(){
             let fileExtension =  image.value.split('.').pop() /* image.value.slice((image.value.lastIndexOf(".") - 1 >>> 0) + 2); */;
 
             if(!acceptedExtensions.includes(fileExtension)){
-                console.log("paso por aca")
                 errors.push("Las extensiones aceptadas son "+ acceptedExtensions.join(", "));
             }
         };
