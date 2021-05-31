@@ -24,9 +24,14 @@ window.onload = function(){
             lastName.classList.add('is-invalid');
         }
 
-        if (email.value == '' || !email.value.includes ('@') /*|| !email.value.match (emailFormat)*/) {
-            errors.push('El campo email no puede estar vacío, debe contener un email valido');
+        if (email.value == '') {
+            errors.push('El campo email no puede estar vacío');
             email.classList.add('is-invalid');
+        } else if (/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/.test(email.value))
+            { return (true)
+        } else {
+            errors.push('Debe ingresar un email valido');
+            email.classList.add('is-invalid')
         };
 
         if (password.value == '') {
@@ -39,11 +44,7 @@ window.onload = function(){
             password.classList.add('is-invalid');
         };
 
-        /*if (!image.acceptedExtensions.exec(fileExtensions)){
-            errors.push('Las extensiones aceptadas son '+ acceptedExtensions.join(","));
-            image.classList.add('is-invalid');
-        };*/
-         let acceptedExtensions = ["jpg", "png" , "gif"];
+        let acceptedExtensions = ["jpg", "png" , "gif"];
         if(image.value != ""){
             let fileExtension =  image.value.split('.').pop() /* image.value.slice((image.value.lastIndexOf(".") - 1 >>> 0) + 2); */;
 
@@ -51,7 +52,8 @@ window.onload = function(){
                 console.log("paso por aca")
                 errors.push("Las extensiones aceptadas son "+ acceptedExtensions.join(", "));
             }
-        }
+        };
+
         if (errors.length > 0){
             e.preventDefault();
 
