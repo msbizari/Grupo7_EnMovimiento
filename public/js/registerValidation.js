@@ -1,6 +1,6 @@
 window.onload = function(){
     
-    let form = document.querySelector('.form_register');
+    let form = document.querySelector('.form-register');
     form.addEventListener('submit', (e) => {
         let errors = [];
 

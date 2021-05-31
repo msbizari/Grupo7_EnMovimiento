@@ -195,7 +195,19 @@ footer h3{
 .create-form{
     padding: 20px 15px;
 }
+.create-form h2, .register-body h2, .form-register h2{
+    margin-left: auto;
+    margin-right: auto;
+    color: RGB(220,137,018);
+    background-color: rgb(160, 221, 204);
+    text-decoration: underline;   
+}
+.create-form .control-formulario{
+    margin-left: auto;
+    margin-right: auto;
+}
 .control-formulario label{
+    margin: auto;
     margin-bottom: 15px;
     font-style: italic;
     display: block;
@@ -306,7 +318,7 @@ form h3{
     font-size: 14px;
     margin: 25px 0px;
     
-    width: 75%;
+    width: 100%;
     border-radius: 5px;
     background-color: white;
     color: #666;
@@ -387,8 +399,16 @@ form h3{
         width: 100%;
     }
     .create-form{
-        width: 50%;
+        width: 27%;
         margin: auto;
+    }
+    .register-body, .form-register{
+        width: 55%;
+        margin: auto;   
+    }
+    .form-eliminar{
+        width: 55%;
+        margin: auto;   
     }
     .logo{
         width: 150px;
@@ -446,7 +466,7 @@ form h3{
         justify-content: space-around;
     }
     .control{
-        width: 50%;
+        width: 100%;
     }
     .una-caja{
         width: 30%;
