@@ -6,23 +6,15 @@
     <body>
         <%- include("./partials/header") %>    
 <main>
-<<<<<<< HEAD
-    <section class="register-body">
-         <div> 
-               <ul class="errors">
-                   
-               </ul>
-            </div>
-        <form class="form_edicion" action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-          
-=======
     <section>
         
         <form action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-body">
 
             <h2>EDITAR PRODUCTO</h2>
-
->>>>>>> ffe36b77602f10dea68d384f6ef6e29a76e53845
+            
+            <ul class="errors">
+                   
+            </ul>
             <p class="login">
                 <label for="name">Nombre del producto</label>   
                 <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
@@ -73,7 +65,7 @@
             
             <p class="login">
                 <label for="pass">Precio</label>   
-                <input type="text" name="price" value="<%= productToEdit.price %>">
+                <input type="text" name="price" id="price" value="<%= productToEdit.price %>">
             </p>
             
             <p class="login">
@@ -96,7 +88,7 @@
 </main>
 
 <br>
-<script src="/js/edicionValidaciones.js"></script> 
+<script src="/js/administradorValidation.js"></script> 
 </body>
 <%- include("./partials/footer")%> 
 </html>

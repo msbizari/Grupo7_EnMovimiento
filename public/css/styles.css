@@ -202,10 +202,7 @@ footer h3{
     background-color: rgb(160, 221, 204);
     text-decoration: underline;   
 }
-.create-form .control-formulario{
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .control-formulario label{
     margin: auto;
     margin-bottom: 15px;

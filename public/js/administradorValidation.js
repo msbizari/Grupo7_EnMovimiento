@@ -2,7 +2,7 @@ window.onload = function(){
     let form = document.querySelector('.register-body');
     form.addEventListener('submit', (e) => {
         let errors = [];
-
+        e.preventDefault()
         let name = document.querySelector('#name');
         let description = document.querySelector('#description');
         let image = document.querySelector('#myfile');

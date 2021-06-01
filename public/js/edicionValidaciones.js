@@ -1,7 +1,7 @@
 window.onload = function(){
     
 
-    //------DESDE AQUÍ CONTINUE CON LAS VALIDACIONES DEL FORMULARIO -------//    
+    //------DESDE AQUÍ CONTINUE CON LAS VALIDACIONES DEL FORMULARIO -------    
         let form = document.querySelector('.form_edicion');
         
       
@@ -16,7 +16,7 @@ window.onload = function(){
         let size = document.querySelector('#size');
         let price = document.querySelector('#price');
         let discount = document.querySelector('#discount'); 
-
+        console.log(name.value)
 
         if (name.value == '' || name.value.length < 05 ){
             errors.push('Nombre de producto es obligatorio y debe contener como minimo 5 carácteres');
