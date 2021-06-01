@@ -195,6 +195,9 @@ footer h3{
 .create-form{
     padding: 20px 15px;
 }
+.create-form input{
+    width:100%;
+}
 .create-form h2, .register-body h2, .form-register h2{
     margin-left: auto;
     margin-right: auto;
