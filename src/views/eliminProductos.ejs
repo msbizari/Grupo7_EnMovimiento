@@ -15,7 +15,12 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/products/<%= productToDelete.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+			<div> 
+				<ul class="errors">
+					
+				</ul>
+			 </div>
+			<form class="form-delete" action="/products/<%= productToDelete.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<h2 class="products-title">Estás editando: <i>
@@ -47,7 +52,7 @@
 									</div>
 							</form>
 						</div>
-								<form action="/products/10?_method=DELETE" method="POST" style="display: inline-flex">
+								<form class="delete" action="/products/10?_method=DELETE" method="POST" style="display: inline-flex">
 								<button type="submit" class="action-delete-button">ELIMINAR</button>
 							</form>
 							</div>
@@ -57,6 +62,7 @@
 				
 			</div>
 </main>
+<script src="/js/eliminarValidaciones.js"></script> 
 </body>
 <%- include("./partials/footer")%> 
 </html>

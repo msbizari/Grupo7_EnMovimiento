@@ -7,8 +7,13 @@
         <%- include("./partials/header") %>    
 <main>
     <section class="register-body">
-        <form action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-            
+         <div> 
+               <ul class="errors">
+                   
+               </ul>
+            </div>
+        <form class="form_edicion" action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+          
             <p class="login">
                 <label for="name">Nombre del producto</label>   
                 <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
@@ -80,6 +85,9 @@
         
     </section>
 </main>
+
+<br>
+<script src="/js/edicionValidaciones.js"></script> 
 </body>
 <%- include("./partials/footer")%> 
 </html>
