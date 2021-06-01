@@ -8,21 +8,16 @@
     <body>
         <main>
             <br>
-            <div>
-                <h2>
-                <p>REGISTRO DE USUARIO</p>
-                </h2>
-            </div>
 
             <br>
-
-        <div>
-            <form class="form_register" action="/users" method="POST" enctype="multipart/form-data">
+            <form class="form-register" action="/users" method="POST" enctype="multipart/form-data">
+                <h2>REGISTRO DE USUARIO</h2>
                 <div>
+                <br/>    
                 <ul class = "errors">
 
                 </ul>
-
+                <br/>
                 </div>
                 <p class="control-formulario">
                 <label for="name" id="labelName">Nombre:</label>
@@ -93,11 +88,12 @@
                     <label><input type="radio" name="newsletter" value="true" checked> Si</label>
                     <label><input type="radio" name="newsletter" value="false"> No</label>
                 </div>
-                <button type="reset" class="boton-formulario">Borrar</button>
                 <button type="submit" class="boton-formulario">Enviar</button>
+                <button type="reset" class="boton-formulario">Borrar</button>
+                
             </form>
 
-            </div>
+         
 
         </main>
     <br>

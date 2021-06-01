@@ -6,6 +6,7 @@
     <body>
         <%- include("./partials/header") %>    
 <main>
+<<<<<<< HEAD
     <section class="register-body">
          <div> 
                <ul class="errors">
@@ -14,6 +15,14 @@
             </div>
         <form class="form_edicion" action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
           
+=======
+    <section>
+        
+        <form action="/productos/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-body">
+
+            <h2>EDITAR PRODUCTO</h2>
+
+>>>>>>> ffe36b77602f10dea68d384f6ef6e29a76e53845
             <p class="login">
                 <label for="name">Nombre del producto</label>   
                 <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
@@ -73,13 +82,13 @@
             </p>
             
 
-            <button type="submit" class="botones-juntos">Guardar</button>
-            <button type="reset" class="botones-juntos">Borrar</button>
+            <button type="submit" class="boton-formulario">Guardar</button>
+            <button type="reset" class="boton-formulario">Borrar</button>
         </form>
-
-            <form action="/productos/delete/<%= productToEdit.id %>" method="POST">
-                <button type="submit" class="botones-juntos">ELIMINAR</button>
-            </form>
+        <br>
+        <form action="/productos/delete/<%= productToEdit.id %>" method="POST" class="form-eliminar">
+                <button type="submit" class="boton-formulario">ELIMINAR</button>
+        </form>
 
 
         

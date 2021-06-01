@@ -23,7 +23,6 @@ window.onload = function(){
             let fileExtension =  image.value.split('.').pop() /* image.value.slice((image.value.lastIndexOf(".") - 1 >>> 0) + 2); */;
 
             if(!acceptedExtensions.includes(fileExtension)){
-                console.log("paso por aca")
                 errors.push("Las extensiones aceptadas son "+ acceptedExtensions.join(", "));
             }
         };
