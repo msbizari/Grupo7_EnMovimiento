@@ -508,10 +508,7 @@ form h3{
     align-self: flex-start; 
 }
 
-input, select{
-    width: 60%;
-    height: 25px;
-  }
+
   
   .is-invalid {
     color: #842029;
