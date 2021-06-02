@@ -74,12 +74,12 @@
             </p>
             
 
-            <button type="submit" class="boton-formulario">Guardar</button>
-            <button type="reset" class="boton-formulario">Borrar</button>
-        </form>
-        <br>
+            <button type="submit" class="boton-formulario">GUARDAR</button>
+            <button type="reset" class="boton-formulario">BORRAR</button>
+  
+        </form>   <br>       
         <form action="/productos/delete/<%= productToEdit.id %>" method="POST" class="form-eliminar">
-                <button type="submit" class="boton-formulario">ELIMINAR</button>
+            <button type="submit" class="boton-formulario">ELIMINAR</button>
         </form>
 
 
@@ -88,7 +88,7 @@
 </main>
 
 <br>
-<script src="/js/administradorValidation.js"></script> 
+<script src="/js/edicionValidation.js"></script> 
 </body>
 <%- include("./partials/footer")%> 
 </html>

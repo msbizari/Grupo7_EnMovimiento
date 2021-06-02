@@ -252,11 +252,11 @@ form a{
     margin-top: -15px;
 }
 .is-invalid{
-    background-color: burlywood;
+    background-color: orange;
     color: red;
 }
 .errors{
-    background-color: burlywood;
+    /*background-color: burlywood; */
     margin-bottom: 10px;
 }
 .errors li{
@@ -511,9 +511,6 @@ form h3{
 input, select{
     width: 60%;
     height: 25px;
-  }
-  .is-valid {
-    color: #198754;
   }
   
   .is-invalid {
