@@ -7,6 +7,39 @@
     <%- include("./partials/header") %> 
     <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
     </div>
+    <div class="container">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <img src="/images/carrusel/legs.jpg"/>
+          </li>
+          <li id="slide2">
+            <img src="/images/carrusel/people.jpg"/>
+          </li>
+          <li id="slide3">
+            <img src="/images/carrusel/shoes.jpg"/>
+          </li>
+          <li id="slide4">
+            <img src="/images/carrusel/silhouette.jpg"/>
+          </li>
+        </ul>
+        
+        <ul class="menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+          <li>
+            <a href="#slide4"></a>
+          </li>
+        </ul>
+      
+    </div>
     <main>
         <!-- la opción de acceder al listado de productos sólo aparece si el usuario está logueado-->
         <% if (locals.isLogged) { %>
