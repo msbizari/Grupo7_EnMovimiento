@@ -84,3 +84,40 @@ división de tareas sobre la marcha
 
 - Dejar de hacer: 
 empezar tarde con la resolución del sprint
+
+
+## Retrospectiva Sprint_06
+
+- Hacer mas: 
+Usar más el Trello, aumentar la frecuncia de la reuniones
+
+- Empezar a hacer: 
+Dividir en mini-tareas diarias
+
+- Continuar haciendo: 
+Seguir poniendole onda
+Mantener la buena comunicación y la fluidez
+
+- Hacer menos:
+división de tareas sobre la marcha
+
+- Dejar de hacer: 
+empezar tarde con la resolución del sprint
+
+## Retrospectiva Sprint_07
+
+- Hacer mas: 
+Usar más el Trello, utilizar una mayor variedad de recursos y herramientas 
+
+- Empezar a hacer: 
+Dividir en mini-tareas diarias
+
+- Continuar haciendo: 
+Seguir poniendole onda
+Mantener la buena comunicación y la fluidez
+
+- Hacer menos:
+División de tareas sobre la marcha
+
+- Dejar de hacer: 
+Empezar tarde con la resolución del sprint
