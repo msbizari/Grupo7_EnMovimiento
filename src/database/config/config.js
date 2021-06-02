@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Forexatron2019",
+    "password": null,
     "database": "en_movimiento",
     "host": "127.0.0.1",
     "dialect": "mysql"

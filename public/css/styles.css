@@ -198,12 +198,17 @@ footer h3{
 .create-form input{
     width:100%;
 }
+#remember-me{
+    text-align:left;
+    width:7%;
+}
 .create-form h2, .register-body h2, .form-register h2{
     margin-left: auto;
     margin-right: auto;
     color: RGB(220,137,018);
     background-color: rgb(160, 221, 204);
-    text-decoration: underline;   
+    text-decoration: underline;
+    margin-bottom: 10px;   
 }
 
 .control-formulario label{
@@ -251,12 +256,8 @@ form a{
     font-size: 12px;
     margin-top: -15px;
 }
-.is-invalid{
-    background-color: orange;
-    color: red;
-}
 .errors{
-    /*background-color: burlywood; */
+    background-color: burlywood;
     margin-bottom: 10px;
 }
 .errors li{
@@ -507,15 +508,6 @@ form h3{
     border: solid 2px grey; 
     align-self: flex-start; 
 }
-
-input, select{
-    width: 60%;
-    height: 25px;
-  }
-  
-  .is-invalid {
-    color: #842029;
-  }
   
   .alert-warning{
     color:#842029;
@@ -532,7 +524,7 @@ input, select{
   padding: 30px;
 }
 
-ul, li {
+.conatiner ul, .conatiner li {
     padding: 0;
     margin: 0;
     list-style: none;
