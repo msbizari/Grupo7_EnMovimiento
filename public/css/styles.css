@@ -519,7 +519,7 @@ form h3{
 
 .container{
   margin: auto;
-  width: 800px;
+  width: 85%;
   padding: 30px;
 }
 
@@ -531,7 +531,8 @@ form h3{
 
 ul.slider{
   position: relative;
-  width: 800px;
+  margin-left:5%;
+  width: 95%;
   height: 300px;
 }
 
