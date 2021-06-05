@@ -8,6 +8,10 @@ const methodOverride =  require('method-override');
 var mainRouter = require('./src/routes/main');
 var userRouter = require('./src/routes/users');
 var productosRouter = require('./src/routes/productos');
+
+var productosApiRouter = require('./src/routes/api/productosApi');
+var usersApiRouter = require('./src/routes/api/usersApi');
+
 const session = require('express-session'); //luego de escribir la constante en mainControlle.js, aparecio solita aca tmb.
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
@@ -33,6 +37,10 @@ app.use(userLoggedMiddleware);
 app.use('/', mainRouter);
 app.use('/users', userRouter);
 app.use('/productos', productosRouter);
+
+//app.use para rutas de api
+app.use('/api/users', usersApiRouter);
+app.use('/api/productos', productosApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
