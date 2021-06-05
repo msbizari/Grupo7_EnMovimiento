@@ -1,0 +1,68 @@
+API USUARIOS
+Entregable: URL funcionales devolviendo datos de usuariosen formato JSON 
+
+    ☐ api/users/
+    "Deberan devolver un objeto literal con: 
+        ☐ count -> cantidad total de usuarios en la base.
+        ☐ users -> array con la colección de usuarios, cada unocon:
+                    ☐ id
+                    ☐ name
+                    ☐ email
+                    ☐ detail → URL para obtener el detalle
+    
+    ☐ api/users/:id
+    Debera devolver un objeto literal con: 
+        ☐ Una propiedad por cada campo en base
+        ☐ Una URL para la imagen de perfil (para mostrar la imagen)
+        ☐ Sin información sensible (ej: password y categoría)
+
+        
+API PRODUCTOS
+Entregable: URL funcionales devolviendo datos de productos en formato JSON 
+   
+    ☐ api/products/
+    "Deberan devolver un objeto literal con: 
+        ☐ count → cantidad total de productos en la base
+        ☐ countByCategory → objeto literal con una propiedad por categoríacon el total de productos.
+                    ☐ id
+                    ☐ name
+                    ☐ description
+                    ☐ un array con principal relación de uno a muchos (ej:categories)
+                    ☐ detail → URL para obtener el detalle.
+
+    
+    ☐ api/products/:id
+    Debera devolver un objeto literal con: 
+        ☐ Uuna propiedad por cada campo en base.
+        ☐ un array por cada relación de uno a muchos (categories,colors,sizes, etc).
+        ☐ Una URL para la imagen del producto (para mostrarla imagen).
+
+PAGINADO
+Agregar a los endpoints de listado, la posibilidad de paginar los resultados.
+
+    ☐ api/users/
+    ☐ api/productos/
+    Debera devolver un objeto literal con: 
+        ☐ 10 resultados por página (recuerden limit y offset😉☝).
+        ☐ next → URL a la próxima página (si corresponde).
+        ☐ previous → URL a la página previa (si corresponde).
+
+DASHBOARD CON REACT
+        ☐ 3 a 6 paneles simples con los siguientes totales
+                ☐ Total usuarios
+                ☐ Total productos
+                ☐ Total categoría
+        ☐ Panel de detalle de último producto o usuario creado
+        ☐ Panel de categorías con el total de productos de cada una.
+        ☐ Panel con el listado de productos.
+        ☐ Funcionalidades adicionales:
+                ☐ Total de productos vendidos / total de ventas.
+                ☐ Últimos 5 productos vendidos / los 5 más vendidos.
+                ☐ Vista de creación de productos como Administrador.
+                ☐ Vista de edición de productos como Administrador.
+                ☐ Opción de eliminar productos como Administrador.
+    
+        ☐ RETRO
+        ☐ DAILY
+        ☐ TRELLO
+                
