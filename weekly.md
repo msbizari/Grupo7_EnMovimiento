@@ -1,26 +1,28 @@
 # WEEKLY - Semana 1
 
 ## Qué se hizo: 
-Estudiamos los puntos a entregar
-Repasamos el material de estudio para ver que hacia falta reforzar
-armado de la base de datos con phpmyadmin
+Estudiamos los puntos a entregar. 
+Delimitamos tareas
+Se hizo un To Do para ver si se facilitaba
+Consultamos como llevar a cabo API y REACT ya que habia dudas
+Creamos el repositorio para manejar lo de React
 
 ## Se encontró algún impedimento: 
-Los temas que se van viendo, como avanzan en grado de complejidad, se hace tal vez un poco mas dificil de incorporando rapidamente
+Ya en el ultimo tramo como se trabajarian dos temas en paralelo, costo ver como arrancar.
 
 ## Qué se va a realizar esta semana:
-Arrancamos con los puntos menos complicados como ser Trello, weekly y retro. 
-Evacuamos dudas y coordinamos pasos a seguir y meeting para la proxima semana. 
+Nos coordinamos para arrancar API de usuarios y productos 
+Modificaciones generales de la pagina
+
 
 # WEEKLY - Semana 2
 
 ## Qué se hizo: 
-Trabajamos en la relacion de las diferentes configuraciones, para enlazar.
-Poblar la base de datos y relacionarla con el modelo
-
+to be filled 
 
 ## Se encontró algún impedimento:
-Cuesta coordinar efectivamente, como llevar a cabo el trabajo en la tarea de uno para que luego se relacione con el resto y no pisarnos. 
+to be filled 
 
 ## Qué se realizó esta semana: 
-CRUD de base de datos, relaciones
+to be filled
+

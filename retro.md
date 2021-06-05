@@ -121,3 +121,20 @@ División de tareas sobre la marcha
 
 - Dejar de hacer: 
 Empezar tarde con la resolución del sprint
+
+## Retrospectiva Sprint_08
+
+- Hacer mas: 
+Revision de los puntos entregables. 
+
+- Empezar a hacer:
+Juntada presencial para las weekly con medialunas y cafe con leche mediante.
+
+- Continuar haciendo: 
+El apoyo entre los integrantes, hemos reforzado la asistencia mutua ante cualquier impedimento. 
+
+- Hacer menos:
+División de tareas sobre la marcha
+
+- Dejar de hacer: 
+Empezar tarde con la resolución del sprint aunque en esta oportunidad se definio. 
