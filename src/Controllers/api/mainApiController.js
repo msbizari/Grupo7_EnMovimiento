@@ -33,11 +33,11 @@ const mainApiController= {
                 delete products[i].dataValues.brand_id
                 delete products[i].dataValues.category
             }
-            console.log(products)
+            
             let respuesta = {
                 meta: {
                     status : 200,
-                    url: 'api/productos'
+                    url: 'http://localhost:3000/api/productos'
                 },
                 data: {
                     count: products.length,
@@ -47,20 +47,25 @@ const mainApiController= {
             }
             res.json(respuesta);
     },
-    'detail': async function(req, res) {
-        let product = await db.Product.findByPk(req.params.id,
+    'detail': function (req, res) {
+        db.Product.findByPk(req.params.id,
             {
                 include : [{association:"category"},{association:"brand"}]
             })
+        .then(product => {
             product.dataValues.url_image = "http://localhost:3000/api/productos/image/"+product.id;
             let respuesta = {
                 meta: {
                     status: 200,
-                    url: '/api/productos/'+product.id
+                    url: 'http://localhost:3000/api/productos/'+product.id
                 },
                 data: product
                 }
                 res.json(respuesta);
+            })
+            .catch(error =>{error.TypeError = 'No se encuentra producto con ese id';
+            res.send(error)
+            })
     },
     'sendImage': async function(req, res) {
         let product = await db.Product.findByPk(req.params.id)
