@@ -46,8 +46,27 @@ const mainApiController= {
                 }
             }
             res.json(respuesta);
+    },
+    'detail': async function(req, res) {
+        let product = await db.Product.findByPk(req.params.id,
+            {
+                include : [{association:"category"},{association:"brand"}]
+            })
+            product.dataValues.url_image = "http://localhost:3000/api/productos/image/"+product.id;
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    url: '/api/productos/'+product.id
+                },
+                data: product
+                }
+                res.json(respuesta);
+    },
+    'sendImage': async function(req, res) {
+        let product = await db.Product.findByPk(req.params.id)
+        imagen = path.join(__dirname, '../../../public/images/productos/',product.image)
+        res.sendFile(imagen)
     }
-}
-    
+}   
 
 module.exports = mainApiController;
