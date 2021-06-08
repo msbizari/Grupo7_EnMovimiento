@@ -47,7 +47,7 @@
 
         <% } %>
         <section>
-            <h2 class="titulo-category-home">NOVEDADES</h2>
+            <h2 class="titulo-category-home">NOVEDADES <% if (marcaSeleccionada) { %> marca <%=marcaSeleccionada.name%> <% } %></h2>
             <div class="productos">
                 <% for( let i = 0;  i < novedades.length; i++ ) { %>
             <article class="article-productos"><a href="/productos/<%= novedades[i].id %>/detalleDeproducto"><img src="/images/productos/<%= novedades[i].image %>" width=100% alt= "<%= novedades[i].name %>"></a>
@@ -66,7 +66,7 @@
             </div>
         </section>
         <section>
-            <h2 class="titulo-category-home">OFERTAS</h2>
+            <h2 class="titulo-category-home">OFERTAS <% if (marcaSeleccionada) { %> marca <%=marcaSeleccionada.name%> <% } %></h2>
             <div class="productos">
                 <% for( let i = 0;  i < enOferta.length; i++ ) { %>
                     <article class="article-productos"><a href="/productos/<%= enOferta[i].id %>/detalleDeproducto %>"><img src="/images/productos/<%= enOferta[i].image %>" width=100% alt= "<%= enOferta[i].name %>"></a>

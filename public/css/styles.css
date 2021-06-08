@@ -70,6 +70,7 @@ main{
 .main-nav-bar li{
     /*border: rgb(140, 165, 173) solid 2px;*/
     width:19%;
+    font-weight: 600;
     text-align: center;
 }
 .burger{

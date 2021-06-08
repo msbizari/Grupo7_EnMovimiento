@@ -11,15 +11,15 @@ const Category = require('../database/models/Category');
 const Brand = require('../database/models/Brand');
 const Products = db.Product;
 const Categorys = db.Category;
-const Brands = db.Brand
+const Brands = db.Brand;
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const mainController= {
     index: async function(req,res) {
-        
-         let novedades = await db.Product.findAll({
+
+        let novedades = await db.Product.findAll({
             include:[{association:"category"},{association:"brand"}],
             /* nest : true, */
             where: {
@@ -33,7 +33,15 @@ const mainController= {
             category_id: "2"
             }
         });
-        res.render('index',{novedades:novedades , enOferta:enOferta})
+        marcaSeleccionada = {}
+        if (req.params.id){
+        novedades = novedades.filter(producto => producto.brand.id == req.params.id)
+        enOferta = enOferta.filter(producto => producto.brand.id == req.params.id)
+        marcaSeleccionada = await db.Brand.findByPk(req.params.id)
+        
+        }
+        console.log(marcaSeleccionada)
+        res.render('index',{novedades:novedades , enOferta:enOferta, marcaSeleccionada:marcaSeleccionada})
     },
      
     carrito: (req, res) => { res.render ('carrito') },
