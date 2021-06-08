@@ -24,7 +24,7 @@ const mainApiController= {
                     }
                    
             for (let i = 0 ; i < products.length ; i++) {
-                products[i].dataValues.url = "http://localhost:3000/productos/"+products[i].id+'/detalleDeproducto';
+                products[i].dataValues.url = "http://localhost:3000/api/productos/"+products[i].id;
                 delete products[i].dataValues.price
                 delete products[i].dataValues.image
                 delete products[i].dataValues.category_id

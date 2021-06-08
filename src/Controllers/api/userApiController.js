@@ -18,7 +18,7 @@ const userApiController= {
                 delete usuarios[i].dataValues.passwordConfirme
                 delete usuarios[i].dataValues.newsletter
                 delete usuarios[i].dataValues.image
-               /*  usuarios[i].dataValues.url = "http://localhost:3000/usuarios/"+usuarios[i].id; */
+                usuarios[i].dataValues.url = "http://localhost:3000/api/users/"+usuarios[i].id;
             }
             console.log(usuarios)
             let respuesta = {

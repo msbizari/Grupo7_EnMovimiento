@@ -109,7 +109,16 @@ const userController = {
                 })
             }
     }, 
-
+    profile: (req,res) => {
+        if(req.session.userLogged.newsletter==true){
+            req.session.userLogged.newsletter="Sí"
+        }else{
+            req.session.userLogged.newsletter="No"
+        }
+        return res.render('users/userProfile', {
+			user: req.session.userLogged
+		});
+	},
     logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();

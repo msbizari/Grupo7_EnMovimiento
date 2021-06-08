@@ -15,18 +15,18 @@
             <ul class="errors">
                    
             </ul>
-            <p class="login">
+            <p class="control-formulario">
                 <label for="name">Nombre del producto</label>   
-                <input type="text" id="name" name="name" value="<%= productToEdit.name %>">
+                <input type="text" id="name" name="name" class="control" value="<%= productToEdit.name %>">
                 <% if (locals.errors && errors.name) { %>
                     <p class = "error-message-product"> <%= errors.name.msg %></p>
                 <% } %> 
             </p>  
                           
             
-            <p class="login">
+            <p class="control-formulario">
                 <label for="description">Descripción</label>   
-                <input type="text" id="description" name="description" size= 35 value="<%= productToEdit.description %>">
+                <input type="text" id="description" name="description" class="control" size= 35 value="<%= productToEdit.description %>">
                 <% if (locals.errors && errors.description) { %>
                     <p class = "error-message-product"> <%= errors.description.msg %></p>
                 <% } %> 
@@ -58,21 +58,21 @@
                 <% }); %>
            </select>
 
-            <p class="login">
+            <p class="control-formulario">
                 <label for="size">Talle</label>   
-                <input type="text" id="size" name="size" value="<%= productToEdit.size %>">
+                <input type="text" id="size" name="size" class="control" value="<%= productToEdit.size %>">
             </p>
             
-            <p class="login">
+            <p class="control-formulario">
                 <label for="pass">Precio</label>   
-                <input type="text" name="price" id="price" value="<%= productToEdit.price %>">
+                <input type="text" name="price" id="price" class="control"value="<%= productToEdit.price %>">
             </p>
             
-            <p class="login">
+            <p class="control-formulario">
                 <label for="discount">Descuento (en %)</label>   
-                <input type="text" id="discount" name="discount" value="<%= productToEdit.discount %>">
+                <input type="text" id="discount" name="discount" class="control" value="<%= productToEdit.discount %>">
             </p>
-            
+            <br>
 
             <button type="submit" class="boton-formulario">GUARDAR</button>
             <button type="reset" class="boton-formulario">BORRAR</button>
