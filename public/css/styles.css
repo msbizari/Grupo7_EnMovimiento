@@ -57,6 +57,19 @@ main{
 .main-nav-bar{
     display: none;
 }
+.main-nav-bar-display{
+    display: block;
+}
+.main-nav-bar-display ul{
+    width:30%;
+    margin: auto;
+    list-style-type: none;
+}
+.main-nav-bar-display a{
+    text-decoration: none;
+    padding: 3px 0px;
+    text-align: center;
+}
 .main-nav-bar a {
     text-decoration: none;
     display: inline-block;
@@ -70,6 +83,11 @@ main{
 .main-nav-bar li{
     /*border: rgb(140, 165, 173) solid 2px;*/
     width:19%;
+    font-weight: 600;
+    text-align: center;
+}
+.main-nav-bar-display li{
+    width:100%;
     font-weight: 600;
     text-align: center;
 }
@@ -464,13 +482,13 @@ form h3{
         border: solid black 1px;
         border-radius: 3px;
     }
-    .main-nav-bar{
+    .main-nav-bar, .main-nav-bar-display{
         display: block;
         width: 85%;
         margin:auto;
         margin-top: 20px;
     }
-    .main-nav-bar ul{
+    .main-nav-bar ul, .main-nav-bar-display ul{
         display: flex;
         justify-content: space-between;
     }
