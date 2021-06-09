@@ -25,7 +25,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5px 15px 10px 5px;
+    margin: 5px 5px 10px 5px;
 }
 .logo{
     width: 30%;
@@ -46,16 +46,13 @@ div.right-top-header{
 }
 .right-top-header ul{
     list-style-type: none;
-    width: 200px;
+    width: 190px;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     justify-content: space-between;
 }
-/*.right-top-header li{
-    margin: 8px;
-}*/
 .right-top-header a{
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 20px;
     color: rgb(69, 77, 87);
 }
