@@ -41,11 +41,7 @@
       
     </div>
     <main>
-        <!-- la opción de acceder al listado de productos sólo aparece si el usuario está logueado-->
-        <% if (locals.isLogged) { %>
-            <h2 class="titulo-category-home">Hola <%= locals.userLogged.name %>! Edita tu lista de productos <a href="/productos">aquí  <i class="fas fa-clipboard"></i></a></h2>
-
-        <% } %>
+        <!-- la opción de acceder al listado de productos sólo aparece si el usuario está logueado, a través del icono admin a lado de su foto de perfil-->
         <section>
             <h2 class="titulo-category-home">NOVEDADES</h2>
             <div class="productos">
