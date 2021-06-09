@@ -14,6 +14,7 @@ var usersApiRouter = require('./src/routes/api/usersApi');
 
 const session = require('express-session'); //luego de escribir la constante en mainControlle.js, aparecio solita aca tmb.
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const marcasHeaderMiddleware = require('./src/middlewares/marcasHeaderMiddleware');
 
 var app = express();
 
@@ -33,6 +34,7 @@ resave: false,
 
 
 app.use(userLoggedMiddleware);
+app.use(marcasHeaderMiddleware);
 
 app.use('/', mainRouter);
 app.use('/users', userRouter);

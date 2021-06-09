@@ -7,8 +7,8 @@
         <div class="right-top-header">
             <ul>
                 <li><% if (locals.isLogged) { %>
-                    <img src="/images/usuarios/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"><h3>
-                     Hi <%= locals.userLogged.name %>!</h3>
+                    <a href="/users/profile"><img src="/images/usuarios/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"></a>
+                    <h3>Hi <%= locals.userLogged.name %>!</h3>
                             <% } else { %>
                 
                     <a href="/users/login"><i class="fas fa-user"></i></a>
@@ -24,13 +24,9 @@
     </div>
     <nav class="main-nav-bar">
             <ul>
-                <li><a href=# >Ofertas</a></li>
-                <li><a href=# >Novedades</a></li>
-                <li><a href=# >Hombre</a></li>
-                <li><a href=# >Mujer</a></li>
-                <li><a href=# >Niños</a></li>
-                <li><a href=# >Marcas</a></li>
-                <li><a href=# >Deporte</a></li>
+                <% for( let i = 0;  i < locals.marcas.length; i++ ) { %> 
+                <li><a href="/marca/<%= locals.marcas[i].id%>"><%= locals.marcas[i].name.toUpperCase() %></a></li>
+                <% } %>
             </ul>
     </nav> 
     <div><i class="fas fa-bars burger"></i>

@@ -14,17 +14,17 @@
                         </ul>
                     </div>
 
-                    <p class="login">
+                    <p class="control-formulario">
                         <label for="name">Nombre del producto</label>   
-                        <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
+                        <input type="text" id="name" name="name" class="control" value="<%= locals.oldData ? oldData.name : null %>" >
                         <% if (locals.errors && errors.name) { %>
                             <p class = "error-message-product"> <%= errors.name.msg %></p>
                         <% } %> 
                     </p>                
 
-                    <p class="login">
+                    <p class="control-formulario">
                         <label for="description">Descripción</label>   
-                        <input type="text" id="description" size= 35 name="description" value="<%= locals.oldData ? oldData.description : null %>">
+                        <input type="text" id="description" size= 35 name="description" class="control" value="<%= locals.oldData ? oldData.description : null %>">
                         <% if (locals.errors && errors.description) { %>
                             <p class = "error-message-product"> <%= errors.description.msg %></p>
                         <% } %> 
@@ -52,19 +52,19 @@
                         </select>
                     </p>
 
-                    <p class="login">
+                    <p class="control-formulario">
                         <label for="discount">Descuento</label>   
-                        <input type="text" id="discount" name="discount" value="<%= locals.oldData ? oldData.discount : null %>">
+                        <input type="text" id="discount" name="discount" class="control" value="<%= locals.oldData ? oldData.discount : null %>">
                     </p>
 
-                    <p class="login">
+                    <p class="control-formulario">
                         <label for="size">Talles</label>   
-                        <input type="text" id="size" name="size" value="<%= locals.oldData ? oldData.size : null %>">
+                        <input type="text" id="size" name="size" class="control" value="<%= locals.oldData ? oldData.size : null %>">
                     </p>
 
-                    <p class="login">
+                    <p class="control-formulario">
                         <label for="price">Precio</label>   
-                        <input type="text" id="price" name="price" value="<%= locals.oldData ? oldData.price : null %>">
+                        <input type="text" id="price" name="price" class="control" value="<%= locals.oldData ? oldData.price : null %>">
                     </p>
                 
                     <h3>Marca</h3>

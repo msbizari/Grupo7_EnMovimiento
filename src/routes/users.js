@@ -45,6 +45,9 @@ const validacionLogin = [
 //EL RESTO DE LAS VALIDACIONES ESTA EN EL CONTROLADOR
 router.post('/login', validacionLogin, userController.loginProcess);
 
+// PERFIL DE USUARIO:
+router.get('/profile/', authMiddleware, userController.profile);
+
 // Logout
 router.get('/logout', userController.logout);
 
