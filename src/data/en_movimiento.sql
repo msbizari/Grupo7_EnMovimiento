@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 12, 2021 at 10:19 PM
+-- Generation Time: Jun 09, 2021 at 10:35 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -21,66 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `en_movimiento`
 --
-CREATE DATABASE IF NOT EXISTS `en_movimiento` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `en_movimiento`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `brands`
---
-
-DROP TABLE IF EXISTS `brands`;
-CREATE TABLE IF NOT EXISTS `brands` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Truncate table before insert `brands`
---
-
-TRUNCATE TABLE `brands`;
---
--- Dumping data for table `brands`
---
-
-INSERT DELAYED IGNORE INTO `brands` (`id`, `name`) VALUES
-(1, 'Nike'),
-(2, 'Adidas'),
-(3, 'Puma'),
-(4, 'Salomon'),
-(5, 'Generico'),
-(6, 'Asics'),
-(7, 'New Balance');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categorys`
---
-
-DROP TABLE IF EXISTS `categorys`;
-CREATE TABLE IF NOT EXISTS `categorys` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Truncate table before insert `categorys`
---
-
-TRUNCATE TABLE `categorys`;
---
--- Dumping data for table `categorys`
---
-
-INSERT DELAYED IGNORE INTO `categorys` (`id`, `name`) VALUES
-(1, 'novedad'),
-(2, 'en-oferta'),
-(3, 'visitado');
 
 -- --------------------------------------------------------
 
@@ -135,42 +75,7 @@ INSERT DELAYED IGNORE INTO `products` (`id`, `name`, `description`, `price`, `di
 (22, 'Short Nike Running II', 'Short de microfibra', '4925.00', 20, 'short-nike-running.jpg', 1, '38', 1),
 (23, 'AIRMAX Shoes', 'zapatillas de mujer con camara de aire', '7200.00', 20, 'zapatillas_2.jpg', 3, '38', 1),
 (24, 'Zapatillas ASICS, modelo Spring 2020', 'zapatillas', '4350.00', 0, 'zapatillas_asics.jpg', 2, '38', 6),
-(25, 'Calzado New Balance - Edición 2021', 'Zapatillas marca Nike, edicion Post Pandemia', '6229.00', 20, 'zapatillas_Nike.jpg', 1, '38', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `lastName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `birthDate` date NOT NULL,
-  `adress` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `passwordConfirme` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `newsletter` tinyint(4) NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Truncate table before insert `users`
---
-
-TRUNCATE TABLE `users`;
---
--- Dumping data for table `users`
---
-
-INSERT DELAYED IGNORE INTO `users` (`id`, `name`, `lastName`, `birthDate`, `adress`, `email`, `password`, `passwordConfirme`, `newsletter`, `image`) VALUES
-(4, 'pedro', 'picapiedra', '1900-01-01', 'cuevana 01', 'pedro.notiene@mail.com', '$2a$10$03atCKu/GWwTdAU070By8uc0qiUqhwZozhRgWeGtMBjYUYvNhIMMu', 'pedro123', 1, '1620429583225-pedropicapiedra.jpeg'),
-(5, 'blanca', 'nieves', '1950-06-06', 'havaii 1000', 'blanca.nieves@mail.com', '$2a$10$zGANxuo9IgAUHbWVHJZDkOrRqcTRP2UClzdKEfVpRuSA0H/5V7nyW', 'hola123', 1, '1620857805259-blanca_nieves.jpeg'),
-(6, 'Ricky', 'Martin', '1980-10-10', 'meame 10', 'rickymartin@mail.com', '$2a$10$2bs1frqUvsTWR7UVhIHh6.tDOBVZ448Ooh.NhflKI4APfDfag7Vaa', 'ricky123', 0, '1620857886020-Ricky_Martin.jpg');
+(25, 'Calzado New Balance - Edición 2021', 'Zapatillas marca Nike, edicion Post Pandemia', '6229.00', 20, 'Zapatillas-new-balance-foam.jpg', 1, '38', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
