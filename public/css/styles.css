@@ -65,13 +65,16 @@ main{
     display: block;
 }
 .main-nav-bar-display ul{
-    width:30%;
+    width:50%;
     margin: auto;
     list-style-type: none;
 }
 .main-nav-bar-display a{
     text-decoration: none;
+    color: black;
     padding: 3px 0px;
+    font-weight: bold;
+    font-size: 1.3em;
     text-align: center;
 }
 .main-nav-bar a {
@@ -99,6 +102,7 @@ main{
     width:100%;
     font-weight: 600;
     text-align: center;
+    margin: 3px 0px
 }
 .burger{
     font-size: 19px;
@@ -159,8 +163,7 @@ hr{
     filter:url(#marker-shape);
     left:-0.25em;
     top:0.1em;  
-    padding:0 0.25em;
-    
+    padding:0 0.25em; 
 }
 
 .productos{

@@ -33,14 +33,13 @@ const mainController= {
             category_id: "2"
             }
         });
-        marcaSeleccionada = {}
+        let marcaSeleccionada
         if (req.params.id){
         novedades = novedades.filter(producto => producto.brand.id == req.params.id)
         enOferta = enOferta.filter(producto => producto.brand.id == req.params.id)
         marcaSeleccionada = await db.Brand.findByPk(req.params.id)
         
         }
-        console.log(marcaSeleccionada)
         res.render('index',{novedades:novedades , enOferta:enOferta, marcaSeleccionada:marcaSeleccionada})
     },
      
