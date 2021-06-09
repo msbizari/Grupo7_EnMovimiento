@@ -16,7 +16,7 @@
                     
                     <br>
                     
-                            <h2><%= producto.name%></h2>
+                            <h2 class="nombre-producto"><%= producto.name%></h2>
                     <br>
 
                             <a href="/productos/<%= producto.id %>/detalleDeproducto"><img src="/images/productos/<%= producto.image %>" width=45% alt= "<%= producto.name %> "></a>
@@ -24,7 +24,7 @@
                     <br>
                             <ul>
                             <li>DESCRIPCION:         <%= producto.description%> </li>
-                            <li>PRECIO: $            <%= producto.price %> </li>
+                            <li>PRECIO: $ <span class="precio-producto"><%= producto.price %></span></li>
                             <li>COLORES DISPONIBLES: <%= producto.color %> </li>
                             <li>SIZE:                <%= producto.size %> </li>
                             <li><p><i class="fas fa-credit-card"></i>   Pagá en 12 cuotas sin interes</p></li>
@@ -35,7 +35,7 @@
 
                         <section class="botones"> 
                         <div>
-                            <button class="boton-ticket"> COMPRAR </button>
+                            <button class="boton-ticket boton-comprar"> COMPRAR </button>
                             <button class="boton-ticket"> AGREGAR A FAVORITOS</button>
                         <br>
                         <a href="/productos/<%= producto.id %>/edit"><button class="boton-ticket">   EDITAR </button></a>
@@ -50,4 +50,5 @@
         
 </body>
     <%- include("./partials/footer")%> 
+    <script src="/js/detalleProducto.js"></script>
 </html>
