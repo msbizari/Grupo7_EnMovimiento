@@ -37,17 +37,23 @@ main{
     display: none; /* hago desaparecer la barra de busqueda y dejo la lupa para moblie y tablet?*/
 }
 
+div.right-top-header{
+    width: 200px;
+}
+
 .right-top-header{
-    width: 100px;
+    width: 100%;
 }
 .right-top-header ul{
     list-style-type: none;
+    width: 200px;
     display: flex;
+    justify-content: flex-start;
     justify-content: space-between;
 }
-.right-top-header li{
+/*.right-top-header li{
     margin: 8px;
-}
+}*/
 .right-top-header a{
     display: inline-block;
     font-size: 20px;
@@ -132,7 +138,7 @@ hr{
     background-size: 750px;
     background-color: #ECA116;
     background-position: bottom;
-    width: 145px;
+    width: 250px;
     height: 28px;
     margin-top: -25px;
     margin: 20px 0px;
@@ -143,6 +149,13 @@ hr{
     top:0.1em;  
     padding:0 0.25em;
     
+}
+
+.titulo-category-admin{
+    background-color: none;
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+    color: black;
 }
 
 .productos{
@@ -187,7 +200,8 @@ div.productos article:hover i{
 .caja-datos-prod{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: baseline;
     border-top: 1px solid #ebebeb;
     padding: 15px;
@@ -308,13 +322,52 @@ footer h3{
     text-align:left;
     width:7%;
 }
-.create-form h2, .register-body h2, .form-register h2, .container-profile h2{
-    margin-left: auto;
-    margin-right: auto;
-    color: RGB(220,137,018);
-    background-color: rgb(160, 221, 204);
-    text-decoration: underline;
-    margin-bottom: 10px;   
+.create-form h2, .register-body h2, .container-profile h2{
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    --rotate: -5deg;
+    background-image: url(../images/static.png);
+    background-size: 750px;
+    background-color: #ECA116;
+    background-position: bottom;
+    width: 165px;
+    height: 18px;
+    margin-top: -25px;
+    margin: 20px 0px;
+    height:1em;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;  
+    padding:0 0.25em;   
+}
+
+.form-register h2 {
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    --rotate: -5deg;
+    background-image: url(../images/static.png);
+    background-size: 750px;
+    background-color: #ECA116;
+    background-position: bottom;
+    width: 230px;
+    height: 18px;
+    margin-top: -25px;
+    margin: 20px 0px;
+    height:1em;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;  
+    padding:0 0.25em; 
+}
+
+.container-profile h2 {
+    width: 250px;
 }
 
 .control-formulario label{
@@ -607,7 +660,8 @@ form h3{
     .caja-datos-prod{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         align-items: baseline;
         border-top: 1px solid #ebebeb;
         padding: 15px;

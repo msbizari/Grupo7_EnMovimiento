@@ -9,12 +9,16 @@
                 <li><% if (locals.isLogged) { %>
                     <a href="/users/profile"><img src="/images/usuarios/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"></a>
                     <h3>Hi <%= locals.userLogged.name %>!</h3>
-                            <% } else { %>
-                
-                    <a href="/users/login"><i class="fas fa-user"></i></a>
-                
+                            <% } else { %>                
+                    <a href="/users/login"><i class="fas fa-user"></i></a>                
                 <% } %>
                 </li>
+
+                <li><% if (locals.isLogged) { %>
+                    <a href="/productos"><i class="fas fa-user-cog"></i></a>
+                <% } %>
+                </li>
+
                 <li>   <a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
                 </li>
                 <li>    <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>

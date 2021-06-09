@@ -8,11 +8,13 @@
         <div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
         </div>
     <main>
-        
+        <div>
+            <% if (locals.isLogged) { %>-->
+                <h2 class="titulo-category-admin"><i>Hola <%= locals.userLogged.name %>!</i> Aquí podrás editar los productos de tu web</h2>
+            <% } %>-->
+        </div>
         <section class="product">
             <main>
-                <br>
-
                 <a href="/productos/create"><button class="boton-ticket">  CREAR NUEVO PRODUCTO </button></a>
                 <section class="listaproductos">
                    
