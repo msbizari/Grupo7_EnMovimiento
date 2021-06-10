@@ -10,15 +10,45 @@
                 
                 <section>
                     <h2>Tu Carrito</h2>
-                    <div class="productos-carrito">
-        
+                    <!-- <div class="productos-carrito"> -->
+                        
+                        <div class="wrapper">
+  
+                            <div class="table">
+                              
+                              <div class="row header">
+                                <div class="cell">
+                                  Nombre
+                                </div>
+                                <div class="cell">
+                                  Precio
+                                </div>
+                                <div class="cell">
+                                  Descuento
+                                </div>
+                                <div class="cell">
+                                  Tamaño
+                                </div>
+                                <div class="cell">
+                                    Marca
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                        </div>
+                        <h2 class="monto-total">Total de tu compra: $</h2>
+<!-- 
                     <article>
-                        <img src="/images/productos/bolso.jpg" width=100% alt= "foto ropa"> <!-- COMPLETAR ALT Y SRC--> 
+                        <img src="/images/productos/bolso.jpg" width=100% alt= "foto ropa">  
                         <div class="caja-datos-prod">
                             <p class="precios">$6.770</p>
                             <h4 class="oculto-enmobile">Bolso Deportivo</h4>
                         </div>
                     </article>
+                     
+                   
+
                     
                     <article class="una-caja">
                         
@@ -29,7 +59,7 @@
                         </div>
                         
         
-                         <!-- COMPLETAR ALT Y SRC--> 
+                         
                         <div class="detalles-prod">
                             <h4 class="titulo-prod">Bolso Deportivo</h4>
                             <p class="precios">Bolso Grande Nike Brasilia Large 9.0. Medidas aproximadas: 71cm x 35cm x 35cm
@@ -38,7 +68,7 @@
                     </article>
                     
         
-                    <article> <!-- COMPLETAR ALT Y SRC--> 
+                    <article>  
                         <div class="ticket">
                             <h4 class="titulo-prod">Ticket</h4>
                             <i class="fas fa-align-left"></i>
@@ -46,12 +76,17 @@
                         </div>
                         <button class="boton-ticket">FINALIZAR COMPRA</button>
                         <button class="boton-ticket">SEGUIR COMPRANDO</button>
-                        </div>
+                        
                         
                     </article>
+                    </div>-->
                 </section>
+                <button class=" boton-formulario borrar-carrito">VACIAR CARRITO</button>
+                <br>
+                <br>
+                
             </main>
-            
+            <script src="/js/carrito.js"></script> 
         </body>
     <%- include("./partials/footer")%> 
 </html>        

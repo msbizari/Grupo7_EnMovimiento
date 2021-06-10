@@ -17,16 +17,18 @@
                     <br>
                     
                             <h2 class="nombre-producto"><%= producto.name%></h2>
+                            <p hidden class="id-producto"><%= producto.id%></p>
                     <br>
 
                             <a href="/productos/<%= producto.id %>/detalleDeproducto"><img src="/images/productos/<%= producto.image %>" width=45% alt= "<%= producto.name %> "></a>
                     <br>
                     <br>
                             <ul>
-                            <li>DESCRIPCION:         <%= producto.description%> </li>
-                            <li>PRECIO: $ <span class="precio-producto"><%= producto.price %></span></li>
-                            <li>COLORES DISPONIBLES: <%= producto.color %> </li>
-                            <li>SIZE:                <%= producto.size %> </li>
+                            <li>DESCRIPCION:         <span class="description-producto"><%= producto.description%></span> </li>
+                            <li>PRECIO: $ <span class="price-producto"><%= producto.price %></span></li>
+                            <li>DESCUENTO: %<span class="discount-producto"><%= producto.discount %></span> </li>
+                            <li>SIZE:  <span class="size-producto"> <%= producto.size %></span> </li>
+                            <li>MARCA:                <span class="brand-producto"><%= producto.brand.name %></span> </li>
                             <li><p><i class="fas fa-credit-card"></i>   Pagá en 12 cuotas sin interes</p></li>
                             <li><p><i class="fas fa-store"> </i>        Retiro gratis en locales del vendedor</p></li>
                         </ul> 
@@ -36,7 +38,7 @@
                         <section class="botones"> 
                         <div>
                             <button class="boton-ticket boton-comprar"> COMPRAR </button>
-                            <button class="boton-ticket"> AGREGAR A FAVORITOS</button>
+                            <button class="boton-ticket boton-borrar-carrito"> BORRAR CARRITO</button>
                         <br>
                         <a href="/productos/<%= producto.id %>/edit"><button class="boton-ticket">   EDITAR </button></a>
                         
