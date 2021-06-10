@@ -1,8 +1,9 @@
 window.onload = function(){
     let form = document.querySelector('.register-body');
+    let formEliminar = document.querySelector('.form-eliminar');
     form.addEventListener('submit', (e) => {
         let errors = [];
-        e.preventDefault()
+       
         let name = document.querySelector('#name');
         let description = document.querySelector('#description');
         let image = document.querySelector('#myfile');
@@ -56,4 +57,14 @@ window.onload = function(){
             }
         }
     })
-    }
+    formEliminar.addEventListener('submit', (e) => {
+        e.preventDefault()
+        var r = confirm("Confirma que desea eliminar el producto?");
+        if (r == true) {
+            formEliminar.submit()
+        } else {
+            alert("Cancelaste elminar el producto");
+        }
+    })
+
+}
