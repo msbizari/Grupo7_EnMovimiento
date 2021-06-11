@@ -1,7 +1,7 @@
 window.onload = function (){
     document.querySelector(".boton-borrar-carrito").onclick = function (e) {
         localStorage.removeItem("producto")
-        console.log(localStorage.producto)
+        alert("vaciaste el carrito :( ")
     }
     
     document.querySelector(".boton-comprar").onclick = function (e) {

@@ -523,13 +523,33 @@ footer h3{
 .edit-product h2 {
     width: 200px;
 }
-
+section .listaproductos{
+    margin:auto;
+    text-align: center;
+    width: 65%
+}
+.producto1{
+    display: block;
+    margin: auto
+}
 .detalle-productos li, .detalle-productos ul {
     list-style: none;
     font-weight: 750;
     font-size: 1.1em;
     line-height: 1.5em;
+    text-align: left;
 }
+.detalle-imagen{
+    width: 55%
+}
+@media(max-width: 769px) {
+    section .listaproductos{
+        width:90%
+    }
+    .detalle-imagen{
+        width: 75%
+    }
+  }
 
 .image-product {
     width: 70%;
@@ -984,6 +1004,10 @@ form h3{
     .una-caja{
         width: 30%;
     }
+    .detalle-productos{
+        margin-left: 15%;
+        margin-right:10%
+    }
 }
     .h2{
         font-family: 'Quicksand', sans-serif;
@@ -991,6 +1015,7 @@ form h3{
         font-style: italic; 
     
     }
+
 
 
 .products{
