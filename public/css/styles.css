@@ -19,6 +19,8 @@ main{
 
 .main-header {
     background-color: RGB(107,201,203);
+    background-image: url(../images/static.png);
+    background-size: 600px;
     padding: 20px;
 }
 .main-header-top-bar{
@@ -157,7 +159,7 @@ hr{
     background-size: 750px;
     background-color: #ECA116;
     background-position: bottom;
-    width: 250px;
+    width: 180px;
     height: 28px;
     margin-top: -25px;
     margin: 20px 0px;
@@ -273,6 +275,114 @@ div.productos article:hover i{
 }
 
 
+/*CARUSEL CON EFECTO*/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+/*TERMINARON LOS EFECTOS DEL CARUSEL*/
+
 /* FOOTER */
 
 footer{
@@ -340,7 +450,7 @@ footer h3{
     text-align:left;
     width:7%;
 }
-.create-form h2, .register-body h2, .container-profile h2{
+.create-form h2, .register-body h2, .container-profile h2 {
     font-family: 'Alata', sans-serif;
     font-size: 18px;
     color: black;
@@ -350,7 +460,7 @@ footer h3{
     background-size: 750px;
     background-color: #ECA116;
     background-position: bottom;
-    width: 165px;
+    width: 200px;
     height: 18px;
     margin-top: -25px;
     margin: 20px 0px;
@@ -372,7 +482,29 @@ footer h3{
     background-size: 750px;
     background-color: #ECA116;
     background-position: bottom;
-    width: 230px;
+    width: 200px;
+    height: 18px;
+    margin-top: -25px;
+    margin: 20px 0px;
+    height:1em;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;  
+    padding:0 0.25em; 
+}
+
+.carrito-title {
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    --rotate: -5deg;
+    background-image: url(../images/static.png);
+    background-size: 750px;
+    background-color: #ECA116;
+    background-position: bottom;
+    width: 150px;
     height: 18px;
     margin-top: -25px;
     margin: 20px 0px;
@@ -386,6 +518,39 @@ footer h3{
 
 .container-profile h2 {
     width: 250px;
+}
+
+.edit-product h2 {
+    width: 200px;
+}
+
+.detalle-productos li, .detalle-productos ul {
+    list-style: none;
+    font-weight: 750;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.image-product {
+    width: 70%;
+    margin: 8px 0px 5px 0px;
+    
+}
+
+.image-product img {
+    border: solid rgb(158, 158, 158) 0.5px;
+}
+
+.lista-productos-admin li, .lista-productos-admin ul {
+    list-style: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.detalle-productos li i{
+    color: #ECA116;
+    
 }
 
 .control-formulario label{
@@ -410,11 +575,12 @@ footer h3{
 .boton-formulario {
     background-color:  RGB(045,064,122);
     border: none;
-    font-size: 20px;
+    font-size: inherit;
     color:#ffffff;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
+    margin-top: 15px;
 }
 form a{
     display: inline-block;
@@ -474,8 +640,8 @@ form a{
   }
   .row.header {
     font-weight: 900;
-    color: #ffffff;
-    background: #ea6153;
+    color: black;
+    background: #ECA116;
   }
 
 @media (max-width: 580px) {
@@ -579,11 +745,14 @@ div .botones-mas-menos i{
 }
 
 .boton-ticket {
-    background-color: RGB(045,064,122);
-    color: white;
-    text-align: center;
-    margin: 10px 5px 0px;
-    border-radius: 4px;
+    background-color:  RGB(045,064,122);
+    border: none;
+    font-size: inherit;
+    color:#ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 15px;
 }
 .icono-suelto{
     color: RGB(045,064,122);
@@ -736,17 +905,20 @@ form h3{
         font-size: 42px;
         align-content: center;
         justify-content: center;
+        border-color: white;
     }
     .barra-busqueda{
         width: 80%;
         height: 26px;
+        border-radius: 10px;
+        border-color: white;
     }
     .busqueda{
         background-color: #ebebeb;
         font-size: 18px;
         padding: 3px 3px;
-        border: solid black 1px;
-        border-radius: 3px;
+        border-radius: 10px;
+        border-color: white;
     }
     .main-nav-bar, .main-nav-bar-display{
         display: block;
@@ -846,7 +1018,7 @@ form h3{
     border-radius: 10px;
   }
 
-/* PROSPECTO DE CARRUSEL */
+/* PROSPECTO DE CARRUSEL 
 
 .container{
   margin: auto;
@@ -934,5 +1106,5 @@ ul.slider li:target {
   height: 20px;
   font-size: 20px;
   border-radius: 100%;
-}
+}*/
 

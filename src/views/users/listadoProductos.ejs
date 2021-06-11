@@ -7,34 +7,37 @@
         <%- include("../partials/header") %>    
         <!--<div> <img class="banner" src="/images/banner-achatado.jpg" alt="Banner">
         </div>-->
-    <main>
-        <div>
-            <% if (locals.isLogged) { %>
-                <h2 class="titulo-category-admin"><i>Hola <%= locals.userLogged.name %>!</i> Aquí podrás editar los productos de tu web</h2>
-            <% } %>
-        </div>
-        <section class="product">
-            <main>
-                <a href="/productos/create"><button class="boton-ticket">  CREAR NUEVO PRODUCTO </button></a>
-                <section class="listaproductos">
-                   
-                    <br>
-                    <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
-                        <h3><%= listaProductos[i].name%></h3>
-                        <a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto"><img src="/images/productos/<%= listaProductos[i].image %>" width=35% alt= "<%= listaProductos[i].name%>"></a>
-                        <ul>  
-                    <ul>
-                      <li>Descripción:     <%= listaProductos[i].description%> </li>
-                      <li>Precio: $        <%= listaProductos[i].price%> </li>
-                      <li>Color:           <%= listaProductos[i].color%> </li>
-                    </ul>
-                    <br>
-                    <% } %>
-
+        <main>
+            <div>
+                <% if (locals.isLogged) { %>
+                    <h2 class="titulo-category-admin"><i>Hola <%= locals.userLogged.name %>!</i> Aquí podrás editar los productos de tu web</h2>
+                <% } %>
+            </div>
+            <section class="product">
+                <main>
+                    <a href="/productos/create"><button class="boton-ticket">  CREAR NUEVO PRODUCTO </button></a>
+                    <section class="listaproductos">
                     
-                            
-                        </ul>
-    </main>
-</body>
+                        <br>
+                        <% for( let i = 0;  i < listaProductos.length; i++ ) { %>
+                            <h3><%= listaProductos[i].name%></h3>
+                            <div class="image-product">
+                                <a href="/productos/<%= listaProductos[i].id %>/detalleDeproducto"><img src="/images/productos/<%= listaProductos[i].image %>" width=35% alt= "<%= listaProductos[i].name%>"></a>
+                            </div>                            
+                                <ul>  
+                                <ul class="lista-productos-admin">
+                                <li>Descripción:     <%= listaProductos[i].description%> </li>
+                                <li>Precio: $        <%= listaProductos[i].price%> </li>
+                                <li>Color:           <%= listaProductos[i].color%> </li>
+                                </ul>
+                                <br>
+                                <br>
+                                <% } %>
+                                </ul>                            
+                    </section>
+                </main>
+            </section>
+        </main>
+    </body>
     <%- include("../partials/footer")%> 
 </html>
