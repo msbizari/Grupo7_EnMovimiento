@@ -17,7 +17,9 @@
                     <a href="/users/login"><i class="fas fa-user"></i></a>                
                 <% } %>
                 </li>
-                <li>   <a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+                <li><% if (!locals.isLogged) { %>
+                    <a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
+                <% } %>
                 </li>
                 <li>    <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
                 </li>

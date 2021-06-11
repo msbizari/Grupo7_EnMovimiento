@@ -173,6 +173,7 @@ hr{
 
 .titulo-category-admin{
     background-color: none;
+    text-align: center;
     font-family: 'Alata', sans-serif;
     font-size: 25px;
     color: black;
@@ -532,7 +533,13 @@ section .listaproductos{
     display: block;
     margin: auto
 }
-.detalle-productos li, .detalle-productos ul {
+.producto-lista{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 75%
+}
+.detalle-productos li, .detalle-productos ul{
     list-style: none;
     font-weight: 750;
     font-size: 1.1em;
@@ -540,7 +547,17 @@ section .listaproductos{
     text-align: left;
 }
 .detalle-imagen{
-    width: 55%
+    width: 55%;
+    text-align: center;
+    margin: auto
+}
+.detalle-imagen{
+    width:45%
+}
+.nombre-producto{
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: #ECA116;
 }
 @media(max-width: 769px) {
     section .listaproductos{
