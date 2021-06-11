@@ -555,9 +555,10 @@ section .listaproductos{
     width:45%
 }
 .nombre-producto{
-    font-size: 20px;
+    font-size: 24px;
     padding-bottom: 5px;
-    color: #ECA116;
+    color: RGB(045,064,122);
+    font-weight: 600;
 }
 @media(max-width: 769px) {
     section .listaproductos{
