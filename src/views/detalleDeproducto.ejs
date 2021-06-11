@@ -10,12 +10,12 @@
             <section class="product">
                 <main>
                     <section class="listaproductos">
-                        <article class="producto1"></article>
+                        <article class="producto1">
                             <br>
                             <h2 class="nombre-producto"><%= producto.name%></h2>
                             <p hidden class="id-producto"><%= producto.id%></p>
                             <br>
-                            <a href="/productos/<%= producto.id %>/detalleDeproducto"><img src="/images/productos/<%= producto.image %>" width=45% alt= "<%= producto.name %> "></a>
+                            <a href="/productos/<%= producto.id %>/detalleDeproducto"><img src="/images/productos/<%= producto.image %>" class="detalle-imagen" alt= "<%= producto.name %> "></a>
                             <br>
                             <br>
                             <ul class="detalle-productos">
@@ -27,18 +27,20 @@
                                 <li><p><i class="fas fa-credit-card"></i>   Pagá en 12 cuotas sin interes</p></li>
                                 <li><p><i class="fas fa-store"> </i>        Retiro gratis en locales del vendedor</p></li>
                             </ul> 
-                            
-                            <br>
+                        
 
                             <section class="botones"> 
                                 <div>
-                                    <button class="boton-ticket boton-comprar"> COMPRAR </button>
-                                    <button class="boton-ticket boton-borrar-carrito"> BORRAR CARRITO</button>
-                                    <a href="/"><button class="boton-formulario">SEGUIR COMPRANDO</button></a>                    
-
+                                    <% if (!locals.isLogged) { %>
+                                        <button class="boton-ticket boton-comprar"> COMPRAR </button>
+                                        <button class="boton-ticket boton-borrar-carrito"> BORRAR CARRITO</button>
+                                        <a href="/"><button class="boton-formulario">SEGUIR COMPRANDO</button></a>                    
+                                    <% } %>
                                 <br>
-                                                    
-                                <a href="/productos/<%= producto.id %>/edit"><button class="boton-ticket">   EDITAR </button></a>
+                                                                                   
+                                <% if (locals.isLogged) { %>
+                                    <a href="/productos/<%= producto.id %>/edit"><button class="boton-ticket">   EDITAR </button></a>
+                                <% } %>
                                 </div>
                             </section>  
                             
