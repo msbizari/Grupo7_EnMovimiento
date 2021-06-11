@@ -125,7 +125,7 @@ Empezar tarde con la resolución del sprint
 ## Retrospectiva Sprint_08
 
 - Hacer mas: 
-Revision de los puntos entregables. 
+Siempre se puede hacer mas de todo, pero se puso todo el empeño posible como equipo
 
 - Empezar a hacer:
 Juntada presencial para las weekly con medialunas y cafe con leche mediante.
@@ -134,7 +134,7 @@ Juntada presencial para las weekly con medialunas y cafe con leche mediante.
 El apoyo entre los integrantes, hemos reforzado la asistencia mutua ante cualquier impedimento. 
 
 - Hacer menos:
-División de tareas sobre la marcha
+División de tareas sobre la marcha. 
 
 - Dejar de hacer: 
-Empezar tarde con la resolución del sprint aunque en esta oportunidad se definio. 
+Empezar tarde con la resolución del sprint aunque en esta oportunidad se definio con antelación 

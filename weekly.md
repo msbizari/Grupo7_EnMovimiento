@@ -18,11 +18,11 @@ Modificaciones generales de la pagina
 # WEEKLY - Semana 2
 
 ## Qué se hizo: 
-to be filled 
+Tuvimos daily asiduamente para concluir con los objetivos, lo que incluyo hasta el ensayo de la presentación final. 
 
 ## Se encontró algún impedimento:
-to be filled 
+Compatibilizar el como trabajar en los dos proyectos pero se resolvio exitosamente
 
-## Qué se realizó esta semana: 
-to be filled
+## Qué se va a realizar esta semana:
+Fin de la ultima etapa ... FESTEJAR POR LOS RESULTADOS!!!!!
 
