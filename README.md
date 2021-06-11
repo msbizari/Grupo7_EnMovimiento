@@ -1,4 +1,4 @@
-# Entregables Sprint 1
+# Información General del Proyecto
 
 ## Temática del sitio
 
@@ -23,9 +23,11 @@ Venta online de ropa deportiva multimarca y de deportes varios
 * Los colores de la marca son RGB(045,064,122); RGB(107,201,203); RGB(220,137,018)
 * La fuente usada es "Swis721 BlkCn BT..."
 
-# Entregables Sprint 2
-
 ## Link a Trello
 
-Link para ingresar al tablero de trabajo de En Movimiento [aquí](https://trello.com/b/f3MbNTjd/grupo7enmovimiento)
+- Link para ingresar al tablero de trabajo de En Movimiento [aquí](https://trello.com/b/f3MbNTjd/grupo7enmovimiento)
+
+
+## Repositorio de GitHub para el proyecto del dashboard con REACT
+- (react_Grupo_7_EnMovimiento.git) 
 
