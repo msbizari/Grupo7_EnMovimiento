@@ -137,4 +137,11 @@ El apoyo entre los integrantes, hemos reforzado la asistencia mutua ante cualqui
 División de tareas sobre la marcha. 
 
 - Dejar de hacer: 
-Empezar tarde con la resolución del sprint aunque en esta oportunidad se definio con antelación 
+Empezar tarde con la resolución del sprint aunque en esta oportunidad se definio todo con antelación. 
+
+
+
+
+
+
+## En Movimiento ...
